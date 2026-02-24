@@ -9,19 +9,12 @@ Clone this repo into your project directory, run `/setup` inside Claude, and you
 ```bash
 cd ~/storacha                # your project directory (create it if new)
 git clone https://github.com/storacha/aidev.git
-cd aidev
-claude                       # start Claude Code inside aidev
+claude                       # start Claude Code from project root
 ```
 
 Inside Claude, run:
 ```
-/setup                       # creates symlinks in parent directory
-```
-
-Then restart Claude from the project root:
-```bash
-cd ..
-claude                       # now running with full process
+/setup                       # creates symlinks, process is immediately active
 ```
 
 Clone repos alongside `aidev/` as needed:
