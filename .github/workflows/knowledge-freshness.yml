@@ -1,0 +1,87 @@
+name: Knowledge Freshness Check
+
+on:
+  schedule:
+    - cron: '0 2 * * 0'  # Sunday 2am UTC
+  workflow_dispatch: {}   # Manual trigger
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run freshness validation
+        id: validate
+        run: |
+          python tools/validate-freshness.py --ci --output report.json 2>&1 | tee validation-output.txt
+          echo "exit_code=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+        continue-on-error: true
+
+      - name: Generate issue body
+        if: steps.validate.outputs.exit_code != '0'
+        id: body
+        run: |
+          python3 -c "
+          import json, sys
+          from datetime import datetime
+
+          with open('report.json') as f:
+              report = json.load(f)
+
+          body = []
+          body.append('## Knowledge Freshness Report')
+          body.append(f'**Generated:** {datetime.utcnow().strftime(\"%Y-%m-%d %H:%M UTC\")}')
+          body.append(f'**Report date:** {report.get(\"date\", \"unknown\")}')
+          body.append('')
+
+          summary = report.get('summary', {})
+          body.append('### Summary')
+          body.append(f'- Files checked: {summary.get(\"files_checked\", 0)}')
+          body.append(f'- Files with issues: {summary.get(\"files_with_issues\", 0)}')
+          body.append(f'- Stale/missing headers: {summary.get(\"stale_headers\", 0)}')
+          body.append(f'- Quantitative drift: {summary.get(\"quantitative_drift\", 0)}')
+          body.append(f'- Missing references: {summary.get(\"missing_references\", 0)}')
+          body.append('')
+
+          files = report.get('files', [])
+          if not files:
+              body.append('No drift detected.')
+          else:
+              body.append('### Issues by File')
+              body.append('')
+              for file_entry in files:
+                  file_path = file_entry.get('file', 'unknown')
+                  issues = file_entry.get('issues', [])
+                  body.append(f'#### \`{file_path}\`')
+                  for issue in issues:
+                      severity = issue.get('severity', 'info').upper()
+                      category = issue.get('category', 'unknown')
+                      message = issue.get('message', '')
+                      line = issue.get('line', 0)
+                      line_str = f' (line {line})' if line else ''
+                      body.append(f'- **[{severity}]** {category}{line_str}: {message}')
+                  body.append('')
+
+          body.append('---')
+          body.append('*Run \`python tools/validate-freshness.py --verbose\` locally for full details.*')
+
+          with open('issue-body.md', 'w') as f:
+              f.write('\n'.join(body))
+          "
+
+      - name: Create or update issue on drift
+        if: steps.validate.outputs.exit_code != '0'
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: "Knowledge Freshness Report — Week of ${{ github.event.repository.updated_at || github.run_id }}"
+          content-filepath: issue-body.md
+          labels: knowledge-maintenance,automated
+          assignees: ''

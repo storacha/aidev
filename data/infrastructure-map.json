@@ -1,0 +1,7501 @@
+{
+  "summary": {
+    "DynamoDB": {
+      "?": [
+        "agent-store-migration",
+        "content-claims",
+        "legacy-spaces-migration",
+        "w3filecoin-infra",
+        "w3infra"
+      ],
+      "claims-v1": [
+        "content-claims"
+      ],
+      "TABLE_NAME": [
+        "legacy-spaces-migration"
+      ],
+      "metadata": [
+        "piri"
+      ],
+      "chunk_links": [
+        "piri"
+      ],
+      "ran_link_index": [
+        "piri"
+      ],
+      "allocation_store": [
+        "piri"
+      ],
+      "acceptance_store": [
+        "piri"
+      ],
+      "table": [
+        "storoku"
+      ],
+      "humanode": [
+        "w3infra"
+      ],
+      "allocation": [
+        "w3infra"
+      ],
+      "blob-registry": [
+        "w3infra"
+      ],
+      "store": [
+        "w3infra"
+      ],
+      "upload": [
+        "w3infra"
+      ],
+      "piece-v2": [
+        "w3infra"
+      ],
+      "subscription": [
+        "w3infra"
+      ],
+      "consumer": [
+        "w3infra"
+      ],
+      "rate-limit": [
+        "w3infra"
+      ],
+      "delegation": [
+        "w3infra"
+      ],
+      "revocation": [
+        "w3infra"
+      ],
+      "admin-metrics": [
+        "w3infra"
+      ],
+      "space-metrics": [
+        "w3infra"
+      ],
+      "storage-provider": [
+        "w3infra"
+      ],
+      "replica": [
+        "w3infra"
+      ],
+      "customer": [
+        "w3infra"
+      ],
+      "space-snapshot": [
+        "w3infra"
+      ],
+      "space-diff": [
+        "w3infra"
+      ],
+      "space-diff-archive": [
+        "w3infra"
+      ],
+      "usage": [
+        "w3infra"
+      ],
+      "egress-traffic-events": [
+        "w3infra"
+      ],
+      "eipfs-blocks-cars-position-table": [
+        "w3infra"
+      ],
+      "agent-index": [
+        "w3infra"
+      ]
+    },
+    "S3/R2 Buckets": {
+      "?": [
+        "agent-store-migration",
+        "content-claims",
+        "legacy-spaces-migration",
+        "w3filecoin-infra",
+        "w3infra"
+      ],
+      "claims-v1": [
+        "content-claims"
+      ],
+      "S3_BUCKET": [
+        "eliza"
+      ],
+      "ipni_store_bucket": [
+        "piri"
+      ],
+      "ipni_store_cors": [
+        "piri"
+      ],
+      "ipni_store_policy": [
+        "piri"
+      ],
+      "blob_store_bucket": [
+        "piri"
+      ],
+      "blob_store_cors": [
+        "piri"
+      ],
+      "blob_store_policy": [
+        "piri"
+      ],
+      "receipt_store_bucket": [
+        "piri"
+      ],
+      "claim_store_bucket": [
+        "piri"
+      ],
+      "ipni_publisher": [
+        "piri"
+      ],
+      "ipni_publisher_lifecycle": [
+        "piri"
+      ],
+      "env_files": [
+        "storetheindex"
+      ],
+      "bucket": [
+        "storoku"
+      ],
+      "public_access_block": [
+        "storoku"
+      ],
+      "cors": [
+        "storoku"
+      ],
+      "policy": [
+        "storoku"
+      ],
+      "lifecycle": [
+        "storoku"
+      ],
+      "env_file_bucket": [
+        "storoku"
+      ],
+      "env_file": [
+        "storoku"
+      ],
+      "car-store": [
+        "w3infra"
+      ],
+      "delegation-store": [
+        "w3infra"
+      ],
+      "upload-shards-store": [
+        "w3infra"
+      ],
+      "stream-log-store": [
+        "w3infra"
+      ],
+      "athena-w3up-results": [
+        "w3infra"
+      ],
+      "athena-dynamo-spill": [
+        "w3infra"
+      ],
+      "workflow-store": [
+        "w3infra"
+      ],
+      "ucan-store": [
+        "w3infra"
+      ],
+      "BUCKET_NAME": [
+        "w3infra"
+      ]
+    },
+    "Queues": {
+      "?": [
+        "agent-store-migration",
+        "legacy-spaces-migration",
+        "tg-miniapp",
+        "w3filecoin-infra",
+        "w3infra"
+      ],
+      "hourly_backup_deadletter": [
+        "bluesky-backup-webapp-server"
+      ],
+      "ipni_publisher": [
+        "piri"
+      ],
+      "ipni_publisher_deadletter": [
+        "piri"
+      ],
+      "ipni_advertisement_publishing": [
+        "piri"
+      ],
+      "ipni_advertisement_publishing_deadletter": [
+        "piri"
+      ],
+      "queue": [
+        "storoku"
+      ],
+      "queue_deadletter": [
+        "storoku"
+      ],
+      "caching": [
+        "storoku"
+      ],
+      "aggregator-piece-store-handle-insert-dlq": [
+        "w3filecoin-infra"
+      ],
+      "aggregate-store-handle-piece-accept-dlq": [
+        "w3filecoin-infra"
+      ],
+      "aggregate-store-handle-aggregate-offer-dlq": [
+        "w3filecoin-infra"
+      ],
+      "inclusion-store-handle-update-state-dlq": [
+        "w3filecoin-infra"
+      ],
+      "inclusion-store-handle-piece-accept-dlq": [
+        "w3filecoin-infra"
+      ],
+      "piece-cid-compute-queue": [
+        "w3infra"
+      ],
+      "metrics-aggregate-total-dlq": [
+        "w3infra"
+      ],
+      "indexer-topic-queue": [
+        "w3infra"
+      ],
+      "space-billing-dlq": [
+        "w3infra"
+      ],
+      "space-billing-queue": [
+        "w3infra"
+      ],
+      "customer-billing-dlq": [
+        "w3infra"
+      ],
+      "customer-billing-queue": [
+        "w3infra"
+      ],
+      "usage-table-dlq": [
+        "w3infra"
+      ],
+      "egress-traffic-dlq": [
+        "w3infra"
+      ],
+      "egress-traffic-queue": [
+        "w3infra"
+      ],
+      "eipfs-multihashes-topic-queue": [
+        "w3infra"
+      ],
+      "block-advert-publisher-queue": [
+        "w3infra"
+      ],
+      "block-advert-publisher-dlq": [
+        "w3infra"
+      ],
+      "block-index-writer-queue": [
+        "w3infra"
+      ],
+      "block-index-writer-dlq": [
+        "w3infra"
+      ],
+      "upload-admin-metrics-dlq": [
+        "w3infra"
+      ],
+      "upload-space-metrics-dlq": [
+        "w3infra"
+      ],
+      "car-replicator-queue": [
+        "w3infra"
+      ]
+    },
+    "Terraform: other": {
+      "random_password.backup_password": [
+        "bluesky-backup-webapp-server",
+        "tg-miniapp"
+      ],
+      "random_password.session_password": [
+        "bluesky-backup-webapp-server",
+        "tg-miniapp"
+      ],
+      "aws_cloudwatch_event_rule.hourly_backup": [
+        "bluesky-backup-webapp-server"
+      ],
+      "aws_cloudwatch_event_target.hourly_backup": [
+        "bluesky-backup-webapp-server"
+      ],
+      "aws_cloudwatch_event_connection.hourly_backup": [
+        "bluesky-backup-webapp-server"
+      ],
+      "aws_cloudwatch_event_api_destination.hourly_backup": [
+        "bluesky-backup-webapp-server"
+      ],
+      "aws_ssm_parameter.private_key": [
+        "piri"
+      ],
+      "aws_ssm_parameter.external_blob_bucket_access_key_id": [
+        "piri"
+      ],
+      "aws_ssm_parameter.external_blob_bucket_secret_access_key": [
+        "piri"
+      ],
+      "aws_cloudwatch_log_group.lambda_log_group": [
+        "piri"
+      ],
+      "aws_apigatewayv2_api.api": [
+        "piri"
+      ],
+      "aws_apigatewayv2_route.routes": [
+        "piri"
+      ],
+      "aws_apigatewayv2_integration.integrations": [
+        "piri"
+      ],
+      "aws_apigatewayv2_deployment.deployment": [
+        "piri"
+      ],
+      "aws_acm_certificate.cert": [
+        "piri",
+        "storoku"
+      ],
+      "aws_acm_certificate_validation.cert": [
+        "piri",
+        "storoku"
+      ],
+      "aws_apigatewayv2_domain_name.custom_domain": [
+        "piri"
+      ],
+      "aws_apigatewayv2_stage.stage": [
+        "piri"
+      ],
+      "aws_apigatewayv2_api_mapping.api_mapping": [
+        "piri"
+      ],
+      "aws_api_gateway_account.api_gateway_account": [
+        "piri"
+      ],
+      "aws_cloudwatch_log_group.access_logs": [
+        "piri"
+      ],
+      "aws_instance.piri": [
+        "piri"
+      ],
+      "aws_ebs_volume.piri_data": [
+        "piri"
+      ],
+      "aws_ebs_volume.piri_data_protected": [
+        "piri"
+      ],
+      "aws_volume_attachment.piri_data": [
+        "piri"
+      ],
+      "aws_internet_gateway.main": [
+        "piri"
+      ],
+      "aws_route_table.public": [
+        "piri"
+      ],
+      "aws_route_table_association.public": [
+        "piri"
+      ],
+      "aws_security_group.piri": [
+        "piri"
+      ],
+      "aws_security_group.pdp_node_sg": [
+        "piri"
+      ],
+      "aws_instance.pdp_node": [
+        "piri"
+      ],
+      "aws_internet_gateway.pdp_igw": [
+        "piri"
+      ],
+      "aws_route_table.pdp_public_rt": [
+        "piri"
+      ],
+      "aws_route.pdp_public_route_igw": [
+        "piri"
+      ],
+      "aws_route_table_association.pdp_public_rta": [
+        "piri"
+      ],
+      "aws_codedeploy_app.ingest": [
+        "storetheindex"
+      ],
+      "aws_codedeploy_deployment_group.ingest": [
+        "storetheindex"
+      ],
+      "local_file.code_deploy_sh": [
+        "storetheindex",
+        "storoku"
+      ],
+      "terraform_data.trigger_code_deploy_deployment": [
+        "storetheindex",
+        "storoku"
+      ],
+      "aws_security_group.container_sg": [
+        "storetheindex",
+        "storoku"
+      ],
+      "aws_lb_target_group.blue": [
+        "storetheindex"
+      ],
+      "aws_lb_target_group.green": [
+        "storetheindex"
+      ],
+      "aws_lb_listener_rule.announce": [
+        "storetheindex"
+      ],
+      "random_password.{{.Lower}}": [
+        "storoku"
+      ],
+      "aws_kms_key.encryption_key": [
+        "storoku"
+      ],
+      "aws_kms_alias.encryption_key": [
+        "storoku"
+      ],
+      "aws_kms_key_policy.encryption_key": [
+        "storoku"
+      ],
+      "aws_globalaccelerator_accelerator.ga": [
+        "storoku"
+      ],
+      "aws_globalaccelerator_listener.ga": [
+        "storoku"
+      ],
+      "aws_globalaccelerator_endpoint_group.ga": [
+        "storoku"
+      ],
+      "aws_sns_topic.topic": [
+        "storoku"
+      ],
+      "aws_kms_key.cache_key": [
+        "storoku"
+      ],
+      "aws_security_group.cache_security_group": [
+        "storoku"
+      ],
+      "cloudflare_dns_record.ns": [
+        "storoku"
+      ],
+      "aws_ecr_repository.ecr": [
+        "storoku"
+      ],
+      "aws_kms_key.ecr_kms_key": [
+        "storoku"
+      ],
+      "aws_kms_alias.ecr_key_alias": [
+        "storoku"
+      ],
+      "aws_security_group.rds": [
+        "storoku"
+      ],
+      "aws_db_parameter_group.postgres": [
+        "storoku"
+      ],
+      "aws_secretsmanager_secret_rotation.rds": [
+        "storoku"
+      ],
+      "aws_kms_key.encryption_rds": [
+        "storoku"
+      ],
+      "aws_kms_alias.encryption_rds": [
+        "storoku"
+      ],
+      "aws_kms_key_policy.encryption_rds": [
+        "storoku"
+      ],
+      "aws_db_instance.rds": [
+        "storoku"
+      ],
+      "random_password.proxy_user_password": [
+        "storoku"
+      ],
+      "aws_secretsmanager_secret.proxy_user_secret": [
+        "storoku"
+      ],
+      "aws_secretsmanager_secret_version.proxy_user_secret_version": [
+        "storoku"
+      ],
+      "aws_db_proxy_default_target_group.rds_proxy_target_group": [
+        "storoku"
+      ],
+      "aws_db_proxy_target.rds_proxy_target": [
+        "storoku"
+      ],
+      "aws_db_proxy.db_proxy": [
+        "storoku"
+      ],
+      "aws_security_group.bastion_host": [
+        "storoku"
+      ],
+      "aws_instance.database_bastion_host": [
+        "storoku"
+      ],
+      "aws_eip.bastion-host-eip": [
+        "storoku"
+      ],
+      "aws_key_pair.bastion-host-key-pair": [
+        "storoku"
+      ],
+      "aws_codedeploy_app.app": [
+        "storoku"
+      ],
+      "aws_codedeploy_deployment_group.deployment_group": [
+        "storoku"
+      ],
+      "aws_appautoscaling_target.dev_to_target": [
+        "storoku"
+      ],
+      "aws_appautoscaling_policy.dev_to_memory": [
+        "storoku"
+      ],
+      "aws_appautoscaling_policy.dev_to_cpu": [
+        "storoku"
+      ],
+      "aws_internet_gateway.vpc_internet_gateway": [
+        "storoku"
+      ],
+      "aws_route_table.vpc_public_route_table": [
+        "storoku"
+      ],
+      "aws_route_table.vpc_private_route_table": [
+        "storoku"
+      ],
+      "aws_route_table.vpc_db_route_table": [
+        "storoku"
+      ],
+      "aws_route_table.vpc_elasticache_route_table": [
+        "storoku"
+      ],
+      "aws_route_table_association.vpc_public_route_table_association": [
+        "storoku"
+      ],
+      "aws_route_table_association.vpc_private_route_table_association": [
+        "storoku"
+      ],
+      "aws_route_table_association.vpc_db_route_table_association": [
+        "storoku"
+      ],
+      "aws_route_table_association.vpc_elasticache_route_table_association": [
+        "storoku"
+      ],
+      "aws_route.vpc_public_internet_gateway": [
+        "storoku"
+      ],
+      "aws_route.vpc_private_nat_gateway": [
+        "storoku"
+      ],
+      "aws_eip.vpc_nat_ip": [
+        "storoku"
+      ],
+      "aws_nat_gateway.vpc_nat": [
+        "storoku"
+      ],
+      "aws_security_group.endpoint_sg": [
+        "storoku"
+      ],
+      "aws_secretsmanager_secret.ecs_secret": [
+        "storoku"
+      ],
+      "aws_secretsmanager_secret_version.ecs_secret_version": [
+        "storoku"
+      ],
+      "aws_cloudwatch_log_group.logs": [
+        "storoku"
+      ],
+      "aws_kms_key.encryption_cloudwatch": [
+        "storoku"
+      ],
+      "aws_kms_alias.encryption_cloudwatch": [
+        "storoku"
+      ],
+      "aws_lb.alb": [
+        "storoku"
+      ],
+      "aws_lb_target_group.blue_target_group": [
+        "storoku"
+      ],
+      "aws_lb_target_group.green_target_group": [
+        "storoku"
+      ],
+      "aws_alb_listener.listener": [
+        "storoku"
+      ],
+      "aws_lb_listener.redirect_https": [
+        "storoku"
+      ],
+      "aws_security_group.lb": [
+        "storoku"
+      ],
+      "aws_security_group.lambda": [
+        "storoku"
+      ]
+    },
+    "Terraform: iam": {
+      "aws_iam_role.hourly_backup": [
+        "bluesky-backup-webapp-server"
+      ],
+      "aws_iam_policy.hourly_backup": [
+        "bluesky-backup-webapp-server"
+      ],
+      "aws_iam_role_policy_attachment.hourly_backup": [
+        "bluesky-backup-webapp-server"
+      ],
+      "aws_iam_policy.task_external_dynamodb": [
+        "delegator"
+      ],
+      "aws_iam_role_policy_attachment.task_external_dynamodb": [
+        "delegator"
+      ],
+      "aws_iam_policy.task_external_dynamodb_scan_query": [
+        "etracker"
+      ],
+      "aws_iam_role_policy_attachment.task_external_dynamodb_scan_query": [
+        "etracker"
+      ],
+      "aws_iam_policy.task_legacy_dynamodb_query": [
+        "indexing-service"
+      ],
+      "aws_iam_role_policy_attachment.task_legacy_dynamodb_query": [
+        "indexing-service"
+      ],
+      "aws_iam_policy.task_legacy_s3_get": [
+        "indexing-service"
+      ],
+      "aws_iam_role_policy_attachment.task_legacy_s3_get": [
+        "indexing-service"
+      ],
+      "aws_iam_role.lambda_exec": [
+        "piri"
+      ],
+      "aws_iam_policy.lambda_dynamodb_put_get": [
+        "piri"
+      ],
+      "aws_iam_role_policy_attachment.lambda_dynamodb_put_get": [
+        "piri"
+      ],
+      "aws_iam_policy.lambda_s3_put_get": [
+        "piri"
+      ],
+      "aws_iam_role_policy_attachment.lambda_s3_put_get": [
+        "piri"
+      ],
+      "aws_iam_policy.lambda_logs": [
+        "piri"
+      ],
+      "aws_iam_role_policy_attachment.lambda_logs": [
+        "piri"
+      ],
+      "aws_iam_policy.lambda_ssm": [
+        "piri"
+      ],
+      "aws_iam_role_policy_attachment.lambda_ssm": [
+        "piri"
+      ],
+      "aws_iam_policy.lambda_sqs": [
+        "piri"
+      ],
+      "aws_iam_role_policy_attachment.lambda_sqs": [
+        "piri"
+      ],
+      "aws_iam_role.api_gateway_logging_role": [
+        "piri"
+      ],
+      "aws_iam_role_policy.api_gateway_logging_role_policy": [
+        "piri"
+      ],
+      "aws_iam_role.piri_instance": [
+        "piri"
+      ],
+      "aws_iam_role_policy.piri_instance": [
+        "piri"
+      ],
+      "aws_iam_instance_profile.piri": [
+        "piri"
+      ],
+      "aws_iam_role.codedeploy_role": [
+        "storetheindex",
+        "storoku"
+      ],
+      "aws_iam_role_policy_attachment.codedeploy_policy_attachement": [
+        "storetheindex",
+        "storoku"
+      ],
+      "aws_iam_role.rds_monitoring_role": [
+        "storoku"
+      ],
+      "aws_iam_role_policy_attachment.managed_rds_monitoring_policy_attachement": [
+        "storoku"
+      ],
+      "aws_iam_policy.rds_proxy_iam_policy": [
+        "storoku"
+      ],
+      "aws_iam_role_policy_attachment.rds_proxy_iam_attach": [
+        "storoku"
+      ],
+      "aws_iam_role.rds_proxy_iam_role": [
+        "storoku"
+      ],
+      "aws_iam_policy.rds_access_iam_policy": [
+        "storoku"
+      ],
+      "aws_iam_role.ecs_task_role": [
+        "storoku"
+      ],
+      "aws_iam_role.ecs_task_execution_role": [
+        "storoku"
+      ],
+      "aws_iam_role_policy_attachment.custom": [
+        "storoku"
+      ],
+      "aws_iam_policy.task_execution_s3_put_get": [
+        "storoku"
+      ],
+      "aws_iam_role_policy_attachment.task_execution_s3_put_get": [
+        "storoku"
+      ],
+      "aws_iam_policy.secrets_manager_read_policy": [
+        "storoku"
+      ],
+      "aws_iam_role_policy_attachment.attach_secrets_read_task_role": [
+        "storoku"
+      ],
+      "aws_iam_role_policy_attachment.attach_secrets_read_task_execution_role": [
+        "storoku"
+      ],
+      "aws_iam_policy.task_elasticache_connect": [
+        "storoku"
+      ],
+      "aws_iam_role_policy_attachment.task_elasticache_connect": [
+        "storoku"
+      ],
+      "aws_iam_policy.task_dynamodb_put_get": [
+        "storoku"
+      ],
+      "aws_iam_role_policy_attachment.task_dynamodb_put_get": [
+        "storoku"
+      ],
+      "aws_iam_policy.task_s3_put_get": [
+        "storoku"
+      ],
+      "aws_iam_role_policy_attachment.task_s3_put_get": [
+        "storoku"
+      ],
+      "aws_iam_policy.task_rds_connect": [
+        "storoku"
+      ],
+      "aws_iam_role_policy_attachment.task_rds_connect_attach": [
+        "storoku"
+      ],
+      "aws_iam_policy.task_sns": [
+        "storoku"
+      ],
+      "aws_iam_role_policy_attachment.task_sns": [
+        "storoku"
+      ],
+      "aws_iam_policy.task_sqs": [
+        "storoku"
+      ],
+      "aws_iam_role_policy_attachment.task_sqs": [
+        "storoku"
+      ],
+      "aws_iam_policy.task_protection": [
+        "tg-miniapp"
+      ],
+      "aws_iam_role_policy_attachment.task_protection": [
+        "tg-miniapp"
+      ]
+    },
+    "SQL Tables": {
+      "rotation_keys": [
+        "bluesky-backup-webapp-server"
+      ],
+      "refresh_locks": [
+        "bluesky-backup-webapp-server"
+      ],
+      "at_blobs": [
+        "bluesky-backup-webapp-server"
+      ],
+      "backups": [
+        "bluesky-backup-webapp-server"
+      ],
+      "snapshots": [
+        "bluesky-backup-webapp-server"
+      ],
+      "blobs": [
+        "bluesky-backup-webapp-server"
+      ],
+      "auth_sessions": [
+        "bluesky-backup-webapp-server"
+      ],
+      "auth_states": [
+        "bluesky-backup-webapp-server"
+      ],
+      "indexes": [
+        "guppy"
+      ],
+      "shards_in_indexes": [
+        "guppy"
+      ],
+      "node_uploads": [
+        "guppy"
+      ],
+      "nodes_in_shards": [
+        "guppy"
+      ],
+      "sources": [
+        "guppy"
+      ],
+      "spaces": [
+        "guppy"
+      ],
+      "space_sources": [
+        "guppy"
+      ],
+      "fs_entries": [
+        "guppy"
+      ],
+      "directory_children": [
+        "guppy"
+      ],
+      "nodes": [
+        "guppy"
+      ],
+      "links": [
+        "guppy"
+      ],
+      "uploads": [
+        "guppy"
+      ],
+      "shards": [
+        "guppy"
+      ],
+      "dag_scans": [
+        "guppy"
+      ],
+      "jobqueue": [
+        "piri"
+      ],
+      "jobqueue_dead": [
+        "piri"
+      ],
+      "queues": [
+        "piri"
+      ],
+      "job_ns": [
+        "piri"
+      ],
+      "jobs": [
+        "piri",
+        "tg-miniapp"
+      ],
+      "job_done": [
+        "piri"
+      ],
+      "job_dead": [
+        "piri"
+      ],
+      "machines": [
+        "piri"
+      ],
+      "task": [
+        "piri"
+      ],
+      "task_history": [
+        "piri"
+      ],
+      "task_follow": [
+        "piri"
+      ],
+      "task_impl": [
+        "piri"
+      ],
+      "parked_pieces": [
+        "piri"
+      ],
+      "parked_piece_refs": [
+        "piri"
+      ],
+      "pdp_services": [
+        "piri"
+      ],
+      "pdp_piece_uploads": [
+        "piri"
+      ],
+      "pdp_piecerefs": [
+        "piri"
+      ],
+      "pdp_proof_sets": [
+        "piri"
+      ],
+      "pdp_prove_tasks": [
+        "piri"
+      ],
+      "pdp_proofset_creates": [
+        "piri"
+      ],
+      "pdp_proofset_roots": [
+        "piri"
+      ],
+      "pdp_proofset_root_adds": [
+        "piri"
+      ],
+      "message_sends_eth": [
+        "piri"
+      ],
+      "message_send_eth_locks": [
+        "piri"
+      ],
+      "message_waits_eth": [
+        "piri"
+      ],
+      "users": [
+        "tg-miniapp"
+      ]
+    },
+    "PostgreSQL": {
+      "postgres": [
+        "bluesky-backup-webapp-server",
+        "tg-miniapp"
+      ],
+      "github.com/lib/pq": [
+        "guppy",
+        "spade"
+      ],
+      "github.com/jackc/pgx": [
+        "guppy",
+        "piri",
+        "spade"
+      ],
+      "gorm.io/driver/postgres": [
+        "piri"
+      ]
+    },
+    "IPFS Datastore": {
+      "github.com/ipfs/go-datastore": [
+        "debugger",
+        "delegator",
+        "etracker",
+        "fil-datasegment",
+        "filecoin-spade-client",
+        "go-ds-arc",
+        "go-libstoracha",
+        "go-mkdelegation",
+        "go-ucanto",
+        "guppy",
+        "indexing-service",
+        "ipni-publisher",
+        "network-tester",
+        "piri",
+        "piri-signing-service",
+        "spade",
+        "storetheindex"
+      ]
+    },
+    "AWS SDK": {
+      "github.com/aws/aws-sdk-go": [
+        "delegator",
+        "etracker",
+        "go-libstoracha",
+        "indexing-service",
+        "piri",
+        "spade",
+        "storetheindex"
+      ],
+      "github.com/aws/aws-sdk-go-v2": [
+        "delegator",
+        "etracker",
+        "go-libstoracha",
+        "indexing-service",
+        "piri",
+        "spade",
+        "storetheindex"
+      ]
+    },
+    "SQLite": {
+      "better-sqlite3": [
+        "eliza"
+      ],
+      "gorm.io/driver/sqlite": [
+        "piri"
+      ],
+      "github.com/mattn/go-sqlite3": [
+        "piri"
+      ]
+    },
+    "Redis": {
+      "REDIS_URL": [
+        "eliza"
+      ],
+      "github.com/redis/go-redis": [
+        "indexing-service"
+      ],
+      "redis": [
+        "storoku"
+      ]
+    },
+    "Blockchain RPC": {
+      "RPC_URL": [
+        "eliza"
+      ]
+    },
+    "Docker Services": {
+      "eliza ()": [
+        "eliza"
+      ],
+      "docs ()": [
+        "eliza"
+      ],
+      "graph-node (graphprotocol/graph-node)": [
+        "filecoin-services"
+      ],
+      "ipfs (ipfs/kubo:v0.17.0)": [
+        "filecoin-services"
+      ],
+      "postgres (postgres:14)": [
+        "filecoin-services"
+      ],
+      "filecoin-localdev ()": [
+        "filecoin-services"
+      ],
+      "ipfs0 (ipfs/go-ipfs:v0.13.0)": [
+        "reads"
+      ],
+      "postgres (postgres:16)": [
+        "tg-miniapp"
+      ]
+    },
+    "Embedded KV Store": {
+      "github.com/dgraph-io/badger": [
+        "filecoin-spade-client",
+        "guppy"
+      ],
+      "github.com/cockroachdb/pebble": [
+        "storetheindex"
+      ]
+    },
+    "KV Stores": {
+      "AUTH_TOKEN_METADATA": [
+        "freeway"
+      ],
+      "DENYLIST": [
+        "hoverboard"
+      ]
+    },
+    "Terraform: lambda": {
+      "aws_lambda_function.lambda": [
+        "piri"
+      ],
+      "aws_lambda_permission.api_gateway": [
+        "piri"
+      ],
+      "aws_lambda_event_source_mapping.ipni_publisher_source_mapping": [
+        "piri"
+      ],
+      "aws_lambda_event_source_mapping.ipni_advertisement_publishing_source_mapping": [
+        "piri"
+      ],
+      "aws_lambda_layer_version.psycopg2_lambda_layer": [
+        "storoku"
+      ]
+    },
+    "Terraform: dns": {
+      "aws_route53_record.cert_validation": [
+        "piri",
+        "storoku"
+      ],
+      "aws_route53_record.api_gateway": [
+        "piri"
+      ],
+      "aws_route53_zone.primary": [
+        "piri"
+      ],
+      "aws_route53_record.piri": [
+        "piri"
+      ],
+      "aws_route53_record.pdp_record": [
+        "piri"
+      ],
+      "aws_route53_record.alb": [
+        "storoku"
+      ],
+      "aws_route53_zone.network": [
+        "storoku"
+      ]
+    },
+    "Terraform: networking": {
+      "aws_vpc.main": [
+        "piri"
+      ],
+      "aws_subnet.public": [
+        "piri"
+      ],
+      "aws_vpc.pdp_vpc": [
+        "piri"
+      ],
+      "aws_subnet.pdp_public_subnet": [
+        "piri"
+      ],
+      "aws_db_subnet_group.rds": [
+        "storoku"
+      ],
+      "aws_vpc.vpc": [
+        "storoku"
+      ],
+      "aws_subnet.vpc_public_subnet": [
+        "storoku"
+      ],
+      "aws_subnet.vpc_private_subnet": [
+        "storoku"
+      ],
+      "aws_subnet.vpc_db_subnet": [
+        "storoku"
+      ],
+      "aws_subnet.vpc_elasticache_subnet": [
+        "storoku"
+      ],
+      "aws_vpc_endpoint.ecr": [
+        "storoku"
+      ],
+      "aws_vpc_endpoint.ecr_api": [
+        "storoku"
+      ],
+      "aws_vpc_endpoint.cloudwatch": [
+        "storoku"
+      ],
+      "aws_vpc_endpoint.dynamodb": [
+        "storoku"
+      ],
+      "aws_vpc_endpoint.sqs": [
+        "storoku"
+      ],
+      "aws_vpc_endpoint.sns": [
+        "storoku"
+      ],
+      "aws_vpc_endpoint.s3": [
+        "storoku"
+      ],
+      "aws_vpc_endpoint_route_table_association.s3_association": [
+        "storoku"
+      ]
+    },
+    "Terraform: ecs": {
+      "aws_ecs_task_definition.ingest": [
+        "storetheindex"
+      ],
+      "aws_ecs_service.ingest": [
+        "storetheindex"
+      ],
+      "aws_ecs_task_definition.app": [
+        "storoku"
+      ],
+      "aws_ecs_service.service": [
+        "storoku"
+      ],
+      "aws_ecs_cluster.cluster": [
+        "storoku"
+      ]
+    },
+    "MongoDB": {
+      "mongoose": [
+        "tg-miniapp"
+      ]
+    },
+    "Durable Objects": {
+      "CLOCK": [
+        "w3clock"
+      ],
+      "DurableClock0": [
+        "w3clock"
+      ],
+      "NAME_ROOM": [
+        "w3name"
+      ],
+      "NameRoom0": [
+        "w3name"
+      ],
+      "IPNS_RECORD": [
+        "w3name"
+      ],
+      "IPNSRecord": [
+        "w3name"
+      ]
+    },
+    "Event Bus": {
+      "event-bus": [
+        "w3infra"
+      ]
+    }
+  },
+  "per_repo": {
+    "agent-store-migration": [
+      {
+        "type": "js_dep_dynamodb",
+        "package": "@aws-sdk/client-dynamodb",
+        "version": "^3.922.0",
+        "file": "package.json"
+      },
+      {
+        "type": "js_dep_dynamodb",
+        "package": "@aws-sdk/lib-dynamodb",
+        "version": "^3.922.0",
+        "file": "package.json"
+      },
+      {
+        "type": "js_dep_s3",
+        "package": "@aws-sdk/client-s3",
+        "version": "^3.922.0",
+        "file": "package.json"
+      },
+      {
+        "type": "js_dep_sqs",
+        "package": "@aws-sdk/client-sqs",
+        "version": "^3.922.0",
+        "file": "package.json"
+      }
+    ],
+    "bluesky-backup-webapp-server": [
+      {
+        "type": "terraform_other",
+        "resource_type": "random_password",
+        "name": "backup_password",
+        "file": "deploy/app/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "random_password",
+        "name": "session_password",
+        "file": "deploy/app/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_cloudwatch_event_rule",
+        "name": "hourly_backup",
+        "file": "deploy/app/cron.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role",
+        "name": "hourly_backup",
+        "file": "deploy/app/cron.tf"
+      },
+      {
+        "type": "terraform_sqs",
+        "resource_type": "aws_sqs_queue",
+        "name": "hourly_backup_deadletter",
+        "file": "deploy/app/cron.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_policy",
+        "name": "hourly_backup",
+        "file": "deploy/app/cron.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role_policy_attachment",
+        "name": "hourly_backup",
+        "file": "deploy/app/cron.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_cloudwatch_event_target",
+        "name": "hourly_backup",
+        "file": "deploy/app/cron.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_cloudwatch_event_connection",
+        "name": "hourly_backup",
+        "file": "deploy/app/cron.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_cloudwatch_event_api_destination",
+        "name": "hourly_backup",
+        "file": "deploy/app/cron.tf"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "rotation_keys",
+        "columns": [
+          {
+            "name": "id",
+            "type": "TEXT"
+          },
+          {
+            "name": "storacha_account",
+            "type": "TEXT"
+          },
+          {
+            "name": "atproto_account",
+            "type": "TEXT"
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP"
+          }
+        ],
+        "file": "scripts/migrations/00004_rotation_keys/index.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "refresh_locks",
+        "columns": [
+          {
+            "name": "key",
+            "type": "TEXT"
+          },
+          {
+            "name": "value",
+            "type": "TEXT"
+          }
+        ],
+        "file": "scripts/migrations/00002_refresh_locks/index.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "at_blobs",
+        "columns": [
+          {
+            "name": "id",
+            "type": "UUID"
+          },
+          {
+            "name": "cid",
+            "type": "TEXT"
+          },
+          {
+            "name": "content_type",
+            "type": "TEXT"
+          },
+          {
+            "name": "backup_id",
+            "type": "UUID"
+          },
+          {
+            "name": "snapshot_id",
+            "type": "UUID"
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP"
+          }
+        ],
+        "file": "scripts/migrations/00003_at_blobs/index.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "backups",
+        "columns": [
+          {
+            "name": "id",
+            "type": "UUID"
+          },
+          {
+            "name": "account_did",
+            "type": "TEXT"
+          },
+          {
+            "name": "name",
+            "type": "TEXT"
+          },
+          {
+            "name": "atproto_account",
+            "type": "TEXT"
+          },
+          {
+            "name": "storacha_space",
+            "type": "TEXT"
+          },
+          {
+            "name": "include_repository",
+            "type": "BOOLEAN"
+          },
+          {
+            "name": "include_blobs",
+            "type": "BOOLEAN"
+          },
+          {
+            "name": "include_preferences",
+            "type": "BOOLEAN"
+          },
+          {
+            "name": "delegation_cid",
+            "type": "TEXT"
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP"
+          }
+        ],
+        "file": "scripts/migrations/00001_initial/index.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "snapshots",
+        "columns": [
+          {
+            "name": "id",
+            "type": "UUID"
+          },
+          {
+            "name": "backup_id",
+            "type": "UUID"
+          },
+          {
+            "name": "atproto_account",
+            "type": "TEXT"
+          },
+          {
+            "name": "repo_rev",
+            "type": "TEXT"
+          },
+          {
+            "name": "repository_status",
+            "type": "TEXT"
+          },
+          {
+            "name": "repository_status",
+            "type": "IN"
+          },
+          {
+            "name": "repository_cid",
+            "type": "TEXT"
+          },
+          {
+            "name": "blobs_status",
+            "type": "TEXT"
+          },
+          {
+            "name": "blobs_status",
+            "type": "IN"
+          },
+          {
+            "name": "preferences_status",
+            "type": "TEXT"
+          },
+          {
+            "name": "preferences_status",
+            "type": "IN"
+          },
+          {
+            "name": "preferences_cid",
+            "type": "TEXT"
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP"
+          }
+        ],
+        "file": "scripts/migrations/00001_initial/index.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "blobs",
+        "columns": [
+          {
+            "name": "cid",
+            "type": "TEXT"
+          },
+          {
+            "name": "content_type",
+            "type": "TEXT"
+          },
+          {
+            "name": "backup_id",
+            "type": "UUID"
+          },
+          {
+            "name": "snapshot_id",
+            "type": "UUID"
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP"
+          }
+        ],
+        "file": "scripts/migrations/00001_initial/index.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "auth_sessions",
+        "columns": [
+          {
+            "name": "key",
+            "type": "TEXT"
+          },
+          {
+            "name": "value",
+            "type": "TEXT"
+          },
+          {
+            "name": "expiration_ttl",
+            "type": "INTEGER"
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP"
+          }
+        ],
+        "file": "scripts/migrations/00001_initial/index.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "auth_states",
+        "columns": [
+          {
+            "name": "key",
+            "type": "TEXT"
+          },
+          {
+            "name": "value",
+            "type": "TEXT"
+          },
+          {
+            "name": "expiration_ttl",
+            "type": "INTEGER"
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP"
+          }
+        ],
+        "file": "scripts/migrations/00001_initial/index.sql"
+      },
+      {
+        "type": "js_dep_postgres",
+        "package": "postgres",
+        "version": "^3.4.5",
+        "file": "package.json"
+      }
+    ],
+    "content-claims": [
+      {
+        "type": "dynamodb_table",
+        "name": "claims-v1",
+        "file": "stacks/db.js"
+      },
+      {
+        "type": "s3_bucket",
+        "name": "claims-v1",
+        "file": "stacks/bucket.js"
+      },
+      {
+        "type": "js_dep_dynamodb",
+        "package": "@aws-sdk/client-dynamodb",
+        "version": "^3.563.0",
+        "file": "packages/infra/package.json"
+      },
+      {
+        "type": "js_dep_s3",
+        "package": "@aws-sdk/client-s3",
+        "version": "^3.563.0",
+        "file": "packages/infra/package.json"
+      }
+    ],
+    "debugger": [
+      {
+        "type": "go_driver_ipfs_datastore",
+        "driver": "github.com/ipfs/go-datastore",
+        "file": "go.mod"
+      }
+    ],
+    "delegator": [
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_policy",
+        "name": "task_external_dynamodb",
+        "file": "deploy/app/external.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role_policy_attachment",
+        "name": "task_external_dynamodb",
+        "file": "deploy/app/external.tf"
+      },
+      {
+        "type": "go_driver_aws_sdk",
+        "driver": "github.com/aws/aws-sdk-go",
+        "file": "go.mod"
+      },
+      {
+        "type": "go_driver_aws_sdk_v2",
+        "driver": "github.com/aws/aws-sdk-go-v2",
+        "file": "go.mod"
+      },
+      {
+        "type": "go_driver_ipfs_datastore",
+        "driver": "github.com/ipfs/go-datastore",
+        "file": "go.mod"
+      }
+    ],
+    "eliza": [
+      {
+        "type": "js_dep_sqlite",
+        "package": "better-sqlite3",
+        "version": "11.8.1",
+        "file": "packages/adapter-sqlite/package.json"
+      },
+      {
+        "type": "env_redis",
+        "var": "REDIS_URL",
+        "file": ".env.example"
+      },
+      {
+        "type": "env_bucket",
+        "var": "S3_BUCKET",
+        "file": ".env.example"
+      },
+      {
+        "type": "env_blockchain_rpc",
+        "var": "RPC_URL",
+        "file": ".env.example"
+      },
+      {
+        "type": "env_blockchain_rpc",
+        "var": "RPC_URL",
+        "file": ".env.example"
+      },
+      {
+        "type": "env_blockchain_rpc",
+        "var": "RPC_URL",
+        "file": ".env.example"
+      },
+      {
+        "type": "env_blockchain_rpc",
+        "var": "RPC_URL",
+        "file": ".env.example"
+      },
+      {
+        "type": "env_blockchain_rpc",
+        "var": "RPC_URL",
+        "file": ".env.example"
+      },
+      {
+        "type": "env_blockchain_rpc",
+        "var": "RPC_URL",
+        "file": ".env.example"
+      },
+      {
+        "type": "env_blockchain_rpc",
+        "var": "RPC_URL",
+        "file": ".env.example"
+      },
+      {
+        "type": "env_blockchain_rpc",
+        "var": "RPC_URL",
+        "file": ".env.example"
+      },
+      {
+        "type": "env_blockchain_rpc",
+        "var": "RPC_URL",
+        "file": ".env.example"
+      },
+      {
+        "type": "env_blockchain_rpc",
+        "var": "RPC_URL",
+        "file": ".env.example"
+      },
+      {
+        "type": "env_blockchain_rpc",
+        "var": "RPC_URL",
+        "file": ".env.example"
+      },
+      {
+        "type": "env_blockchain_rpc",
+        "var": "RPC_URL",
+        "file": ".env.example"
+      },
+      {
+        "type": "env_blockchain_rpc",
+        "var": "RPC_URL",
+        "file": ".env.example"
+      },
+      {
+        "type": "env_blockchain_rpc",
+        "var": "RPC_URL",
+        "file": ".env.example"
+      },
+      {
+        "type": "env_blockchain_rpc",
+        "var": "RPC_URL",
+        "file": ".env.example"
+      },
+      {
+        "type": "env_blockchain_rpc",
+        "var": "RPC_URL",
+        "file": ".env.example"
+      },
+      {
+        "type": "docker_service",
+        "name": "eliza",
+        "image": "",
+        "file": "docker-compose.yaml"
+      },
+      {
+        "type": "docker_service",
+        "name": "docs",
+        "image": "",
+        "file": "docker-compose-docs.yaml"
+      }
+    ],
+    "etracker": [
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_policy",
+        "name": "task_external_dynamodb_scan_query",
+        "file": "deploy/app/external.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role_policy_attachment",
+        "name": "task_external_dynamodb_scan_query",
+        "file": "deploy/app/external.tf"
+      },
+      {
+        "type": "go_driver_aws_sdk",
+        "driver": "github.com/aws/aws-sdk-go",
+        "file": "go.mod"
+      },
+      {
+        "type": "go_driver_aws_sdk_v2",
+        "driver": "github.com/aws/aws-sdk-go-v2",
+        "file": "go.mod"
+      },
+      {
+        "type": "go_driver_ipfs_datastore",
+        "driver": "github.com/ipfs/go-datastore",
+        "file": "go.mod"
+      }
+    ],
+    "fil-datasegment": [
+      {
+        "type": "go_driver_ipfs_datastore",
+        "driver": "github.com/ipfs/go-datastore",
+        "file": "go.mod"
+      }
+    ],
+    "filecoin-services": [
+      {
+        "type": "docker_service",
+        "name": "graph-node",
+        "image": "graphprotocol/graph-node",
+        "file": "subgraph/docker-compose.yml"
+      },
+      {
+        "type": "docker_service",
+        "name": "ipfs",
+        "image": "ipfs/kubo:v0.17.0",
+        "file": "subgraph/docker-compose.yml"
+      },
+      {
+        "type": "docker_service",
+        "name": "postgres",
+        "image": "postgres:14",
+        "file": "subgraph/docker-compose.yml"
+      },
+      {
+        "type": "docker_service",
+        "name": "filecoin-localdev",
+        "image": "",
+        "file": "service_contracts/localdev/docker-compose.yml"
+      }
+    ],
+    "filecoin-spade-client": [
+      {
+        "type": "go_driver_ipfs_datastore",
+        "driver": "github.com/ipfs/go-datastore",
+        "file": "go.mod"
+      },
+      {
+        "type": "go_driver_badger",
+        "driver": "github.com/dgraph-io/badger",
+        "file": "go.mod"
+      }
+    ],
+    "freeway": [
+      {
+        "type": "kv_namespace",
+        "binding": "AUTH_TOKEN_METADATA",
+        "id": "f848730e45d94f17bcaf3b6d0915da40",
+        "file": "wrangler.toml"
+      }
+    ],
+    "go-ds-arc": [
+      {
+        "type": "go_driver_ipfs_datastore",
+        "driver": "github.com/ipfs/go-datastore",
+        "file": "go.mod"
+      }
+    ],
+    "go-libstoracha": [
+      {
+        "type": "go_driver_aws_sdk",
+        "driver": "github.com/aws/aws-sdk-go",
+        "file": "go.mod"
+      },
+      {
+        "type": "go_driver_aws_sdk_v2",
+        "driver": "github.com/aws/aws-sdk-go-v2",
+        "file": "go.mod"
+      },
+      {
+        "type": "go_driver_ipfs_datastore",
+        "driver": "github.com/ipfs/go-datastore",
+        "file": "go.mod"
+      }
+    ],
+    "go-mkdelegation": [
+      {
+        "type": "go_driver_ipfs_datastore",
+        "driver": "github.com/ipfs/go-datastore",
+        "file": "go.mod"
+      }
+    ],
+    "go-ucanto": [
+      {
+        "type": "go_driver_ipfs_datastore",
+        "driver": "github.com/ipfs/go-datastore",
+        "file": "go.mod"
+      }
+    ],
+    "guppy": [
+      {
+        "type": "sql_table",
+        "table_name": "indexes",
+        "columns": [
+          {
+            "name": "id",
+            "type": "BLOB"
+          },
+          {
+            "name": "upload_id",
+            "type": "BLOB"
+          },
+          {
+            "name": "digest",
+            "type": "BLOB"
+          },
+          {
+            "name": "piece_cid",
+            "type": "BLOB"
+          },
+          {
+            "name": "size",
+            "type": "INTEGER"
+          },
+          {
+            "name": "slice_count",
+            "type": "INTEGER"
+          },
+          {
+            "name": "state",
+            "type": "TEXT"
+          },
+          {
+            "name": "location_inv",
+            "type": "BLOB"
+          },
+          {
+            "name": "pdp_accept_inv",
+            "type": "BLOB"
+          }
+        ],
+        "file": "pkg/preparation/sqlrepo/migrations/20251219063531_indexes_listed_in_db.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "shards_in_indexes",
+        "columns": [
+          {
+            "name": "shard_id",
+            "type": "BLOB"
+          },
+          {
+            "name": "index_id",
+            "type": "BLOB"
+          }
+        ],
+        "file": "pkg/preparation/sqlrepo/migrations/20251219063531_indexes_listed_in_db.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "node_uploads",
+        "columns": [
+          {
+            "name": "node_cid",
+            "type": "BLOB"
+          },
+          {
+            "name": "space_did",
+            "type": "BLOB"
+          },
+          {
+            "name": "upload_id",
+            "type": "BLOB"
+          },
+          {
+            "name": "shard_id",
+            "type": "BLOB"
+          },
+          {
+            "name": "shard_offset",
+            "type": "INTEGER"
+          }
+        ],
+        "file": "pkg/preparation/sqlrepo/migrations/20251228120000_rename_nodes_in_shards_to_node_uploads.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "nodes_in_shards",
+        "columns": [
+          {
+            "name": "node_cid",
+            "type": "BLOB"
+          },
+          {
+            "name": "space_did",
+            "type": "BLOB"
+          },
+          {
+            "name": "shard_id",
+            "type": "BLOB"
+          },
+          {
+            "name": "shard_offset",
+            "type": "INTEGER"
+          }
+        ],
+        "file": "pkg/preparation/sqlrepo/migrations/20251228120000_rename_nodes_in_shards_to_node_uploads.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "sources",
+        "columns": [
+          {
+            "name": "id",
+            "type": "BLOB"
+          },
+          {
+            "name": "name",
+            "type": "TEXT"
+          },
+          {
+            "name": "kind",
+            "type": "TEXT"
+          },
+          {
+            "name": "path",
+            "type": "TEXT"
+          },
+          {
+            "name": "connection_params",
+            "type": "BLOB"
+          },
+          {
+            "name": "created_at",
+            "type": "INTEGER"
+          },
+          {
+            "name": "updated_at",
+            "type": "INTEGER"
+          }
+        ],
+        "file": "pkg/preparation/sqlrepo/migrations/20240101000000_init_schema.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "spaces",
+        "columns": [
+          {
+            "name": "did",
+            "type": "BLOB"
+          },
+          {
+            "name": "name",
+            "type": "TEXT"
+          },
+          {
+            "name": "created_at",
+            "type": "INTEGER"
+          },
+          {
+            "name": "shard_size",
+            "type": "INTEGER"
+          }
+        ],
+        "file": "pkg/preparation/sqlrepo/migrations/20240101000000_init_schema.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "space_sources",
+        "columns": [
+          {
+            "name": "source_id",
+            "type": "BLOB"
+          },
+          {
+            "name": "space_did",
+            "type": "BLOB"
+          }
+        ],
+        "file": "pkg/preparation/sqlrepo/migrations/20240101000000_init_schema.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "fs_entries",
+        "columns": [
+          {
+            "name": "id",
+            "type": "BLOB"
+          },
+          {
+            "name": "source_id",
+            "type": "BLOB"
+          },
+          {
+            "name": "space_did",
+            "type": "BLOB"
+          },
+          {
+            "name": "path",
+            "type": "TEXT"
+          },
+          {
+            "name": "last_modified",
+            "type": "INTEGER"
+          },
+          {
+            "name": "mode",
+            "type": "INTEGER"
+          },
+          {
+            "name": "size",
+            "type": "INTEGER"
+          },
+          {
+            "name": "checksum",
+            "type": "BLOB"
+          }
+        ],
+        "file": "pkg/preparation/sqlrepo/migrations/20240101000000_init_schema.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "directory_children",
+        "columns": [
+          {
+            "name": "directory_id",
+            "type": "BLOB"
+          },
+          {
+            "name": "child_id",
+            "type": "BLOB"
+          }
+        ],
+        "file": "pkg/preparation/sqlrepo/migrations/20240101000000_init_schema.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "nodes",
+        "columns": [
+          {
+            "name": "cid",
+            "type": "BLOB"
+          },
+          {
+            "name": "space_did",
+            "type": "BLOB"
+          },
+          {
+            "name": "size",
+            "type": "INTEGER"
+          },
+          {
+            "name": "ufsdata",
+            "type": "BLOB"
+          },
+          {
+            "name": "path",
+            "type": "TEXT"
+          },
+          {
+            "name": "source_id",
+            "type": "BLOB"
+          },
+          {
+            "name": "offset",
+            "type": "INTEGER"
+          },
+          {
+            "name": "ufsdata",
+            "type": "IS"
+          },
+          {
+            "name": "AND",
+            "type": "path"
+          },
+          {
+            "name": "AND",
+            "type": "source_id"
+          },
+          {
+            "name": "path",
+            "type": "IS"
+          },
+          {
+            "name": "AND",
+            "type": "source_id"
+          },
+          {
+            "name": "AND",
+            "type": "ufsdata"
+          }
+        ],
+        "file": "pkg/preparation/sqlrepo/migrations/20240101000000_init_schema.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "links",
+        "columns": [
+          {
+            "name": "name",
+            "type": "TEXT"
+          },
+          {
+            "name": "t_size",
+            "type": "INTEGER"
+          },
+          {
+            "name": "hash",
+            "type": "BLOB"
+          },
+          {
+            "name": "parent_id",
+            "type": "BLOB"
+          },
+          {
+            "name": "space_did",
+            "type": "BLOB"
+          },
+          {
+            "name": "ordering",
+            "type": "INTEGER"
+          }
+        ],
+        "file": "pkg/preparation/sqlrepo/migrations/20240101000000_init_schema.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "uploads",
+        "columns": [
+          {
+            "name": "id",
+            "type": "BLOB"
+          },
+          {
+            "name": "space_did",
+            "type": "BLOB"
+          },
+          {
+            "name": "source_id",
+            "type": "BLOB"
+          },
+          {
+            "name": "created_at",
+            "type": "INTEGER"
+          },
+          {
+            "name": "updated_at",
+            "type": "INTEGER"
+          },
+          {
+            "name": "root_fs_entry_id",
+            "type": "BLOB"
+          },
+          {
+            "name": "root_cid",
+            "type": "BLOB"
+          },
+          {
+            "name": "SET",
+            "type": "NULL"
+          }
+        ],
+        "file": "pkg/preparation/sqlrepo/migrations/20240101000000_init_schema.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "shards",
+        "columns": [
+          {
+            "name": "id",
+            "type": "BLOB"
+          },
+          {
+            "name": "upload_id",
+            "type": "BLOB"
+          },
+          {
+            "name": "size",
+            "type": "INTEGER"
+          },
+          {
+            "name": "digest",
+            "type": "BLOB"
+          },
+          {
+            "name": "state",
+            "type": "TEXT"
+          }
+        ],
+        "file": "pkg/preparation/sqlrepo/migrations/20240101000000_init_schema.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "dag_scans",
+        "columns": [
+          {
+            "name": "fs_entry_id",
+            "type": "BLOB"
+          },
+          {
+            "name": "upload_id",
+            "type": "BLOB"
+          },
+          {
+            "name": "created_at",
+            "type": "INTEGER"
+          },
+          {
+            "name": "updated_at",
+            "type": "INTEGER"
+          },
+          {
+            "name": "cid",
+            "type": "BLOB"
+          },
+          {
+            "name": "space_did",
+            "type": "BLOB"
+          },
+          {
+            "name": "kind",
+            "type": "TEXT"
+          }
+        ],
+        "file": "pkg/preparation/sqlrepo/migrations/20240101000000_init_schema.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "nodes_in_shards",
+        "columns": [
+          {
+            "name": "node_cid",
+            "type": "BLOB"
+          },
+          {
+            "name": "space_did",
+            "type": "BLOB"
+          },
+          {
+            "name": "shard_id",
+            "type": "BLOB"
+          },
+          {
+            "name": "shard_offset",
+            "type": "INTEGER"
+          }
+        ],
+        "file": "pkg/preparation/sqlrepo/migrations/20240101000000_init_schema.sql"
+      },
+      {
+        "type": "go_driver_postgres",
+        "driver": "github.com/lib/pq",
+        "file": "go.mod"
+      },
+      {
+        "type": "go_driver_postgres",
+        "driver": "github.com/jackc/pgx",
+        "file": "go.mod"
+      },
+      {
+        "type": "go_driver_ipfs_datastore",
+        "driver": "github.com/ipfs/go-datastore",
+        "file": "go.mod"
+      },
+      {
+        "type": "go_driver_badger",
+        "driver": "github.com/dgraph-io/badger",
+        "file": "go.mod"
+      }
+    ],
+    "hoverboard": [
+      {
+        "type": "kv_namespace",
+        "binding": "DENYLIST",
+        "id": "f4eb0eca32e14e28b643604a82e00cb3",
+        "file": "wrangler.toml"
+      }
+    ],
+    "indexing-service": [
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_policy",
+        "name": "task_legacy_dynamodb_query",
+        "file": "deploy/app/legacyclaims.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role_policy_attachment",
+        "name": "task_legacy_dynamodb_query",
+        "file": "deploy/app/legacyclaims.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_policy",
+        "name": "task_legacy_s3_get",
+        "file": "deploy/app/legacyclaims.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role_policy_attachment",
+        "name": "task_legacy_s3_get",
+        "file": "deploy/app/legacyclaims.tf"
+      },
+      {
+        "type": "go_driver_redis",
+        "driver": "github.com/redis/go-redis",
+        "file": "go.mod"
+      },
+      {
+        "type": "go_driver_aws_sdk",
+        "driver": "github.com/aws/aws-sdk-go",
+        "file": "go.mod"
+      },
+      {
+        "type": "go_driver_aws_sdk_v2",
+        "driver": "github.com/aws/aws-sdk-go-v2",
+        "file": "go.mod"
+      },
+      {
+        "type": "go_driver_ipfs_datastore",
+        "driver": "github.com/ipfs/go-datastore",
+        "file": "go.mod"
+      }
+    ],
+    "ipni-publisher": [
+      {
+        "type": "go_driver_ipfs_datastore",
+        "driver": "github.com/ipfs/go-datastore",
+        "file": "go.mod"
+      }
+    ],
+    "legacy-spaces-migration": [
+      {
+        "type": "js_dep_dynamodb",
+        "package": "@aws-sdk/client-dynamodb",
+        "version": "^3.922.0",
+        "file": "package.json"
+      },
+      {
+        "type": "js_dep_dynamodb",
+        "package": "@aws-sdk/lib-dynamodb",
+        "version": "^3.922.0",
+        "file": "package.json"
+      },
+      {
+        "type": "js_dep_s3",
+        "package": "@aws-sdk/client-s3",
+        "version": "^3.922.0",
+        "file": "package.json"
+      },
+      {
+        "type": "js_dep_sqs",
+        "package": "@aws-sdk/client-sqs",
+        "version": "^3.922.0",
+        "file": "package.json"
+      },
+      {
+        "type": "env_dynamodb",
+        "var": "TABLE_NAME",
+        "file": ".env.example"
+      },
+      {
+        "type": "env_dynamodb",
+        "var": "TABLE_NAME",
+        "file": ".env.example"
+      },
+      {
+        "type": "env_dynamodb",
+        "var": "TABLE_NAME",
+        "file": ".env.example"
+      },
+      {
+        "type": "env_dynamodb",
+        "var": "TABLE_NAME",
+        "file": ".env.example"
+      },
+      {
+        "type": "env_dynamodb",
+        "var": "TABLE_NAME",
+        "file": ".env.example"
+      }
+    ],
+    "network-tester": [
+      {
+        "type": "go_driver_ipfs_datastore",
+        "driver": "github.com/ipfs/go-datastore",
+        "file": "go.mod"
+      }
+    ],
+    "piri": [
+      {
+        "type": "terraform_s3",
+        "resource_type": "aws_s3_bucket",
+        "name": "ipni_store_bucket",
+        "file": "deploy/app/s3.tf"
+      },
+      {
+        "type": "terraform_s3",
+        "resource_type": "aws_s3_bucket_public_access_block",
+        "name": "ipni_store_bucket",
+        "file": "deploy/app/s3.tf"
+      },
+      {
+        "type": "terraform_s3",
+        "resource_type": "aws_s3_bucket_cors_configuration",
+        "name": "ipni_store_cors",
+        "file": "deploy/app/s3.tf"
+      },
+      {
+        "type": "terraform_s3",
+        "resource_type": "aws_s3_bucket_policy",
+        "name": "ipni_store_policy",
+        "file": "deploy/app/s3.tf"
+      },
+      {
+        "type": "terraform_s3",
+        "resource_type": "aws_s3_bucket",
+        "name": "blob_store_bucket",
+        "file": "deploy/app/s3.tf"
+      },
+      {
+        "type": "terraform_s3",
+        "resource_type": "aws_s3_bucket_public_access_block",
+        "name": "blob_store_bucket",
+        "file": "deploy/app/s3.tf"
+      },
+      {
+        "type": "terraform_s3",
+        "resource_type": "aws_s3_bucket_cors_configuration",
+        "name": "blob_store_cors",
+        "file": "deploy/app/s3.tf"
+      },
+      {
+        "type": "terraform_s3",
+        "resource_type": "aws_s3_bucket_policy",
+        "name": "blob_store_policy",
+        "file": "deploy/app/s3.tf"
+      },
+      {
+        "type": "terraform_s3",
+        "resource_type": "aws_s3_bucket",
+        "name": "receipt_store_bucket",
+        "file": "deploy/app/s3.tf"
+      },
+      {
+        "type": "terraform_s3",
+        "resource_type": "aws_s3_bucket",
+        "name": "claim_store_bucket",
+        "file": "deploy/app/s3.tf"
+      },
+      {
+        "type": "terraform_s3",
+        "resource_type": "aws_s3_bucket",
+        "name": "ipni_publisher",
+        "file": "deploy/app/s3.tf"
+      },
+      {
+        "type": "terraform_s3",
+        "resource_type": "aws_s3_bucket_lifecycle_configuration",
+        "name": "ipni_publisher_lifecycle",
+        "file": "deploy/app/s3.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_ssm_parameter",
+        "name": "private_key",
+        "file": "deploy/app/secrets.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_ssm_parameter",
+        "name": "external_blob_bucket_access_key_id",
+        "file": "deploy/app/secrets.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_ssm_parameter",
+        "name": "external_blob_bucket_secret_access_key",
+        "file": "deploy/app/secrets.tf"
+      },
+      {
+        "type": "terraform_lambda",
+        "resource_type": "aws_lambda_function",
+        "name": "lambda",
+        "file": "deploy/app/lambda.tf"
+      },
+      {
+        "type": "terraform_lambda",
+        "resource_type": "aws_lambda_permission",
+        "name": "api_gateway",
+        "file": "deploy/app/lambda.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_cloudwatch_log_group",
+        "name": "lambda_log_group",
+        "file": "deploy/app/lambda.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role",
+        "name": "lambda_exec",
+        "file": "deploy/app/lambda.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_policy",
+        "name": "lambda_dynamodb_put_get",
+        "file": "deploy/app/lambda.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role_policy_attachment",
+        "name": "lambda_dynamodb_put_get",
+        "file": "deploy/app/lambda.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_policy",
+        "name": "lambda_s3_put_get",
+        "file": "deploy/app/lambda.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role_policy_attachment",
+        "name": "lambda_s3_put_get",
+        "file": "deploy/app/lambda.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_policy",
+        "name": "lambda_logs",
+        "file": "deploy/app/lambda.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role_policy_attachment",
+        "name": "lambda_logs",
+        "file": "deploy/app/lambda.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_policy",
+        "name": "lambda_ssm",
+        "file": "deploy/app/lambda.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role_policy_attachment",
+        "name": "lambda_ssm",
+        "file": "deploy/app/lambda.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_policy",
+        "name": "lambda_sqs",
+        "file": "deploy/app/lambda.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role_policy_attachment",
+        "name": "lambda_sqs",
+        "file": "deploy/app/lambda.tf"
+      },
+      {
+        "type": "terraform_lambda",
+        "resource_type": "aws_lambda_event_source_mapping",
+        "name": "ipni_publisher_source_mapping",
+        "file": "deploy/app/lambda.tf"
+      },
+      {
+        "type": "terraform_lambda",
+        "resource_type": "aws_lambda_event_source_mapping",
+        "name": "ipni_advertisement_publishing_source_mapping",
+        "file": "deploy/app/lambda.tf"
+      },
+      {
+        "type": "terraform_sqs",
+        "resource_type": "aws_sqs_queue",
+        "name": "ipni_publisher",
+        "file": "deploy/app/sqs.tf"
+      },
+      {
+        "type": "terraform_sqs",
+        "resource_type": "aws_sqs_queue",
+        "name": "ipni_publisher_deadletter",
+        "file": "deploy/app/sqs.tf"
+      },
+      {
+        "type": "terraform_sqs",
+        "resource_type": "aws_sqs_queue_redrive_allow_policy",
+        "name": "ipni_publisher",
+        "file": "deploy/app/sqs.tf"
+      },
+      {
+        "type": "terraform_sqs",
+        "resource_type": "aws_sqs_queue",
+        "name": "ipni_advertisement_publishing",
+        "file": "deploy/app/sqs.tf"
+      },
+      {
+        "type": "terraform_sqs",
+        "resource_type": "aws_sqs_queue",
+        "name": "ipni_advertisement_publishing_deadletter",
+        "file": "deploy/app/sqs.tf"
+      },
+      {
+        "type": "terraform_sqs",
+        "resource_type": "aws_sqs_queue_redrive_allow_policy",
+        "name": "ipni_advertisement_publishing",
+        "file": "deploy/app/sqs.tf"
+      },
+      {
+        "type": "terraform_dynamodb",
+        "resource_type": "aws_dynamodb_table",
+        "name": "metadata",
+        "file": "deploy/app/dynamodb.tf"
+      },
+      {
+        "type": "terraform_dynamodb",
+        "resource_type": "aws_dynamodb_table",
+        "name": "chunk_links",
+        "file": "deploy/app/dynamodb.tf"
+      },
+      {
+        "type": "terraform_dynamodb",
+        "resource_type": "aws_dynamodb_table",
+        "name": "ran_link_index",
+        "file": "deploy/app/dynamodb.tf"
+      },
+      {
+        "type": "terraform_dynamodb",
+        "resource_type": "aws_dynamodb_table",
+        "name": "allocation_store",
+        "file": "deploy/app/dynamodb.tf"
+      },
+      {
+        "type": "terraform_dynamodb",
+        "resource_type": "aws_dynamodb_table",
+        "name": "acceptance_store",
+        "file": "deploy/app/dynamodb.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_apigatewayv2_api",
+        "name": "api",
+        "file": "deploy/app/gateway.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_apigatewayv2_route",
+        "name": "routes",
+        "file": "deploy/app/gateway.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_apigatewayv2_integration",
+        "name": "integrations",
+        "file": "deploy/app/gateway.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_apigatewayv2_deployment",
+        "name": "deployment",
+        "file": "deploy/app/gateway.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_acm_certificate",
+        "name": "cert",
+        "file": "deploy/app/gateway.tf"
+      },
+      {
+        "type": "terraform_dns",
+        "resource_type": "aws_route53_record",
+        "name": "cert_validation",
+        "file": "deploy/app/gateway.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_acm_certificate_validation",
+        "name": "cert",
+        "file": "deploy/app/gateway.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_apigatewayv2_domain_name",
+        "name": "custom_domain",
+        "file": "deploy/app/gateway.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_apigatewayv2_stage",
+        "name": "stage",
+        "file": "deploy/app/gateway.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_apigatewayv2_api_mapping",
+        "name": "api_mapping",
+        "file": "deploy/app/gateway.tf"
+      },
+      {
+        "type": "terraform_dns",
+        "resource_type": "aws_route53_record",
+        "name": "api_gateway",
+        "file": "deploy/app/gateway.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_api_gateway_account",
+        "name": "api_gateway_account",
+        "file": "deploy/app/gateway.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role",
+        "name": "api_gateway_logging_role",
+        "file": "deploy/app/gateway.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role_policy",
+        "name": "api_gateway_logging_role_policy",
+        "file": "deploy/app/gateway.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_cloudwatch_log_group",
+        "name": "access_logs",
+        "file": "deploy/app/gateway.tf"
+      },
+      {
+        "type": "terraform_dns",
+        "resource_type": "aws_route53_zone",
+        "name": "primary",
+        "file": "deploy/shared/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_instance",
+        "name": "piri",
+        "file": "deploy/full-node/modules/piri-instance/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_ebs_volume",
+        "name": "piri_data",
+        "file": "deploy/full-node/modules/piri-instance/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_ebs_volume",
+        "name": "piri_data_protected",
+        "file": "deploy/full-node/modules/piri-instance/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_volume_attachment",
+        "name": "piri_data",
+        "file": "deploy/full-node/modules/piri-instance/main.tf"
+      },
+      {
+        "type": "terraform_dns",
+        "resource_type": "aws_route53_record",
+        "name": "piri",
+        "file": "deploy/full-node/modules/piri-instance/main.tf"
+      },
+      {
+        "type": "terraform_networking",
+        "resource_type": "aws_vpc",
+        "name": "main",
+        "file": "deploy/full-node/modules/base-infrastructure/main.tf"
+      },
+      {
+        "type": "terraform_networking",
+        "resource_type": "aws_subnet",
+        "name": "public",
+        "file": "deploy/full-node/modules/base-infrastructure/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_internet_gateway",
+        "name": "main",
+        "file": "deploy/full-node/modules/base-infrastructure/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_route_table",
+        "name": "public",
+        "file": "deploy/full-node/modules/base-infrastructure/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_route_table_association",
+        "name": "public",
+        "file": "deploy/full-node/modules/base-infrastructure/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_security_group",
+        "name": "piri",
+        "file": "deploy/full-node/modules/base-infrastructure/main.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role",
+        "name": "piri_instance",
+        "file": "deploy/full-node/modules/base-infrastructure/main.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role_policy",
+        "name": "piri_instance",
+        "file": "deploy/full-node/modules/base-infrastructure/main.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_instance_profile",
+        "name": "piri",
+        "file": "deploy/full-node/modules/base-infrastructure/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_security_group",
+        "name": "pdp_node_sg",
+        "file": "deploy/pdp/main.tf"
+      },
+      {
+        "type": "terraform_dns",
+        "resource_type": "aws_route53_record",
+        "name": "pdp_record",
+        "file": "deploy/pdp/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_instance",
+        "name": "pdp_node",
+        "file": "deploy/pdp/main.tf"
+      },
+      {
+        "type": "terraform_networking",
+        "resource_type": "aws_vpc",
+        "name": "pdp_vpc",
+        "file": "deploy/pdp/vpc.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_internet_gateway",
+        "name": "pdp_igw",
+        "file": "deploy/pdp/vpc.tf"
+      },
+      {
+        "type": "terraform_networking",
+        "resource_type": "aws_subnet",
+        "name": "pdp_public_subnet",
+        "file": "deploy/pdp/vpc.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_route_table",
+        "name": "pdp_public_rt",
+        "file": "deploy/pdp/vpc.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_route",
+        "name": "pdp_public_route_igw",
+        "file": "deploy/pdp/vpc.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_route_table_association",
+        "name": "pdp_public_rta",
+        "file": "deploy/pdp/vpc.tf"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "jobqueue",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text"
+          },
+          {
+            "name": "created",
+            "type": "text"
+          },
+          {
+            "name": "updated",
+            "type": "text"
+          },
+          {
+            "name": "queue",
+            "type": "text"
+          },
+          {
+            "name": "body",
+            "type": "blob"
+          },
+          {
+            "name": "timeout",
+            "type": "text"
+          },
+          {
+            "name": "received",
+            "type": "integer"
+          }
+        ],
+        "file": "lib/jobqueue/queue/schema.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "jobqueue_dead",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text"
+          },
+          {
+            "name": "created",
+            "type": "text"
+          },
+          {
+            "name": "updated",
+            "type": "text"
+          },
+          {
+            "name": "queue",
+            "type": "text"
+          },
+          {
+            "name": "body",
+            "type": "blob"
+          },
+          {
+            "name": "timeout",
+            "type": "text"
+          },
+          {
+            "name": "received",
+            "type": "integer"
+          },
+          {
+            "name": "job_name",
+            "type": "text"
+          },
+          {
+            "name": "failure_reason",
+            "type": "text"
+          },
+          {
+            "name": "error_message",
+            "type": "text"
+          },
+          {
+            "name": "moved_at",
+            "type": "text"
+          }
+        ],
+        "file": "lib/jobqueue/queue/schema.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "jobqueue",
+        "columns": [
+          {
+            "name": "id",
+            "type": "TEXT"
+          },
+          {
+            "name": "created",
+            "type": "TIMESTAMPTZ"
+          },
+          {
+            "name": "updated",
+            "type": "TIMESTAMPTZ"
+          },
+          {
+            "name": "queue",
+            "type": "TEXT"
+          },
+          {
+            "name": "body",
+            "type": "BYTEA"
+          },
+          {
+            "name": "timeout",
+            "type": "TIMESTAMPTZ"
+          },
+          {
+            "name": "received",
+            "type": "INTEGER"
+          }
+        ],
+        "file": "lib/jobqueue/queue/schema.postgres.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "jobqueue_dead",
+        "columns": [
+          {
+            "name": "id",
+            "type": "TEXT"
+          },
+          {
+            "name": "created",
+            "type": "TIMESTAMPTZ"
+          },
+          {
+            "name": "updated",
+            "type": "TIMESTAMPTZ"
+          },
+          {
+            "name": "queue",
+            "type": "TEXT"
+          },
+          {
+            "name": "body",
+            "type": "BYTEA"
+          },
+          {
+            "name": "timeout",
+            "type": "TIMESTAMPTZ"
+          },
+          {
+            "name": "received",
+            "type": "INTEGER"
+          },
+          {
+            "name": "job_name",
+            "type": "TEXT"
+          },
+          {
+            "name": "failure_reason",
+            "type": "TEXT"
+          },
+          {
+            "name": "error_message",
+            "type": "TEXT"
+          },
+          {
+            "name": "moved_at",
+            "type": "TIMESTAMPTZ"
+          }
+        ],
+        "file": "lib/jobqueue/queue/schema.postgres.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "queues",
+        "columns": [
+          {
+            "name": "queue",
+            "type": "TEXT"
+          }
+        ],
+        "file": "lib/jobqueue/dedup/schema.postgres.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "job_ns",
+        "columns": [
+          {
+            "name": "id",
+            "type": "SERIAL"
+          },
+          {
+            "name": "queue",
+            "type": "TEXT"
+          },
+          {
+            "name": "name",
+            "type": "TEXT"
+          }
+        ],
+        "file": "lib/jobqueue/dedup/schema.postgres.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "jobs",
+        "columns": [
+          {
+            "name": "id",
+            "type": "SERIAL"
+          },
+          {
+            "name": "ns_id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "key",
+            "type": "BYTEA"
+          },
+          {
+            "name": "body",
+            "type": "BYTEA"
+          },
+          {
+            "name": "created_s",
+            "type": "BIGINT"
+          },
+          {
+            "name": "DEFAULT",
+            "type": "EXTRACT(EPOCH FROM NOW()"
+          },
+          {
+            "name": "avail_s",
+            "type": "BIGINT"
+          },
+          {
+            "name": "attempts",
+            "type": "INTEGER"
+          }
+        ],
+        "file": "lib/jobqueue/dedup/schema.postgres.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "job_done",
+        "columns": [
+          {
+            "name": "ns_id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "key",
+            "type": "BYTEA"
+          },
+          {
+            "name": "status",
+            "type": "INTEGER"
+          },
+          {
+            "name": "done_s",
+            "type": "BIGINT"
+          },
+          {
+            "name": "DEFAULT",
+            "type": "EXTRACT(EPOCH FROM NOW()"
+          }
+        ],
+        "file": "lib/jobqueue/dedup/schema.postgres.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "job_dead",
+        "columns": [
+          {
+            "name": "id",
+            "type": "SERIAL"
+          },
+          {
+            "name": "ns_id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "key",
+            "type": "BYTEA"
+          },
+          {
+            "name": "body",
+            "type": "BYTEA"
+          },
+          {
+            "name": "attempts",
+            "type": "INTEGER"
+          },
+          {
+            "name": "reason",
+            "type": "TEXT"
+          },
+          {
+            "name": "error",
+            "type": "TEXT"
+          },
+          {
+            "name": "moved_s",
+            "type": "BIGINT"
+          },
+          {
+            "name": "DEFAULT",
+            "type": "EXTRACT(EPOCH FROM NOW()"
+          }
+        ],
+        "file": "lib/jobqueue/dedup/schema.postgres.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "queues",
+        "columns": [
+          {
+            "name": "queue",
+            "type": "TEXT"
+          }
+        ],
+        "file": "lib/jobqueue/dedup/schema.sqlite.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "job_ns",
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "queue",
+            "type": "TEXT"
+          },
+          {
+            "name": "name",
+            "type": "TEXT"
+          }
+        ],
+        "file": "lib/jobqueue/dedup/schema.sqlite.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "jobs",
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "ns_id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "key",
+            "type": "BLOB"
+          },
+          {
+            "name": "body",
+            "type": "BLOB"
+          },
+          {
+            "name": "created_s",
+            "type": "INTEGER"
+          },
+          {
+            "name": "avail_s",
+            "type": "INTEGER"
+          },
+          {
+            "name": "attempts",
+            "type": "INTEGER"
+          }
+        ],
+        "file": "lib/jobqueue/dedup/schema.sqlite.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "job_done",
+        "columns": [
+          {
+            "name": "ns_id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "key",
+            "type": "BLOB"
+          },
+          {
+            "name": "status",
+            "type": "INTEGER"
+          },
+          {
+            "name": "done_s",
+            "type": "INTEGER"
+          }
+        ],
+        "file": "lib/jobqueue/dedup/schema.sqlite.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "job_dead",
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "ns_id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "key",
+            "type": "BLOB"
+          },
+          {
+            "name": "body",
+            "type": "BLOB"
+          },
+          {
+            "name": "attempts",
+            "type": "INTEGER"
+          },
+          {
+            "name": "reason",
+            "type": "TEXT"
+          },
+          {
+            "name": "error",
+            "type": "TEXT"
+          },
+          {
+            "name": "moved_s",
+            "type": "INTEGER"
+          }
+        ],
+        "file": "lib/jobqueue/dedup/schema.sqlite.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "machines",
+        "columns": [
+          {
+            "name": "id",
+            "type": "SERIAL"
+          },
+          {
+            "name": "last_contact",
+            "type": "TIMESTAMP"
+          },
+          {
+            "name": "host_and_port",
+            "type": "varchar(300)"
+          },
+          {
+            "name": "cpu",
+            "type": "INTEGER"
+          },
+          {
+            "name": "ram",
+            "type": "BIGINT"
+          },
+          {
+            "name": "gpu",
+            "type": "FLOAT"
+          }
+        ],
+        "file": "pkg/pdp/scheduler/schema/task.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "task",
+        "columns": [
+          {
+            "name": "id",
+            "type": "SERIAL"
+          },
+          {
+            "name": "initiated_by",
+            "type": "INTEGER"
+          },
+          {
+            "name": "update_time",
+            "type": "TIMESTAMP"
+          },
+          {
+            "name": "posted_time",
+            "type": "TIMESTAMP"
+          },
+          {
+            "name": "owner_id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "added_by",
+            "type": "INTEGER"
+          },
+          {
+            "name": "previous_task",
+            "type": "INTEGER"
+          },
+          {
+            "name": "name",
+            "type": "varchar(16)"
+          }
+        ],
+        "file": "pkg/pdp/scheduler/schema/task.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "task_history",
+        "columns": [
+          {
+            "name": "id",
+            "type": "SERIAL"
+          },
+          {
+            "name": "task_id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "name",
+            "type": "VARCHAR(16)"
+          },
+          {
+            "name": "posted",
+            "type": "TIMESTAMP"
+          },
+          {
+            "name": "work_start",
+            "type": "TIMESTAMP"
+          },
+          {
+            "name": "work_end",
+            "type": "TIMESTAMP"
+          },
+          {
+            "name": "result",
+            "type": "BOOLEAN"
+          },
+          {
+            "name": "err",
+            "type": "varchar"
+          },
+          {
+            "name": "completed_by_host_and_port",
+            "type": "varchar(300)"
+          }
+        ],
+        "file": "pkg/pdp/scheduler/schema/task.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "task_follow",
+        "columns": [
+          {
+            "name": "id",
+            "type": "SERIAL"
+          },
+          {
+            "name": "owner_id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "to_type",
+            "type": "VARCHAR(16)"
+          },
+          {
+            "name": "from_type",
+            "type": "VARCHAR(16)"
+          }
+        ],
+        "file": "pkg/pdp/scheduler/schema/task.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "task_impl",
+        "columns": [
+          {
+            "name": "id",
+            "type": "SERIAL"
+          },
+          {
+            "name": "owner_id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "name",
+            "type": "VARCHAR(16)"
+          }
+        ],
+        "file": "pkg/pdp/scheduler/schema/task.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "parked_pieces",
+        "columns": [
+          {
+            "name": "id",
+            "type": "bigserial"
+          },
+          {
+            "name": "created_at",
+            "type": "timestamp"
+          },
+          {
+            "name": "piece_cid",
+            "type": "text"
+          },
+          {
+            "name": "piece_padded_size",
+            "type": "bigint"
+          },
+          {
+            "name": "piece_raw_size",
+            "type": "bigint"
+          },
+          {
+            "name": "complete",
+            "type": "boolean"
+          },
+          {
+            "name": "task_id",
+            "type": "bigint"
+          },
+          {
+            "name": "cleanup_task_id",
+            "type": "bigint"
+          },
+          {
+            "name": "long_term",
+            "type": "BOOLEAN"
+          }
+        ],
+        "file": "pkg/pdp/scheduler/schema/task.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "parked_piece_refs",
+        "columns": [
+          {
+            "name": "ref_id",
+            "type": "bigserial"
+          },
+          {
+            "name": "piece_id",
+            "type": "bigint"
+          },
+          {
+            "name": "data_url",
+            "type": "text"
+          },
+          {
+            "name": "data_headers",
+            "type": "jsonb"
+          },
+          {
+            "name": "long_term",
+            "type": "BOOLEAN"
+          }
+        ],
+        "file": "pkg/pdp/scheduler/schema/task.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "pdp_services",
+        "columns": [
+          {
+            "name": "id",
+            "type": "BIGSERIAL"
+          },
+          {
+            "name": "pubkey",
+            "type": "BYTEA"
+          },
+          {
+            "name": "service_label",
+            "type": "TEXT"
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP"
+          }
+        ],
+        "file": "pkg/pdp/scheduler/schema/task.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "pdp_piece_uploads",
+        "columns": [
+          {
+            "name": "id",
+            "type": "UUID"
+          },
+          {
+            "name": "service",
+            "type": "TEXT"
+          },
+          {
+            "name": "check_hash_codec",
+            "type": "TEXT"
+          },
+          {
+            "name": "check_hash",
+            "type": "BYTEA"
+          },
+          {
+            "name": "check_size",
+            "type": "BIGINT"
+          },
+          {
+            "name": "piece_cid",
+            "type": "TEXT"
+          },
+          {
+            "name": "notify_url",
+            "type": "TEXT"
+          },
+          {
+            "name": "notify_task_id",
+            "type": "BIGINT"
+          },
+          {
+            "name": "piece_ref",
+            "type": "BIGINT"
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP"
+          }
+        ],
+        "file": "pkg/pdp/scheduler/schema/task.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "pdp_piecerefs",
+        "columns": [
+          {
+            "name": "id",
+            "type": "BIGSERIAL"
+          },
+          {
+            "name": "service",
+            "type": "TEXT"
+          },
+          {
+            "name": "piece_cid",
+            "type": "TEXT"
+          },
+          {
+            "name": "piece_ref",
+            "type": "BIGINT"
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP"
+          },
+          {
+            "name": "proofset_refcount",
+            "type": "BIGINT"
+          }
+        ],
+        "file": "pkg/pdp/scheduler/schema/task.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "pdp_proof_sets",
+        "columns": [
+          {
+            "name": "id",
+            "type": "BIGINT"
+          },
+          {
+            "name": "prev_challenge_request_epoch",
+            "type": "BIGINT"
+          },
+          {
+            "name": "challenge_request_task_id",
+            "type": "BIGINT"
+          },
+          {
+            "name": "challenge_request_msg_hash",
+            "type": "TEXT"
+          },
+          {
+            "name": "proving_period",
+            "type": "BIGINT"
+          },
+          {
+            "name": "challenge_window",
+            "type": "BIGINT"
+          },
+          {
+            "name": "prove_at_epoch",
+            "type": "BIGINT"
+          },
+          {
+            "name": "init_ready",
+            "type": "BOOLEAN"
+          },
+          {
+            "name": "create_message_hash",
+            "type": "TEXT"
+          },
+          {
+            "name": "service",
+            "type": "TEXT"
+          }
+        ],
+        "file": "pkg/pdp/scheduler/schema/task.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "pdp_prove_tasks",
+        "columns": [
+          {
+            "name": "proofset",
+            "type": "BIGINT"
+          },
+          {
+            "name": "task_id",
+            "type": "BIGINT"
+          }
+        ],
+        "file": "pkg/pdp/scheduler/schema/task.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "pdp_proofset_creates",
+        "columns": [
+          {
+            "name": "create_message_hash",
+            "type": "TEXT"
+          },
+          {
+            "name": "ok",
+            "type": "BOOLEAN"
+          },
+          {
+            "name": "proofset_created",
+            "type": "BOOLEAN"
+          },
+          {
+            "name": "service",
+            "type": "TEXT"
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP"
+          }
+        ],
+        "file": "pkg/pdp/scheduler/schema/task.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "pdp_proofset_roots",
+        "columns": [
+          {
+            "name": "proofset",
+            "type": "BIGINT"
+          },
+          {
+            "name": "root",
+            "type": "TEXT"
+          },
+          {
+            "name": "add_message_hash",
+            "type": "TEXT"
+          },
+          {
+            "name": "add_message_index",
+            "type": "BIGINT"
+          },
+          {
+            "name": "root_id",
+            "type": "BIGINT"
+          },
+          {
+            "name": "subroot",
+            "type": "TEXT"
+          },
+          {
+            "name": "subroot_offset",
+            "type": "BIGINT"
+          },
+          {
+            "name": "subroot_size",
+            "type": "BIGINT"
+          },
+          {
+            "name": "pdp_pieceref",
+            "type": "BIGINT"
+          }
+        ],
+        "file": "pkg/pdp/scheduler/schema/task.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "pdp_proofset_root_adds",
+        "columns": [
+          {
+            "name": "proofset",
+            "type": "BIGINT"
+          },
+          {
+            "name": "root",
+            "type": "TEXT"
+          },
+          {
+            "name": "add_message_hash",
+            "type": "TEXT"
+          },
+          {
+            "name": "add_message_ok",
+            "type": "BOOLEAN"
+          },
+          {
+            "name": "add_message_index",
+            "type": "BIGINT"
+          },
+          {
+            "name": "subroot",
+            "type": "TEXT"
+          },
+          {
+            "name": "subroot_offset",
+            "type": "BIGINT"
+          },
+          {
+            "name": "subroot_size",
+            "type": "BIGINT"
+          },
+          {
+            "name": "pdp_pieceref",
+            "type": "BIGINT"
+          }
+        ],
+        "file": "pkg/pdp/scheduler/schema/task.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "message_sends_eth",
+        "columns": [
+          {
+            "name": "from_address",
+            "type": "TEXT"
+          },
+          {
+            "name": "to_address",
+            "type": "TEXT"
+          },
+          {
+            "name": "send_reason",
+            "type": "TEXT"
+          },
+          {
+            "name": "send_task_id",
+            "type": "SERIAL"
+          },
+          {
+            "name": "unsigned_tx",
+            "type": "BYTEA"
+          },
+          {
+            "name": "unsigned_hash",
+            "type": "TEXT"
+          },
+          {
+            "name": "nonce",
+            "type": "BIGINT"
+          },
+          {
+            "name": "signed_tx",
+            "type": "BYTEA"
+          },
+          {
+            "name": "signed_hash",
+            "type": "TEXT"
+          },
+          {
+            "name": "send_time",
+            "type": "TIMESTAMP"
+          },
+          {
+            "name": "send_success",
+            "type": "BOOLEAN"
+          },
+          {
+            "name": "send_error",
+            "type": "TEXT"
+          }
+        ],
+        "file": "pkg/pdp/scheduler/schema/task.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "message_send_eth_locks",
+        "columns": [
+          {
+            "name": "from_address",
+            "type": "TEXT"
+          },
+          {
+            "name": "task_id",
+            "type": "BIGINT"
+          },
+          {
+            "name": "claimed_at",
+            "type": "TIMESTAMP"
+          }
+        ],
+        "file": "pkg/pdp/scheduler/schema/task.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "message_waits_eth",
+        "columns": [
+          {
+            "name": "signed_tx_hash",
+            "type": "TEXT"
+          },
+          {
+            "name": "waiter_machine_id",
+            "type": "INT"
+          },
+          {
+            "name": "confirmed_block_number",
+            "type": "BIGINT"
+          },
+          {
+            "name": "confirmed_tx_hash",
+            "type": "TEXT"
+          },
+          {
+            "name": "confirmed_tx_data",
+            "type": "JSONB"
+          },
+          {
+            "name": "tx_status",
+            "type": "TEXT"
+          },
+          {
+            "name": "tx_receipt",
+            "type": "JSONB"
+          },
+          {
+            "name": "tx_success",
+            "type": "BOOLEAN"
+          }
+        ],
+        "file": "pkg/pdp/scheduler/schema/task.sql"
+      },
+      {
+        "type": "go_driver_postgres",
+        "driver": "github.com/jackc/pgx",
+        "file": "go.mod"
+      },
+      {
+        "type": "go_driver_orm (gorm)",
+        "driver": "gorm.io/gorm",
+        "file": "go.mod"
+      },
+      {
+        "type": "go_driver_postgres (gorm)",
+        "driver": "gorm.io/driver/postgres",
+        "file": "go.mod"
+      },
+      {
+        "type": "go_driver_sqlite (gorm)",
+        "driver": "gorm.io/driver/sqlite",
+        "file": "go.mod"
+      },
+      {
+        "type": "go_driver_sqlite",
+        "driver": "github.com/mattn/go-sqlite3",
+        "file": "go.mod"
+      },
+      {
+        "type": "go_driver_aws_sdk",
+        "driver": "github.com/aws/aws-sdk-go",
+        "file": "go.mod"
+      },
+      {
+        "type": "go_driver_aws_sdk_v2",
+        "driver": "github.com/aws/aws-sdk-go-v2",
+        "file": "go.mod"
+      },
+      {
+        "type": "go_driver_ipfs_datastore",
+        "driver": "github.com/ipfs/go-datastore",
+        "file": "go.mod"
+      }
+    ],
+    "piri-signing-service": [
+      {
+        "type": "go_driver_ipfs_datastore",
+        "driver": "github.com/ipfs/go-datastore",
+        "file": "go.mod"
+      }
+    ],
+    "reads": [
+      {
+        "type": "docker_service",
+        "name": "ipfs0",
+        "image": "ipfs/go-ipfs:v0.13.0",
+        "file": "packages/ipfs-gateway-race/docker/docker-compose.yml"
+      },
+      {
+        "type": "docker_service",
+        "name": "ipfs0",
+        "image": "ipfs/go-ipfs:v0.13.0",
+        "file": "packages/edge-gateway/docker/docker-compose.yml"
+      }
+    ],
+    "spade": [
+      {
+        "type": "go_driver_postgres",
+        "driver": "github.com/lib/pq",
+        "file": "go.mod"
+      },
+      {
+        "type": "go_driver_postgres",
+        "driver": "github.com/jackc/pgx",
+        "file": "go.mod"
+      },
+      {
+        "type": "go_driver_aws_sdk",
+        "driver": "github.com/aws/aws-sdk-go",
+        "file": "go.mod"
+      },
+      {
+        "type": "go_driver_aws_sdk_v2",
+        "driver": "github.com/aws/aws-sdk-go-v2",
+        "file": "go.mod"
+      },
+      {
+        "type": "go_driver_ipfs_datastore",
+        "driver": "github.com/ipfs/go-datastore",
+        "file": "go.mod"
+      }
+    ],
+    "storetheindex": [
+      {
+        "type": "terraform_ecs",
+        "resource_type": "aws_ecs_task_definition",
+        "name": "ingest",
+        "file": "deploy/app/ingest/ecs_task.tf"
+      },
+      {
+        "type": "terraform_s3",
+        "resource_type": "aws_s3_object",
+        "name": "env_files",
+        "file": "deploy/app/ingest/ecs_task.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_codedeploy_app",
+        "name": "ingest",
+        "file": "deploy/app/ingest/codedeploy.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_codedeploy_deployment_group",
+        "name": "ingest",
+        "file": "deploy/app/ingest/codedeploy.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role",
+        "name": "codedeploy_role",
+        "file": "deploy/app/ingest/codedeploy.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role_policy_attachment",
+        "name": "codedeploy_policy_attachement",
+        "file": "deploy/app/ingest/codedeploy.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "local_file",
+        "name": "code_deploy_sh",
+        "file": "deploy/app/ingest/codedeploy.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "terraform_data",
+        "name": "trigger_code_deploy_deployment",
+        "file": "deploy/app/ingest/codedeploy.tf"
+      },
+      {
+        "type": "terraform_ecs",
+        "resource_type": "aws_ecs_service",
+        "name": "ingest",
+        "file": "deploy/app/ingest/ecs_service.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_security_group",
+        "name": "container_sg",
+        "file": "deploy/app/ingest/ecs_service.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_lb_target_group",
+        "name": "blue",
+        "file": "deploy/app/ingest/load_balancer.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_lb_target_group",
+        "name": "green",
+        "file": "deploy/app/ingest/load_balancer.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_lb_listener_rule",
+        "name": "announce",
+        "file": "deploy/app/ingest/load_balancer.tf"
+      },
+      {
+        "type": "go_driver_aws_sdk",
+        "driver": "github.com/aws/aws-sdk-go",
+        "file": "go.mod"
+      },
+      {
+        "type": "go_driver_aws_sdk_v2",
+        "driver": "github.com/aws/aws-sdk-go-v2",
+        "file": "go.mod"
+      },
+      {
+        "type": "go_driver_ipfs_datastore",
+        "driver": "github.com/ipfs/go-datastore",
+        "file": "go.mod"
+      },
+      {
+        "type": "go_driver_pebble",
+        "driver": "github.com/cockroachdb/pebble",
+        "file": "go.mod"
+      }
+    ],
+    "storoku": [
+      {
+        "type": "terraform_other",
+        "resource_type": "random_password",
+        "name": "{{.Lower}}",
+        "file": "cmd/storoku/template/deploy/app/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_kms_key",
+        "name": "encryption_key",
+        "file": "kms/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_kms_alias",
+        "name": "encryption_key",
+        "file": "kms/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_kms_key_policy",
+        "name": "encryption_key",
+        "file": "kms/main.tf"
+      },
+      {
+        "type": "terraform_s3",
+        "resource_type": "aws_s3_bucket",
+        "name": "bucket",
+        "file": "s3/main.tf"
+      },
+      {
+        "type": "terraform_s3",
+        "resource_type": "aws_s3_bucket_public_access_block",
+        "name": "public_access_block",
+        "file": "s3/main.tf"
+      },
+      {
+        "type": "terraform_s3",
+        "resource_type": "aws_s3_bucket_cors_configuration",
+        "name": "cors",
+        "file": "s3/main.tf"
+      },
+      {
+        "type": "terraform_s3",
+        "resource_type": "aws_s3_bucket_policy",
+        "name": "policy",
+        "file": "s3/main.tf"
+      },
+      {
+        "type": "terraform_s3",
+        "resource_type": "aws_s3_bucket_lifecycle_configuration",
+        "name": "lifecycle",
+        "file": "s3/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_globalaccelerator_accelerator",
+        "name": "ga",
+        "file": "ga/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_globalaccelerator_listener",
+        "name": "ga",
+        "file": "ga/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_globalaccelerator_endpoint_group",
+        "name": "ga",
+        "file": "ga/main.tf"
+      },
+      {
+        "type": "terraform_dns",
+        "resource_type": "aws_route53_record",
+        "name": "alb",
+        "file": "app/route53.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_sns_topic",
+        "name": "topic",
+        "file": "sns/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_kms_key",
+        "name": "cache_key",
+        "file": "elasticaches/main.tf"
+      },
+      {
+        "type": "terraform_redis",
+        "resource_type": "aws_elasticache_replication_group",
+        "name": "cache",
+        "file": "elasticaches/main.tf"
+      },
+      {
+        "type": "terraform_redis",
+        "resource_type": "aws_elasticache_parameter_group",
+        "name": "cluster_enabled",
+        "file": "elasticaches/main.tf"
+      },
+      {
+        "type": "terraform_redis",
+        "resource_type": "aws_elasticache_user_group",
+        "name": "cache_user_group",
+        "file": "elasticaches/main.tf"
+      },
+      {
+        "type": "terraform_redis",
+        "resource_type": "aws_elasticache_user",
+        "name": "cache_default_user",
+        "file": "elasticaches/main.tf"
+      },
+      {
+        "type": "terraform_redis",
+        "resource_type": "aws_elasticache_user",
+        "name": "cache_iam_user",
+        "file": "elasticaches/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_security_group",
+        "name": "cache_security_group",
+        "file": "elasticaches/main.tf"
+      },
+      {
+        "type": "terraform_redis",
+        "resource_type": "aws_elasticache_subnet_group",
+        "name": "cache_subnet_group",
+        "file": "elasticaches/main.tf"
+      },
+      {
+        "type": "terraform_dynamodb",
+        "resource_type": "aws_dynamodb_table",
+        "name": "table",
+        "file": "dynamodb/main.tf"
+      },
+      {
+        "type": "terraform_dns",
+        "resource_type": "aws_route53_zone",
+        "name": "network",
+        "file": "shared/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "cloudflare_dns_record",
+        "name": "ns",
+        "file": "shared/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_ecr_repository",
+        "name": "ecr",
+        "file": "shared/ecr.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_kms_key",
+        "name": "ecr_kms_key",
+        "file": "shared/ecr.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_kms_alias",
+        "name": "ecr_key_alias",
+        "file": "shared/ecr.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_kms_key_policy",
+        "name": "encryption_key",
+        "file": "shared/ecr.tf"
+      },
+      {
+        "type": "terraform_sqs",
+        "resource_type": "aws_sqs_queue",
+        "name": "queue",
+        "file": "sqs/main.tf"
+      },
+      {
+        "type": "terraform_sqs",
+        "resource_type": "aws_sqs_queue",
+        "name": "queue_deadletter",
+        "file": "sqs/main.tf"
+      },
+      {
+        "type": "terraform_sqs",
+        "resource_type": "aws_sqs_queue_redrive_allow_policy",
+        "name": "caching",
+        "file": "sqs/main.tf"
+      },
+      {
+        "type": "terraform_networking",
+        "resource_type": "aws_db_subnet_group",
+        "name": "rds",
+        "file": "postgres/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_security_group",
+        "name": "rds",
+        "file": "postgres/main.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role",
+        "name": "rds_monitoring_role",
+        "file": "postgres/main.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role_policy_attachment",
+        "name": "managed_rds_monitoring_policy_attachement",
+        "file": "postgres/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_db_parameter_group",
+        "name": "postgres",
+        "file": "postgres/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_secretsmanager_secret_rotation",
+        "name": "rds",
+        "file": "postgres/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_kms_key",
+        "name": "encryption_rds",
+        "file": "postgres/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_kms_alias",
+        "name": "encryption_rds",
+        "file": "postgres/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_kms_key_policy",
+        "name": "encryption_rds",
+        "file": "postgres/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_db_instance",
+        "name": "rds",
+        "file": "postgres/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "random_password",
+        "name": "proxy_user_password",
+        "file": "postgres/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_secretsmanager_secret",
+        "name": "proxy_user_secret",
+        "file": "postgres/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_secretsmanager_secret_version",
+        "name": "proxy_user_secret_version",
+        "file": "postgres/main.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_policy",
+        "name": "rds_proxy_iam_policy",
+        "file": "postgres/main.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role_policy_attachment",
+        "name": "rds_proxy_iam_attach",
+        "file": "postgres/main.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role",
+        "name": "rds_proxy_iam_role",
+        "file": "postgres/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_db_proxy_default_target_group",
+        "name": "rds_proxy_target_group",
+        "file": "postgres/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_db_proxy_target",
+        "name": "rds_proxy_target",
+        "file": "postgres/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_db_proxy",
+        "name": "db_proxy",
+        "file": "postgres/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_security_group",
+        "name": "bastion_host",
+        "file": "postgres/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_instance",
+        "name": "database_bastion_host",
+        "file": "postgres/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_eip",
+        "name": "bastion-host-eip",
+        "file": "postgres/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_key_pair",
+        "name": "bastion-host-key-pair",
+        "file": "postgres/main.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_policy",
+        "name": "rds_access_iam_policy",
+        "file": "postgres/main.tf"
+      },
+      {
+        "type": "terraform_ecs",
+        "resource_type": "aws_ecs_task_definition",
+        "name": "app",
+        "file": "deployment/ecs_task.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role",
+        "name": "ecs_task_role",
+        "file": "deployment/ecs_task.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role",
+        "name": "ecs_task_execution_role",
+        "file": "deployment/ecs_task.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role_policy_attachment",
+        "name": "custom",
+        "file": "deployment/ecs_task.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_policy",
+        "name": "task_execution_s3_put_get",
+        "file": "deployment/ecs_task.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role_policy_attachment",
+        "name": "task_execution_s3_put_get",
+        "file": "deployment/ecs_task.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_policy",
+        "name": "secrets_manager_read_policy",
+        "file": "deployment/ecs_task.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role_policy_attachment",
+        "name": "attach_secrets_read_task_role",
+        "file": "deployment/ecs_task.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role_policy_attachment",
+        "name": "attach_secrets_read_task_execution_role",
+        "file": "deployment/ecs_task.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_policy",
+        "name": "task_elasticache_connect",
+        "file": "deployment/ecs_task.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role_policy_attachment",
+        "name": "task_elasticache_connect",
+        "file": "deployment/ecs_task.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_policy",
+        "name": "task_dynamodb_put_get",
+        "file": "deployment/ecs_task.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role_policy_attachment",
+        "name": "task_dynamodb_put_get",
+        "file": "deployment/ecs_task.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_policy",
+        "name": "task_s3_put_get",
+        "file": "deployment/ecs_task.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role_policy_attachment",
+        "name": "task_s3_put_get",
+        "file": "deployment/ecs_task.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_policy",
+        "name": "task_rds_connect",
+        "file": "deployment/ecs_task.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role_policy_attachment",
+        "name": "task_rds_connect_attach",
+        "file": "deployment/ecs_task.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_policy",
+        "name": "task_sns",
+        "file": "deployment/ecs_task.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role_policy_attachment",
+        "name": "task_sns",
+        "file": "deployment/ecs_task.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_policy",
+        "name": "task_sqs",
+        "file": "deployment/ecs_task.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role_policy_attachment",
+        "name": "task_sqs",
+        "file": "deployment/ecs_task.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_codedeploy_app",
+        "name": "app",
+        "file": "deployment/codedeploy.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_codedeploy_deployment_group",
+        "name": "deployment_group",
+        "file": "deployment/codedeploy.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role",
+        "name": "codedeploy_role",
+        "file": "deployment/codedeploy.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role_policy_attachment",
+        "name": "codedeploy_policy_attachement",
+        "file": "deployment/codedeploy.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "local_file",
+        "name": "code_deploy_sh",
+        "file": "deployment/codedeploy.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "terraform_data",
+        "name": "trigger_code_deploy_deployment",
+        "file": "deployment/codedeploy.tf"
+      },
+      {
+        "type": "terraform_ecs",
+        "resource_type": "aws_ecs_service",
+        "name": "service",
+        "file": "deployment/ecs_service.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_security_group",
+        "name": "container_sg",
+        "file": "deployment/ecs_service.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_appautoscaling_target",
+        "name": "dev_to_target",
+        "file": "deployment/ecs_service.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_appautoscaling_policy",
+        "name": "dev_to_memory",
+        "file": "deployment/ecs_service.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_appautoscaling_policy",
+        "name": "dev_to_cpu",
+        "file": "deployment/ecs_service.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_acm_certificate",
+        "name": "cert",
+        "file": "cert/main.tf"
+      },
+      {
+        "type": "terraform_dns",
+        "resource_type": "aws_route53_record",
+        "name": "cert_validation",
+        "file": "cert/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_acm_certificate_validation",
+        "name": "cert",
+        "file": "cert/main.tf"
+      },
+      {
+        "type": "terraform_networking",
+        "resource_type": "aws_vpc",
+        "name": "vpc",
+        "file": "vpc/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_internet_gateway",
+        "name": "vpc_internet_gateway",
+        "file": "vpc/main.tf"
+      },
+      {
+        "type": "terraform_networking",
+        "resource_type": "aws_subnet",
+        "name": "vpc_public_subnet",
+        "file": "vpc/main.tf"
+      },
+      {
+        "type": "terraform_networking",
+        "resource_type": "aws_subnet",
+        "name": "vpc_private_subnet",
+        "file": "vpc/main.tf"
+      },
+      {
+        "type": "terraform_networking",
+        "resource_type": "aws_subnet",
+        "name": "vpc_db_subnet",
+        "file": "vpc/main.tf"
+      },
+      {
+        "type": "terraform_networking",
+        "resource_type": "aws_subnet",
+        "name": "vpc_elasticache_subnet",
+        "file": "vpc/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_route_table",
+        "name": "vpc_public_route_table",
+        "file": "vpc/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_route_table",
+        "name": "vpc_private_route_table",
+        "file": "vpc/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_route_table",
+        "name": "vpc_db_route_table",
+        "file": "vpc/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_route_table",
+        "name": "vpc_elasticache_route_table",
+        "file": "vpc/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_route_table_association",
+        "name": "vpc_public_route_table_association",
+        "file": "vpc/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_route_table_association",
+        "name": "vpc_private_route_table_association",
+        "file": "vpc/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_route_table_association",
+        "name": "vpc_db_route_table_association",
+        "file": "vpc/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_route_table_association",
+        "name": "vpc_elasticache_route_table_association",
+        "file": "vpc/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_route",
+        "name": "vpc_public_internet_gateway",
+        "file": "vpc/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_route",
+        "name": "vpc_private_nat_gateway",
+        "file": "vpc/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_eip",
+        "name": "vpc_nat_ip",
+        "file": "vpc/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_nat_gateway",
+        "name": "vpc_nat",
+        "file": "vpc/main.tf"
+      },
+      {
+        "type": "terraform_networking",
+        "resource_type": "aws_vpc_endpoint",
+        "name": "ecr",
+        "file": "vpc/main.tf"
+      },
+      {
+        "type": "terraform_networking",
+        "resource_type": "aws_vpc_endpoint",
+        "name": "ecr_api",
+        "file": "vpc/main.tf"
+      },
+      {
+        "type": "terraform_networking",
+        "resource_type": "aws_vpc_endpoint",
+        "name": "cloudwatch",
+        "file": "vpc/main.tf"
+      },
+      {
+        "type": "terraform_networking",
+        "resource_type": "aws_vpc_endpoint",
+        "name": "dynamodb",
+        "file": "vpc/main.tf"
+      },
+      {
+        "type": "terraform_networking",
+        "resource_type": "aws_vpc_endpoint",
+        "name": "sqs",
+        "file": "vpc/main.tf"
+      },
+      {
+        "type": "terraform_networking",
+        "resource_type": "aws_vpc_endpoint",
+        "name": "sns",
+        "file": "vpc/main.tf"
+      },
+      {
+        "type": "terraform_networking",
+        "resource_type": "aws_vpc_endpoint",
+        "name": "s3",
+        "file": "vpc/main.tf"
+      },
+      {
+        "type": "terraform_networking",
+        "resource_type": "aws_vpc_endpoint_route_table_association",
+        "name": "s3_association",
+        "file": "vpc/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_security_group",
+        "name": "endpoint_sg",
+        "file": "vpc/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_secretsmanager_secret",
+        "name": "ecs_secret",
+        "file": "secret/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_secretsmanager_secret_version",
+        "name": "ecs_secret_version",
+        "file": "secret/main.tf"
+      },
+      {
+        "type": "terraform_s3",
+        "resource_type": "aws_s3_bucket",
+        "name": "env_file_bucket",
+        "file": "env_files/main.tf"
+      },
+      {
+        "type": "terraform_s3",
+        "resource_type": "aws_s3_object",
+        "name": "env_file",
+        "file": "env_files/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_cloudwatch_log_group",
+        "name": "logs",
+        "file": "ecs-infra/cloudwatch.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_kms_key",
+        "name": "encryption_cloudwatch",
+        "file": "ecs-infra/cloudwatch.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_kms_alias",
+        "name": "encryption_cloudwatch",
+        "file": "ecs-infra/cloudwatch.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_kms_key_policy",
+        "name": "encryption_key",
+        "file": "ecs-infra/cloudwatch.tf"
+      },
+      {
+        "type": "terraform_ecs",
+        "resource_type": "aws_ecs_cluster",
+        "name": "cluster",
+        "file": "ecs-infra/cluster.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_lb",
+        "name": "alb",
+        "file": "ecs-infra/alb.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_lb_target_group",
+        "name": "blue_target_group",
+        "file": "ecs-infra/alb.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_lb_target_group",
+        "name": "green_target_group",
+        "file": "ecs-infra/alb.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_alb_listener",
+        "name": "listener",
+        "file": "ecs-infra/alb.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_lb_listener",
+        "name": "redirect_https",
+        "file": "ecs-infra/alb.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_security_group",
+        "name": "lb",
+        "file": "ecs-infra/alb.tf"
+      },
+      {
+        "type": "terraform_lambda",
+        "resource_type": "aws_lambda_layer_version",
+        "name": "psycopg2_lambda_layer",
+        "file": "postgres-provisioner/provisioner.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "aws_security_group",
+        "name": "lambda",
+        "file": "postgres-provisioner/provisioner.tf"
+      }
+    ],
+    "tg-miniapp": [
+      {
+        "type": "terraform_other",
+        "resource_type": "random_password",
+        "name": "backup_password",
+        "file": "deploy/app/main.tf"
+      },
+      {
+        "type": "terraform_other",
+        "resource_type": "random_password",
+        "name": "session_password",
+        "file": "deploy/app/main.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_policy",
+        "name": "task_protection",
+        "file": "deploy/app/main.tf"
+      },
+      {
+        "type": "terraform_iam",
+        "resource_type": "aws_iam_role_policy_attachment",
+        "name": "task_protection",
+        "file": "deploy/app/main.tf"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "jobs",
+        "columns": [
+          {
+            "name": "id",
+            "type": "UUID"
+          },
+          {
+            "name": "user_id",
+            "type": "UUID"
+          },
+          {
+            "name": "status",
+            "type": "TEXT"
+          },
+          {
+            "name": "space",
+            "type": "TEXT"
+          },
+          {
+            "name": "dialogs",
+            "type": "BIGINT"
+          },
+          {
+            "name": "period_from",
+            "type": "DOUBLE"
+          },
+          {
+            "name": "period_to",
+            "type": "DOUBLE"
+          },
+          {
+            "name": "progress",
+            "type": "DOUBLE"
+          },
+          {
+            "name": "started_at",
+            "type": "TIMESTAMP"
+          },
+          {
+            "name": "cause",
+            "type": "TEXT"
+          },
+          {
+            "name": "finished_at",
+            "type": "TIMESTAMP"
+          },
+          {
+            "name": "data_cid",
+            "type": "TEXT"
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP"
+          }
+        ],
+        "file": "app/scripts/migrations/00002_jobs/index.sql"
+      },
+      {
+        "type": "sql_table",
+        "table_name": "users",
+        "columns": [
+          {
+            "name": "id",
+            "type": "UUID"
+          },
+          {
+            "name": "telegram_id",
+            "type": "BIGINT"
+          },
+          {
+            "name": "storacha_space",
+            "type": "TEXT"
+          },
+          {
+            "name": "points",
+            "type": "DOUBLE"
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP"
+          }
+        ],
+        "file": "app/scripts/migrations/00001_initial/index.sql"
+      },
+      {
+        "type": "js_dep_sqs",
+        "package": "@aws-sdk/client-sqs",
+        "version": "^3.876.0",
+        "file": "app/package.json"
+      },
+      {
+        "type": "js_dep_postgres",
+        "package": "postgres",
+        "version": "^3.4.7",
+        "file": "app/package.json"
+      },
+      {
+        "type": "js_dep_mongodb",
+        "package": "mongoose",
+        "version": "^8.10.1",
+        "file": "app/package.json"
+      },
+      {
+        "type": "docker_service",
+        "name": "postgres",
+        "image": "postgres:16",
+        "file": "docker-compose.yml"
+      }
+    ],
+    "w3clock": [
+      {
+        "type": "durable_object",
+        "name": "CLOCK",
+        "file": "wrangler.toml"
+      },
+      {
+        "type": "durable_object",
+        "name": "DurableClock0",
+        "file": "wrangler.toml"
+      }
+    ],
+    "w3filecoin-infra": [
+      {
+        "type": "sqs_queue",
+        "name": "aggregator-piece-store-handle-insert-dlq",
+        "file": "stacks/aggregator-stack.js"
+      },
+      {
+        "type": "sqs_queue",
+        "name": "aggregate-store-handle-piece-accept-dlq",
+        "file": "stacks/aggregator-stack.js"
+      },
+      {
+        "type": "sqs_queue",
+        "name": "aggregate-store-handle-aggregate-offer-dlq",
+        "file": "stacks/aggregator-stack.js"
+      },
+      {
+        "type": "sqs_queue",
+        "name": "inclusion-store-handle-update-state-dlq",
+        "file": "stacks/aggregator-stack.js"
+      },
+      {
+        "type": "sqs_queue",
+        "name": "inclusion-store-handle-piece-accept-dlq",
+        "file": "stacks/aggregator-stack.js"
+      },
+      {
+        "type": "js_dep_dynamodb",
+        "package": "@aws-sdk/client-dynamodb",
+        "version": "catalog:",
+        "file": "package.json"
+      },
+      {
+        "type": "js_dep_s3",
+        "package": "@aws-sdk/client-s3",
+        "version": "catalog:",
+        "file": "package.json"
+      },
+      {
+        "type": "js_dep_dynamodb",
+        "package": "@aws-sdk/client-dynamodb",
+        "version": "catalog:",
+        "file": "packages/core/package.json"
+      },
+      {
+        "type": "js_dep_s3",
+        "package": "@aws-sdk/client-s3",
+        "version": "catalog:",
+        "file": "packages/core/package.json"
+      },
+      {
+        "type": "js_dep_sqs",
+        "package": "@aws-sdk/client-sqs",
+        "version": "catalog:",
+        "file": "packages/core/package.json"
+      },
+      {
+        "type": "js_dep_dynamodb",
+        "package": "@aws-sdk/client-dynamodb",
+        "version": "catalog:",
+        "file": "packages/functions/package.json"
+      }
+    ],
+    "w3infra": [
+      {
+        "type": "sqs_queue",
+        "name": "piece-cid-compute-queue",
+        "file": "stacks/filecoin-stack.js"
+      },
+      {
+        "type": "sqs_queue",
+        "name": "metrics-aggregate-total-dlq",
+        "file": "stacks/filecoin-stack.js"
+      },
+      {
+        "type": "s3_bucket",
+        "name": "car-store",
+        "file": "stacks/carpark-stack.js"
+      },
+      {
+        "type": "sqs_queue",
+        "name": "indexer-topic-queue",
+        "file": "stacks/carpark-stack.js"
+      },
+      {
+        "type": "dynamodb_table",
+        "name": "humanode",
+        "file": "stacks/upload-db-stack.js"
+      },
+      {
+        "type": "dynamodb_table",
+        "name": "allocation",
+        "file": "stacks/upload-db-stack.js"
+      },
+      {
+        "type": "dynamodb_table",
+        "name": "blob-registry",
+        "file": "stacks/upload-db-stack.js"
+      },
+      {
+        "type": "dynamodb_table",
+        "name": "store",
+        "file": "stacks/upload-db-stack.js"
+      },
+      {
+        "type": "dynamodb_table",
+        "name": "upload",
+        "file": "stacks/upload-db-stack.js"
+      },
+      {
+        "type": "dynamodb_table",
+        "name": "piece-v2",
+        "file": "stacks/upload-db-stack.js"
+      },
+      {
+        "type": "dynamodb_table",
+        "name": "subscription",
+        "file": "stacks/upload-db-stack.js"
+      },
+      {
+        "type": "dynamodb_table",
+        "name": "consumer",
+        "file": "stacks/upload-db-stack.js"
+      },
+      {
+        "type": "dynamodb_table",
+        "name": "rate-limit",
+        "file": "stacks/upload-db-stack.js"
+      },
+      {
+        "type": "dynamodb_table",
+        "name": "delegation",
+        "file": "stacks/upload-db-stack.js"
+      },
+      {
+        "type": "dynamodb_table",
+        "name": "revocation",
+        "file": "stacks/upload-db-stack.js"
+      },
+      {
+        "type": "dynamodb_table",
+        "name": "admin-metrics",
+        "file": "stacks/upload-db-stack.js"
+      },
+      {
+        "type": "dynamodb_table",
+        "name": "space-metrics",
+        "file": "stacks/upload-db-stack.js"
+      },
+      {
+        "type": "dynamodb_table",
+        "name": "storage-provider",
+        "file": "stacks/upload-db-stack.js"
+      },
+      {
+        "type": "dynamodb_table",
+        "name": "replica",
+        "file": "stacks/upload-db-stack.js"
+      },
+      {
+        "type": "s3_bucket",
+        "name": "delegation-store",
+        "file": "stacks/upload-db-stack.js"
+      },
+      {
+        "type": "s3_bucket",
+        "name": "upload-shards-store",
+        "file": "stacks/upload-db-stack.js"
+      },
+      {
+        "type": "dynamodb_table",
+        "name": "customer",
+        "file": "stacks/billing-db-stack.js"
+      },
+      {
+        "type": "dynamodb_table",
+        "name": "space-snapshot",
+        "file": "stacks/billing-db-stack.js"
+      },
+      {
+        "type": "dynamodb_table",
+        "name": "space-diff",
+        "file": "stacks/billing-db-stack.js"
+      },
+      {
+        "type": "dynamodb_table",
+        "name": "space-diff-archive",
+        "file": "stacks/billing-db-stack.js"
+      },
+      {
+        "type": "dynamodb_table",
+        "name": "usage",
+        "file": "stacks/billing-db-stack.js"
+      },
+      {
+        "type": "dynamodb_table",
+        "name": "egress-traffic-events",
+        "file": "stacks/billing-db-stack.js"
+      },
+      {
+        "type": "sqs_queue",
+        "name": "space-billing-dlq",
+        "file": "stacks/billing-stack.js"
+      },
+      {
+        "type": "sqs_queue",
+        "name": "space-billing-queue",
+        "file": "stacks/billing-stack.js"
+      },
+      {
+        "type": "sqs_queue",
+        "name": "customer-billing-dlq",
+        "file": "stacks/billing-stack.js"
+      },
+      {
+        "type": "sqs_queue",
+        "name": "customer-billing-queue",
+        "file": "stacks/billing-stack.js"
+      },
+      {
+        "type": "sqs_queue",
+        "name": "usage-table-dlq",
+        "file": "stacks/billing-stack.js"
+      },
+      {
+        "type": "sqs_queue",
+        "name": "egress-traffic-dlq",
+        "file": "stacks/billing-stack.js"
+      },
+      {
+        "type": "sqs_queue",
+        "name": "egress-traffic-queue",
+        "file": "stacks/billing-stack.js"
+      },
+      {
+        "type": "dynamodb_table",
+        "name": "eipfs-blocks-cars-position-table",
+        "file": "stacks/indexer-stack.js"
+      },
+      {
+        "type": "sqs_queue",
+        "name": "eipfs-multihashes-topic-queue",
+        "file": "stacks/indexer-stack.js"
+      },
+      {
+        "type": "sqs_queue",
+        "name": "block-advert-publisher-queue",
+        "file": "stacks/indexer-stack.js"
+      },
+      {
+        "type": "sqs_queue",
+        "name": "block-advert-publisher-dlq",
+        "file": "stacks/indexer-stack.js"
+      },
+      {
+        "type": "sqs_queue",
+        "name": "block-index-writer-queue",
+        "file": "stacks/indexer-stack.js"
+      },
+      {
+        "type": "sqs_queue",
+        "name": "block-index-writer-dlq",
+        "file": "stacks/indexer-stack.js"
+      },
+      {
+        "type": "s3_bucket",
+        "name": "stream-log-store",
+        "file": "stacks/firehose-stack.js"
+      },
+      {
+        "type": "s3_bucket",
+        "name": "athena-w3up-results",
+        "file": "stacks/firehose-stack.js"
+      },
+      {
+        "type": "s3_bucket",
+        "name": "athena-dynamo-spill",
+        "file": "stacks/firehose-stack.js"
+      },
+      {
+        "type": "sqs_queue",
+        "name": "upload-admin-metrics-dlq",
+        "file": "stacks/upload-api-stack.js"
+      },
+      {
+        "type": "sqs_queue",
+        "name": "upload-space-metrics-dlq",
+        "file": "stacks/upload-api-stack.js"
+      },
+      {
+        "type": "dynamodb_table",
+        "name": "agent-index",
+        "file": "stacks/ucan-invocation-stack.js"
+      },
+      {
+        "type": "s3_bucket",
+        "name": "workflow-store",
+        "file": "stacks/ucan-invocation-stack.js"
+      },
+      {
+        "type": "s3_bucket",
+        "name": "ucan-store",
+        "file": "stacks/ucan-invocation-stack.js"
+      },
+      {
+        "type": "event_bus",
+        "name": "event-bus",
+        "file": "stacks/bus-stack.js"
+      },
+      {
+        "type": "sqs_queue",
+        "name": "car-replicator-queue",
+        "file": "stacks/replicator-stack.js"
+      },
+      {
+        "type": "js_dep_dynamodb",
+        "package": "@aws-sdk/client-dynamodb",
+        "version": "catalog:",
+        "file": "package.json"
+      },
+      {
+        "type": "js_dep_s3",
+        "package": "@aws-sdk/client-s3",
+        "version": "catalog:",
+        "file": "package.json"
+      },
+      {
+        "type": "js_dep_sqs",
+        "package": "@aws-sdk/client-sqs",
+        "version": "catalog:",
+        "file": "package.json"
+      },
+      {
+        "type": "js_dep_dynamodb",
+        "package": "@aws-sdk/client-dynamodb",
+        "version": "catalog:",
+        "file": "tools/package.json"
+      },
+      {
+        "type": "js_dep_s3",
+        "package": "@aws-sdk/client-s3",
+        "version": "catalog:",
+        "file": "roundabout/package.json"
+      },
+      {
+        "type": "js_dep_dynamodb",
+        "package": "@aws-sdk/client-dynamodb",
+        "version": "catalog:",
+        "file": "filecoin/package.json"
+      },
+      {
+        "type": "js_dep_s3",
+        "package": "@aws-sdk/client-s3",
+        "version": "catalog:",
+        "file": "filecoin/package.json"
+      },
+      {
+        "type": "js_dep_sqs",
+        "package": "@aws-sdk/client-sqs",
+        "version": "catalog:",
+        "file": "filecoin/package.json"
+      },
+      {
+        "type": "js_dep_s3",
+        "package": "@aws-sdk/client-s3",
+        "version": "catalog:",
+        "file": "replicator/package.json"
+      },
+      {
+        "type": "js_dep_s3",
+        "package": "@aws-sdk/client-s3",
+        "version": "catalog:",
+        "file": "carpark/package.json"
+      },
+      {
+        "type": "js_dep_sqs",
+        "package": "@aws-sdk/client-sqs",
+        "version": "catalog:",
+        "file": "carpark/package.json"
+      },
+      {
+        "type": "js_dep_dynamodb",
+        "package": "@aws-sdk/client-dynamodb",
+        "version": "catalog:",
+        "file": "upload-api/package.json"
+      },
+      {
+        "type": "js_dep_s3",
+        "package": "@aws-sdk/client-s3",
+        "version": "catalog:",
+        "file": "upload-api/package.json"
+      },
+      {
+        "type": "js_dep_sqs",
+        "package": "@aws-sdk/client-sqs",
+        "version": "catalog:",
+        "file": "upload-api/package.json"
+      },
+      {
+        "type": "js_dep_s3",
+        "package": "@aws-sdk/client-s3",
+        "version": "catalog:",
+        "file": "psa/package.json"
+      },
+      {
+        "type": "js_dep_dynamodb",
+        "package": "@aws-sdk/client-dynamodb",
+        "version": "catalog:",
+        "file": "indexer/package.json"
+      },
+      {
+        "type": "js_dep_sqs",
+        "package": "@aws-sdk/client-sqs",
+        "version": "catalog:",
+        "file": "indexer/package.json"
+      },
+      {
+        "type": "js_dep_dynamodb",
+        "package": "@aws-sdk/client-dynamodb",
+        "version": "catalog:",
+        "file": "billing/package.json"
+      },
+      {
+        "type": "js_dep_s3",
+        "package": "@aws-sdk/client-s3",
+        "version": "catalog:",
+        "file": "billing/package.json"
+      },
+      {
+        "type": "js_dep_sqs",
+        "package": "@aws-sdk/client-sqs",
+        "version": "catalog:",
+        "file": "billing/package.json"
+      },
+      {
+        "type": "env_bucket",
+        "var": "BUCKET_NAME",
+        "file": "billing/scripts/dedupe-space-diff/.env.template"
+      },
+      {
+        "type": "env_bucket",
+        "var": "BUCKET_NAME",
+        "file": "billing/scripts/dedupe-space-diff/.env.template"
+      },
+      {
+        "type": "env_bucket",
+        "var": "BUCKET_NAME",
+        "file": "billing/scripts/dedupe-space-diff/.env.template"
+      }
+    ],
+    "w3name": [
+      {
+        "type": "durable_object",
+        "name": "NAME_ROOM",
+        "file": "packages/api/wrangler.toml"
+      },
+      {
+        "type": "durable_object",
+        "name": "NameRoom0",
+        "file": "packages/api/wrangler.toml"
+      },
+      {
+        "type": "durable_object",
+        "name": "IPNS_RECORD",
+        "file": "packages/api/wrangler.toml"
+      },
+      {
+        "type": "durable_object",
+        "name": "IPNSRecord",
+        "file": "packages/api/wrangler.toml"
+      }
+    ]
+  },
+  "sql_schemas": [
+    {
+      "repo": "bluesky-backup-webapp-server",
+      "type": "sql_table",
+      "table_name": "rotation_keys",
+      "columns": [
+        {
+          "name": "id",
+          "type": "TEXT"
+        },
+        {
+          "name": "storacha_account",
+          "type": "TEXT"
+        },
+        {
+          "name": "atproto_account",
+          "type": "TEXT"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP"
+        }
+      ],
+      "file": "scripts/migrations/00004_rotation_keys/index.sql"
+    },
+    {
+      "repo": "bluesky-backup-webapp-server",
+      "type": "sql_table",
+      "table_name": "refresh_locks",
+      "columns": [
+        {
+          "name": "key",
+          "type": "TEXT"
+        },
+        {
+          "name": "value",
+          "type": "TEXT"
+        }
+      ],
+      "file": "scripts/migrations/00002_refresh_locks/index.sql"
+    },
+    {
+      "repo": "bluesky-backup-webapp-server",
+      "type": "sql_table",
+      "table_name": "at_blobs",
+      "columns": [
+        {
+          "name": "id",
+          "type": "UUID"
+        },
+        {
+          "name": "cid",
+          "type": "TEXT"
+        },
+        {
+          "name": "content_type",
+          "type": "TEXT"
+        },
+        {
+          "name": "backup_id",
+          "type": "UUID"
+        },
+        {
+          "name": "snapshot_id",
+          "type": "UUID"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP"
+        }
+      ],
+      "file": "scripts/migrations/00003_at_blobs/index.sql"
+    },
+    {
+      "repo": "bluesky-backup-webapp-server",
+      "type": "sql_table",
+      "table_name": "backups",
+      "columns": [
+        {
+          "name": "id",
+          "type": "UUID"
+        },
+        {
+          "name": "account_did",
+          "type": "TEXT"
+        },
+        {
+          "name": "name",
+          "type": "TEXT"
+        },
+        {
+          "name": "atproto_account",
+          "type": "TEXT"
+        },
+        {
+          "name": "storacha_space",
+          "type": "TEXT"
+        },
+        {
+          "name": "include_repository",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "include_blobs",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "include_preferences",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "delegation_cid",
+          "type": "TEXT"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP"
+        }
+      ],
+      "file": "scripts/migrations/00001_initial/index.sql"
+    },
+    {
+      "repo": "bluesky-backup-webapp-server",
+      "type": "sql_table",
+      "table_name": "snapshots",
+      "columns": [
+        {
+          "name": "id",
+          "type": "UUID"
+        },
+        {
+          "name": "backup_id",
+          "type": "UUID"
+        },
+        {
+          "name": "atproto_account",
+          "type": "TEXT"
+        },
+        {
+          "name": "repo_rev",
+          "type": "TEXT"
+        },
+        {
+          "name": "repository_status",
+          "type": "TEXT"
+        },
+        {
+          "name": "repository_status",
+          "type": "IN"
+        },
+        {
+          "name": "repository_cid",
+          "type": "TEXT"
+        },
+        {
+          "name": "blobs_status",
+          "type": "TEXT"
+        },
+        {
+          "name": "blobs_status",
+          "type": "IN"
+        },
+        {
+          "name": "preferences_status",
+          "type": "TEXT"
+        },
+        {
+          "name": "preferences_status",
+          "type": "IN"
+        },
+        {
+          "name": "preferences_cid",
+          "type": "TEXT"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP"
+        }
+      ],
+      "file": "scripts/migrations/00001_initial/index.sql"
+    },
+    {
+      "repo": "bluesky-backup-webapp-server",
+      "type": "sql_table",
+      "table_name": "blobs",
+      "columns": [
+        {
+          "name": "cid",
+          "type": "TEXT"
+        },
+        {
+          "name": "content_type",
+          "type": "TEXT"
+        },
+        {
+          "name": "backup_id",
+          "type": "UUID"
+        },
+        {
+          "name": "snapshot_id",
+          "type": "UUID"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP"
+        }
+      ],
+      "file": "scripts/migrations/00001_initial/index.sql"
+    },
+    {
+      "repo": "bluesky-backup-webapp-server",
+      "type": "sql_table",
+      "table_name": "auth_sessions",
+      "columns": [
+        {
+          "name": "key",
+          "type": "TEXT"
+        },
+        {
+          "name": "value",
+          "type": "TEXT"
+        },
+        {
+          "name": "expiration_ttl",
+          "type": "INTEGER"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP"
+        }
+      ],
+      "file": "scripts/migrations/00001_initial/index.sql"
+    },
+    {
+      "repo": "bluesky-backup-webapp-server",
+      "type": "sql_table",
+      "table_name": "auth_states",
+      "columns": [
+        {
+          "name": "key",
+          "type": "TEXT"
+        },
+        {
+          "name": "value",
+          "type": "TEXT"
+        },
+        {
+          "name": "expiration_ttl",
+          "type": "INTEGER"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP"
+        }
+      ],
+      "file": "scripts/migrations/00001_initial/index.sql"
+    },
+    {
+      "repo": "guppy",
+      "type": "sql_table",
+      "table_name": "indexes",
+      "columns": [
+        {
+          "name": "id",
+          "type": "BLOB"
+        },
+        {
+          "name": "upload_id",
+          "type": "BLOB"
+        },
+        {
+          "name": "digest",
+          "type": "BLOB"
+        },
+        {
+          "name": "piece_cid",
+          "type": "BLOB"
+        },
+        {
+          "name": "size",
+          "type": "INTEGER"
+        },
+        {
+          "name": "slice_count",
+          "type": "INTEGER"
+        },
+        {
+          "name": "state",
+          "type": "TEXT"
+        },
+        {
+          "name": "location_inv",
+          "type": "BLOB"
+        },
+        {
+          "name": "pdp_accept_inv",
+          "type": "BLOB"
+        }
+      ],
+      "file": "pkg/preparation/sqlrepo/migrations/20251219063531_indexes_listed_in_db.sql"
+    },
+    {
+      "repo": "guppy",
+      "type": "sql_table",
+      "table_name": "shards_in_indexes",
+      "columns": [
+        {
+          "name": "shard_id",
+          "type": "BLOB"
+        },
+        {
+          "name": "index_id",
+          "type": "BLOB"
+        }
+      ],
+      "file": "pkg/preparation/sqlrepo/migrations/20251219063531_indexes_listed_in_db.sql"
+    },
+    {
+      "repo": "guppy",
+      "type": "sql_table",
+      "table_name": "node_uploads",
+      "columns": [
+        {
+          "name": "node_cid",
+          "type": "BLOB"
+        },
+        {
+          "name": "space_did",
+          "type": "BLOB"
+        },
+        {
+          "name": "upload_id",
+          "type": "BLOB"
+        },
+        {
+          "name": "shard_id",
+          "type": "BLOB"
+        },
+        {
+          "name": "shard_offset",
+          "type": "INTEGER"
+        }
+      ],
+      "file": "pkg/preparation/sqlrepo/migrations/20251228120000_rename_nodes_in_shards_to_node_uploads.sql"
+    },
+    {
+      "repo": "guppy",
+      "type": "sql_table",
+      "table_name": "nodes_in_shards",
+      "columns": [
+        {
+          "name": "node_cid",
+          "type": "BLOB"
+        },
+        {
+          "name": "space_did",
+          "type": "BLOB"
+        },
+        {
+          "name": "shard_id",
+          "type": "BLOB"
+        },
+        {
+          "name": "shard_offset",
+          "type": "INTEGER"
+        }
+      ],
+      "file": "pkg/preparation/sqlrepo/migrations/20251228120000_rename_nodes_in_shards_to_node_uploads.sql"
+    },
+    {
+      "repo": "guppy",
+      "type": "sql_table",
+      "table_name": "sources",
+      "columns": [
+        {
+          "name": "id",
+          "type": "BLOB"
+        },
+        {
+          "name": "name",
+          "type": "TEXT"
+        },
+        {
+          "name": "kind",
+          "type": "TEXT"
+        },
+        {
+          "name": "path",
+          "type": "TEXT"
+        },
+        {
+          "name": "connection_params",
+          "type": "BLOB"
+        },
+        {
+          "name": "created_at",
+          "type": "INTEGER"
+        },
+        {
+          "name": "updated_at",
+          "type": "INTEGER"
+        }
+      ],
+      "file": "pkg/preparation/sqlrepo/migrations/20240101000000_init_schema.sql"
+    },
+    {
+      "repo": "guppy",
+      "type": "sql_table",
+      "table_name": "spaces",
+      "columns": [
+        {
+          "name": "did",
+          "type": "BLOB"
+        },
+        {
+          "name": "name",
+          "type": "TEXT"
+        },
+        {
+          "name": "created_at",
+          "type": "INTEGER"
+        },
+        {
+          "name": "shard_size",
+          "type": "INTEGER"
+        }
+      ],
+      "file": "pkg/preparation/sqlrepo/migrations/20240101000000_init_schema.sql"
+    },
+    {
+      "repo": "guppy",
+      "type": "sql_table",
+      "table_name": "space_sources",
+      "columns": [
+        {
+          "name": "source_id",
+          "type": "BLOB"
+        },
+        {
+          "name": "space_did",
+          "type": "BLOB"
+        }
+      ],
+      "file": "pkg/preparation/sqlrepo/migrations/20240101000000_init_schema.sql"
+    },
+    {
+      "repo": "guppy",
+      "type": "sql_table",
+      "table_name": "fs_entries",
+      "columns": [
+        {
+          "name": "id",
+          "type": "BLOB"
+        },
+        {
+          "name": "source_id",
+          "type": "BLOB"
+        },
+        {
+          "name": "space_did",
+          "type": "BLOB"
+        },
+        {
+          "name": "path",
+          "type": "TEXT"
+        },
+        {
+          "name": "last_modified",
+          "type": "INTEGER"
+        },
+        {
+          "name": "mode",
+          "type": "INTEGER"
+        },
+        {
+          "name": "size",
+          "type": "INTEGER"
+        },
+        {
+          "name": "checksum",
+          "type": "BLOB"
+        }
+      ],
+      "file": "pkg/preparation/sqlrepo/migrations/20240101000000_init_schema.sql"
+    },
+    {
+      "repo": "guppy",
+      "type": "sql_table",
+      "table_name": "directory_children",
+      "columns": [
+        {
+          "name": "directory_id",
+          "type": "BLOB"
+        },
+        {
+          "name": "child_id",
+          "type": "BLOB"
+        }
+      ],
+      "file": "pkg/preparation/sqlrepo/migrations/20240101000000_init_schema.sql"
+    },
+    {
+      "repo": "guppy",
+      "type": "sql_table",
+      "table_name": "nodes",
+      "columns": [
+        {
+          "name": "cid",
+          "type": "BLOB"
+        },
+        {
+          "name": "space_did",
+          "type": "BLOB"
+        },
+        {
+          "name": "size",
+          "type": "INTEGER"
+        },
+        {
+          "name": "ufsdata",
+          "type": "BLOB"
+        },
+        {
+          "name": "path",
+          "type": "TEXT"
+        },
+        {
+          "name": "source_id",
+          "type": "BLOB"
+        },
+        {
+          "name": "offset",
+          "type": "INTEGER"
+        },
+        {
+          "name": "ufsdata",
+          "type": "IS"
+        },
+        {
+          "name": "AND",
+          "type": "path"
+        },
+        {
+          "name": "AND",
+          "type": "source_id"
+        },
+        {
+          "name": "path",
+          "type": "IS"
+        },
+        {
+          "name": "AND",
+          "type": "source_id"
+        },
+        {
+          "name": "AND",
+          "type": "ufsdata"
+        }
+      ],
+      "file": "pkg/preparation/sqlrepo/migrations/20240101000000_init_schema.sql"
+    },
+    {
+      "repo": "guppy",
+      "type": "sql_table",
+      "table_name": "links",
+      "columns": [
+        {
+          "name": "name",
+          "type": "TEXT"
+        },
+        {
+          "name": "t_size",
+          "type": "INTEGER"
+        },
+        {
+          "name": "hash",
+          "type": "BLOB"
+        },
+        {
+          "name": "parent_id",
+          "type": "BLOB"
+        },
+        {
+          "name": "space_did",
+          "type": "BLOB"
+        },
+        {
+          "name": "ordering",
+          "type": "INTEGER"
+        }
+      ],
+      "file": "pkg/preparation/sqlrepo/migrations/20240101000000_init_schema.sql"
+    },
+    {
+      "repo": "guppy",
+      "type": "sql_table",
+      "table_name": "uploads",
+      "columns": [
+        {
+          "name": "id",
+          "type": "BLOB"
+        },
+        {
+          "name": "space_did",
+          "type": "BLOB"
+        },
+        {
+          "name": "source_id",
+          "type": "BLOB"
+        },
+        {
+          "name": "created_at",
+          "type": "INTEGER"
+        },
+        {
+          "name": "updated_at",
+          "type": "INTEGER"
+        },
+        {
+          "name": "root_fs_entry_id",
+          "type": "BLOB"
+        },
+        {
+          "name": "root_cid",
+          "type": "BLOB"
+        },
+        {
+          "name": "SET",
+          "type": "NULL"
+        }
+      ],
+      "file": "pkg/preparation/sqlrepo/migrations/20240101000000_init_schema.sql"
+    },
+    {
+      "repo": "guppy",
+      "type": "sql_table",
+      "table_name": "shards",
+      "columns": [
+        {
+          "name": "id",
+          "type": "BLOB"
+        },
+        {
+          "name": "upload_id",
+          "type": "BLOB"
+        },
+        {
+          "name": "size",
+          "type": "INTEGER"
+        },
+        {
+          "name": "digest",
+          "type": "BLOB"
+        },
+        {
+          "name": "state",
+          "type": "TEXT"
+        }
+      ],
+      "file": "pkg/preparation/sqlrepo/migrations/20240101000000_init_schema.sql"
+    },
+    {
+      "repo": "guppy",
+      "type": "sql_table",
+      "table_name": "dag_scans",
+      "columns": [
+        {
+          "name": "fs_entry_id",
+          "type": "BLOB"
+        },
+        {
+          "name": "upload_id",
+          "type": "BLOB"
+        },
+        {
+          "name": "created_at",
+          "type": "INTEGER"
+        },
+        {
+          "name": "updated_at",
+          "type": "INTEGER"
+        },
+        {
+          "name": "cid",
+          "type": "BLOB"
+        },
+        {
+          "name": "space_did",
+          "type": "BLOB"
+        },
+        {
+          "name": "kind",
+          "type": "TEXT"
+        }
+      ],
+      "file": "pkg/preparation/sqlrepo/migrations/20240101000000_init_schema.sql"
+    },
+    {
+      "repo": "guppy",
+      "type": "sql_table",
+      "table_name": "nodes_in_shards",
+      "columns": [
+        {
+          "name": "node_cid",
+          "type": "BLOB"
+        },
+        {
+          "name": "space_did",
+          "type": "BLOB"
+        },
+        {
+          "name": "shard_id",
+          "type": "BLOB"
+        },
+        {
+          "name": "shard_offset",
+          "type": "INTEGER"
+        }
+      ],
+      "file": "pkg/preparation/sqlrepo/migrations/20240101000000_init_schema.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "jobqueue",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text"
+        },
+        {
+          "name": "created",
+          "type": "text"
+        },
+        {
+          "name": "updated",
+          "type": "text"
+        },
+        {
+          "name": "queue",
+          "type": "text"
+        },
+        {
+          "name": "body",
+          "type": "blob"
+        },
+        {
+          "name": "timeout",
+          "type": "text"
+        },
+        {
+          "name": "received",
+          "type": "integer"
+        }
+      ],
+      "file": "lib/jobqueue/queue/schema.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "jobqueue_dead",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text"
+        },
+        {
+          "name": "created",
+          "type": "text"
+        },
+        {
+          "name": "updated",
+          "type": "text"
+        },
+        {
+          "name": "queue",
+          "type": "text"
+        },
+        {
+          "name": "body",
+          "type": "blob"
+        },
+        {
+          "name": "timeout",
+          "type": "text"
+        },
+        {
+          "name": "received",
+          "type": "integer"
+        },
+        {
+          "name": "job_name",
+          "type": "text"
+        },
+        {
+          "name": "failure_reason",
+          "type": "text"
+        },
+        {
+          "name": "error_message",
+          "type": "text"
+        },
+        {
+          "name": "moved_at",
+          "type": "text"
+        }
+      ],
+      "file": "lib/jobqueue/queue/schema.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "jobqueue",
+      "columns": [
+        {
+          "name": "id",
+          "type": "TEXT"
+        },
+        {
+          "name": "created",
+          "type": "TIMESTAMPTZ"
+        },
+        {
+          "name": "updated",
+          "type": "TIMESTAMPTZ"
+        },
+        {
+          "name": "queue",
+          "type": "TEXT"
+        },
+        {
+          "name": "body",
+          "type": "BYTEA"
+        },
+        {
+          "name": "timeout",
+          "type": "TIMESTAMPTZ"
+        },
+        {
+          "name": "received",
+          "type": "INTEGER"
+        }
+      ],
+      "file": "lib/jobqueue/queue/schema.postgres.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "jobqueue_dead",
+      "columns": [
+        {
+          "name": "id",
+          "type": "TEXT"
+        },
+        {
+          "name": "created",
+          "type": "TIMESTAMPTZ"
+        },
+        {
+          "name": "updated",
+          "type": "TIMESTAMPTZ"
+        },
+        {
+          "name": "queue",
+          "type": "TEXT"
+        },
+        {
+          "name": "body",
+          "type": "BYTEA"
+        },
+        {
+          "name": "timeout",
+          "type": "TIMESTAMPTZ"
+        },
+        {
+          "name": "received",
+          "type": "INTEGER"
+        },
+        {
+          "name": "job_name",
+          "type": "TEXT"
+        },
+        {
+          "name": "failure_reason",
+          "type": "TEXT"
+        },
+        {
+          "name": "error_message",
+          "type": "TEXT"
+        },
+        {
+          "name": "moved_at",
+          "type": "TIMESTAMPTZ"
+        }
+      ],
+      "file": "lib/jobqueue/queue/schema.postgres.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "queues",
+      "columns": [
+        {
+          "name": "queue",
+          "type": "TEXT"
+        }
+      ],
+      "file": "lib/jobqueue/dedup/schema.postgres.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "job_ns",
+      "columns": [
+        {
+          "name": "id",
+          "type": "SERIAL"
+        },
+        {
+          "name": "queue",
+          "type": "TEXT"
+        },
+        {
+          "name": "name",
+          "type": "TEXT"
+        }
+      ],
+      "file": "lib/jobqueue/dedup/schema.postgres.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "jobs",
+      "columns": [
+        {
+          "name": "id",
+          "type": "SERIAL"
+        },
+        {
+          "name": "ns_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "key",
+          "type": "BYTEA"
+        },
+        {
+          "name": "body",
+          "type": "BYTEA"
+        },
+        {
+          "name": "created_s",
+          "type": "BIGINT"
+        },
+        {
+          "name": "DEFAULT",
+          "type": "EXTRACT(EPOCH FROM NOW()"
+        },
+        {
+          "name": "avail_s",
+          "type": "BIGINT"
+        },
+        {
+          "name": "attempts",
+          "type": "INTEGER"
+        }
+      ],
+      "file": "lib/jobqueue/dedup/schema.postgres.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "job_done",
+      "columns": [
+        {
+          "name": "ns_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "key",
+          "type": "BYTEA"
+        },
+        {
+          "name": "status",
+          "type": "INTEGER"
+        },
+        {
+          "name": "done_s",
+          "type": "BIGINT"
+        },
+        {
+          "name": "DEFAULT",
+          "type": "EXTRACT(EPOCH FROM NOW()"
+        }
+      ],
+      "file": "lib/jobqueue/dedup/schema.postgres.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "job_dead",
+      "columns": [
+        {
+          "name": "id",
+          "type": "SERIAL"
+        },
+        {
+          "name": "ns_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "key",
+          "type": "BYTEA"
+        },
+        {
+          "name": "body",
+          "type": "BYTEA"
+        },
+        {
+          "name": "attempts",
+          "type": "INTEGER"
+        },
+        {
+          "name": "reason",
+          "type": "TEXT"
+        },
+        {
+          "name": "error",
+          "type": "TEXT"
+        },
+        {
+          "name": "moved_s",
+          "type": "BIGINT"
+        },
+        {
+          "name": "DEFAULT",
+          "type": "EXTRACT(EPOCH FROM NOW()"
+        }
+      ],
+      "file": "lib/jobqueue/dedup/schema.postgres.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "queues",
+      "columns": [
+        {
+          "name": "queue",
+          "type": "TEXT"
+        }
+      ],
+      "file": "lib/jobqueue/dedup/schema.sqlite.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "job_ns",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "queue",
+          "type": "TEXT"
+        },
+        {
+          "name": "name",
+          "type": "TEXT"
+        }
+      ],
+      "file": "lib/jobqueue/dedup/schema.sqlite.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "jobs",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "ns_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "key",
+          "type": "BLOB"
+        },
+        {
+          "name": "body",
+          "type": "BLOB"
+        },
+        {
+          "name": "created_s",
+          "type": "INTEGER"
+        },
+        {
+          "name": "avail_s",
+          "type": "INTEGER"
+        },
+        {
+          "name": "attempts",
+          "type": "INTEGER"
+        }
+      ],
+      "file": "lib/jobqueue/dedup/schema.sqlite.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "job_done",
+      "columns": [
+        {
+          "name": "ns_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "key",
+          "type": "BLOB"
+        },
+        {
+          "name": "status",
+          "type": "INTEGER"
+        },
+        {
+          "name": "done_s",
+          "type": "INTEGER"
+        }
+      ],
+      "file": "lib/jobqueue/dedup/schema.sqlite.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "job_dead",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "ns_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "key",
+          "type": "BLOB"
+        },
+        {
+          "name": "body",
+          "type": "BLOB"
+        },
+        {
+          "name": "attempts",
+          "type": "INTEGER"
+        },
+        {
+          "name": "reason",
+          "type": "TEXT"
+        },
+        {
+          "name": "error",
+          "type": "TEXT"
+        },
+        {
+          "name": "moved_s",
+          "type": "INTEGER"
+        }
+      ],
+      "file": "lib/jobqueue/dedup/schema.sqlite.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "machines",
+      "columns": [
+        {
+          "name": "id",
+          "type": "SERIAL"
+        },
+        {
+          "name": "last_contact",
+          "type": "TIMESTAMP"
+        },
+        {
+          "name": "host_and_port",
+          "type": "varchar(300)"
+        },
+        {
+          "name": "cpu",
+          "type": "INTEGER"
+        },
+        {
+          "name": "ram",
+          "type": "BIGINT"
+        },
+        {
+          "name": "gpu",
+          "type": "FLOAT"
+        }
+      ],
+      "file": "pkg/pdp/scheduler/schema/task.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "task",
+      "columns": [
+        {
+          "name": "id",
+          "type": "SERIAL"
+        },
+        {
+          "name": "initiated_by",
+          "type": "INTEGER"
+        },
+        {
+          "name": "update_time",
+          "type": "TIMESTAMP"
+        },
+        {
+          "name": "posted_time",
+          "type": "TIMESTAMP"
+        },
+        {
+          "name": "owner_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "added_by",
+          "type": "INTEGER"
+        },
+        {
+          "name": "previous_task",
+          "type": "INTEGER"
+        },
+        {
+          "name": "name",
+          "type": "varchar(16)"
+        }
+      ],
+      "file": "pkg/pdp/scheduler/schema/task.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "task_history",
+      "columns": [
+        {
+          "name": "id",
+          "type": "SERIAL"
+        },
+        {
+          "name": "task_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(16)"
+        },
+        {
+          "name": "posted",
+          "type": "TIMESTAMP"
+        },
+        {
+          "name": "work_start",
+          "type": "TIMESTAMP"
+        },
+        {
+          "name": "work_end",
+          "type": "TIMESTAMP"
+        },
+        {
+          "name": "result",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "err",
+          "type": "varchar"
+        },
+        {
+          "name": "completed_by_host_and_port",
+          "type": "varchar(300)"
+        }
+      ],
+      "file": "pkg/pdp/scheduler/schema/task.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "task_follow",
+      "columns": [
+        {
+          "name": "id",
+          "type": "SERIAL"
+        },
+        {
+          "name": "owner_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "to_type",
+          "type": "VARCHAR(16)"
+        },
+        {
+          "name": "from_type",
+          "type": "VARCHAR(16)"
+        }
+      ],
+      "file": "pkg/pdp/scheduler/schema/task.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "task_impl",
+      "columns": [
+        {
+          "name": "id",
+          "type": "SERIAL"
+        },
+        {
+          "name": "owner_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(16)"
+        }
+      ],
+      "file": "pkg/pdp/scheduler/schema/task.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "parked_pieces",
+      "columns": [
+        {
+          "name": "id",
+          "type": "bigserial"
+        },
+        {
+          "name": "created_at",
+          "type": "timestamp"
+        },
+        {
+          "name": "piece_cid",
+          "type": "text"
+        },
+        {
+          "name": "piece_padded_size",
+          "type": "bigint"
+        },
+        {
+          "name": "piece_raw_size",
+          "type": "bigint"
+        },
+        {
+          "name": "complete",
+          "type": "boolean"
+        },
+        {
+          "name": "task_id",
+          "type": "bigint"
+        },
+        {
+          "name": "cleanup_task_id",
+          "type": "bigint"
+        },
+        {
+          "name": "long_term",
+          "type": "BOOLEAN"
+        }
+      ],
+      "file": "pkg/pdp/scheduler/schema/task.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "parked_piece_refs",
+      "columns": [
+        {
+          "name": "ref_id",
+          "type": "bigserial"
+        },
+        {
+          "name": "piece_id",
+          "type": "bigint"
+        },
+        {
+          "name": "data_url",
+          "type": "text"
+        },
+        {
+          "name": "data_headers",
+          "type": "jsonb"
+        },
+        {
+          "name": "long_term",
+          "type": "BOOLEAN"
+        }
+      ],
+      "file": "pkg/pdp/scheduler/schema/task.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "pdp_services",
+      "columns": [
+        {
+          "name": "id",
+          "type": "BIGSERIAL"
+        },
+        {
+          "name": "pubkey",
+          "type": "BYTEA"
+        },
+        {
+          "name": "service_label",
+          "type": "TEXT"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP"
+        }
+      ],
+      "file": "pkg/pdp/scheduler/schema/task.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "pdp_piece_uploads",
+      "columns": [
+        {
+          "name": "id",
+          "type": "UUID"
+        },
+        {
+          "name": "service",
+          "type": "TEXT"
+        },
+        {
+          "name": "check_hash_codec",
+          "type": "TEXT"
+        },
+        {
+          "name": "check_hash",
+          "type": "BYTEA"
+        },
+        {
+          "name": "check_size",
+          "type": "BIGINT"
+        },
+        {
+          "name": "piece_cid",
+          "type": "TEXT"
+        },
+        {
+          "name": "notify_url",
+          "type": "TEXT"
+        },
+        {
+          "name": "notify_task_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "piece_ref",
+          "type": "BIGINT"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP"
+        }
+      ],
+      "file": "pkg/pdp/scheduler/schema/task.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "pdp_piecerefs",
+      "columns": [
+        {
+          "name": "id",
+          "type": "BIGSERIAL"
+        },
+        {
+          "name": "service",
+          "type": "TEXT"
+        },
+        {
+          "name": "piece_cid",
+          "type": "TEXT"
+        },
+        {
+          "name": "piece_ref",
+          "type": "BIGINT"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP"
+        },
+        {
+          "name": "proofset_refcount",
+          "type": "BIGINT"
+        }
+      ],
+      "file": "pkg/pdp/scheduler/schema/task.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "pdp_proof_sets",
+      "columns": [
+        {
+          "name": "id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "prev_challenge_request_epoch",
+          "type": "BIGINT"
+        },
+        {
+          "name": "challenge_request_task_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "challenge_request_msg_hash",
+          "type": "TEXT"
+        },
+        {
+          "name": "proving_period",
+          "type": "BIGINT"
+        },
+        {
+          "name": "challenge_window",
+          "type": "BIGINT"
+        },
+        {
+          "name": "prove_at_epoch",
+          "type": "BIGINT"
+        },
+        {
+          "name": "init_ready",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "create_message_hash",
+          "type": "TEXT"
+        },
+        {
+          "name": "service",
+          "type": "TEXT"
+        }
+      ],
+      "file": "pkg/pdp/scheduler/schema/task.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "pdp_prove_tasks",
+      "columns": [
+        {
+          "name": "proofset",
+          "type": "BIGINT"
+        },
+        {
+          "name": "task_id",
+          "type": "BIGINT"
+        }
+      ],
+      "file": "pkg/pdp/scheduler/schema/task.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "pdp_proofset_creates",
+      "columns": [
+        {
+          "name": "create_message_hash",
+          "type": "TEXT"
+        },
+        {
+          "name": "ok",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "proofset_created",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "service",
+          "type": "TEXT"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP"
+        }
+      ],
+      "file": "pkg/pdp/scheduler/schema/task.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "pdp_proofset_roots",
+      "columns": [
+        {
+          "name": "proofset",
+          "type": "BIGINT"
+        },
+        {
+          "name": "root",
+          "type": "TEXT"
+        },
+        {
+          "name": "add_message_hash",
+          "type": "TEXT"
+        },
+        {
+          "name": "add_message_index",
+          "type": "BIGINT"
+        },
+        {
+          "name": "root_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "subroot",
+          "type": "TEXT"
+        },
+        {
+          "name": "subroot_offset",
+          "type": "BIGINT"
+        },
+        {
+          "name": "subroot_size",
+          "type": "BIGINT"
+        },
+        {
+          "name": "pdp_pieceref",
+          "type": "BIGINT"
+        }
+      ],
+      "file": "pkg/pdp/scheduler/schema/task.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "pdp_proofset_root_adds",
+      "columns": [
+        {
+          "name": "proofset",
+          "type": "BIGINT"
+        },
+        {
+          "name": "root",
+          "type": "TEXT"
+        },
+        {
+          "name": "add_message_hash",
+          "type": "TEXT"
+        },
+        {
+          "name": "add_message_ok",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "add_message_index",
+          "type": "BIGINT"
+        },
+        {
+          "name": "subroot",
+          "type": "TEXT"
+        },
+        {
+          "name": "subroot_offset",
+          "type": "BIGINT"
+        },
+        {
+          "name": "subroot_size",
+          "type": "BIGINT"
+        },
+        {
+          "name": "pdp_pieceref",
+          "type": "BIGINT"
+        }
+      ],
+      "file": "pkg/pdp/scheduler/schema/task.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "message_sends_eth",
+      "columns": [
+        {
+          "name": "from_address",
+          "type": "TEXT"
+        },
+        {
+          "name": "to_address",
+          "type": "TEXT"
+        },
+        {
+          "name": "send_reason",
+          "type": "TEXT"
+        },
+        {
+          "name": "send_task_id",
+          "type": "SERIAL"
+        },
+        {
+          "name": "unsigned_tx",
+          "type": "BYTEA"
+        },
+        {
+          "name": "unsigned_hash",
+          "type": "TEXT"
+        },
+        {
+          "name": "nonce",
+          "type": "BIGINT"
+        },
+        {
+          "name": "signed_tx",
+          "type": "BYTEA"
+        },
+        {
+          "name": "signed_hash",
+          "type": "TEXT"
+        },
+        {
+          "name": "send_time",
+          "type": "TIMESTAMP"
+        },
+        {
+          "name": "send_success",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "send_error",
+          "type": "TEXT"
+        }
+      ],
+      "file": "pkg/pdp/scheduler/schema/task.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "message_send_eth_locks",
+      "columns": [
+        {
+          "name": "from_address",
+          "type": "TEXT"
+        },
+        {
+          "name": "task_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "claimed_at",
+          "type": "TIMESTAMP"
+        }
+      ],
+      "file": "pkg/pdp/scheduler/schema/task.sql"
+    },
+    {
+      "repo": "piri",
+      "type": "sql_table",
+      "table_name": "message_waits_eth",
+      "columns": [
+        {
+          "name": "signed_tx_hash",
+          "type": "TEXT"
+        },
+        {
+          "name": "waiter_machine_id",
+          "type": "INT"
+        },
+        {
+          "name": "confirmed_block_number",
+          "type": "BIGINT"
+        },
+        {
+          "name": "confirmed_tx_hash",
+          "type": "TEXT"
+        },
+        {
+          "name": "confirmed_tx_data",
+          "type": "JSONB"
+        },
+        {
+          "name": "tx_status",
+          "type": "TEXT"
+        },
+        {
+          "name": "tx_receipt",
+          "type": "JSONB"
+        },
+        {
+          "name": "tx_success",
+          "type": "BOOLEAN"
+        }
+      ],
+      "file": "pkg/pdp/scheduler/schema/task.sql"
+    },
+    {
+      "repo": "tg-miniapp",
+      "type": "sql_table",
+      "table_name": "jobs",
+      "columns": [
+        {
+          "name": "id",
+          "type": "UUID"
+        },
+        {
+          "name": "user_id",
+          "type": "UUID"
+        },
+        {
+          "name": "status",
+          "type": "TEXT"
+        },
+        {
+          "name": "space",
+          "type": "TEXT"
+        },
+        {
+          "name": "dialogs",
+          "type": "BIGINT"
+        },
+        {
+          "name": "period_from",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "period_to",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "progress",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "started_at",
+          "type": "TIMESTAMP"
+        },
+        {
+          "name": "cause",
+          "type": "TEXT"
+        },
+        {
+          "name": "finished_at",
+          "type": "TIMESTAMP"
+        },
+        {
+          "name": "data_cid",
+          "type": "TEXT"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP"
+        }
+      ],
+      "file": "app/scripts/migrations/00002_jobs/index.sql"
+    },
+    {
+      "repo": "tg-miniapp",
+      "type": "sql_table",
+      "table_name": "users",
+      "columns": [
+        {
+          "name": "id",
+          "type": "UUID"
+        },
+        {
+          "name": "telegram_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "storacha_space",
+          "type": "TEXT"
+        },
+        {
+          "name": "points",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP"
+        }
+      ],
+      "file": "app/scripts/migrations/00001_initial/index.sql"
+    }
+  ]
+}

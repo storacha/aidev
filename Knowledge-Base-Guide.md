@@ -1,0 +1,242 @@
+# Storacha Knowledge Base Guide
+
+How the AI's knowledge system is organized, what each layer contains, and how it all fits together.
+
+---
+
+## Overview
+
+The knowledge system has **5 layers**, from always-loaded context down to raw repo code:
+
+```
+Layer 1: CLAUDE.md + Rules        ← Always in context. Process + conventions.
+Layer 2: Memory Files             ← Loaded on demand. Deep technical knowledge.
+Layer 3: Structured Data + Query  ← Machine-queryable. 82 repos, 175 capabilities.
+Layer 4: Skills                   ← Reusable workflows triggered by slash commands.
+Layer 5: Research + AIPIPs        ← Decision history and background research.
+```
+
+---
+
+## Layer 1: Always-Loaded Context
+
+These files are injected into every conversation automatically.
+
+### `CLAUDE.md` (project root)
+The master instruction file. Contains:
+- Architecture overview (services, data flow, auth model)
+- Conventions (naming, error handling, imports, testing)
+- **Knowledge routing table** — "need to do X? read Y" lookup
+- Blast radius quick reference
+- Query tool usage examples
+
+### `.claude/rules/*.md` (7 files)
+Behavioral rules the AI must follow:
+
+| File | What it enforces |
+|------|-----------------|
+| `development-workflow.md` | 5-phase process, review gates, stop triggers |
+| `tdd.md` | Test-first rules, never weaken tests |
+| `review-process.md` | Independent subagent review, context isolation |
+| `conventions.md` | Naming, error handling, imports, testing patterns |
+| `javascript.md` | JS/TS-specific patterns (ucanto, monorepo awareness) |
+| `golang.md` | Go-specific patterns (testify, mockery, go-ucanto) |
+| `blast-radius.md` | Shared package caution levels |
+| `subagent-patterns.md` | When/how to use subagents |
+| `process-governance.md` | AIPIP required for process changes |
+
+### `memory/MEMORY.md`
+Auto-memory file — persists across conversations. Contains:
+- AIPIP registry (quick reference to all process proposals)
+- Research report index
+- Key decisions made
+- User preferences
+
+**Note:** Only the first 200 lines are loaded. Detailed info lives in topic files (Layer 2).
+
+---
+
+## Layer 2: Memory Files (Loaded On Demand)
+
+~5,400 lines of curated technical knowledge across 20 files. The AI loads these when it needs deep understanding of a specific area.
+
+### `aidev/memory/tech/` — Technology Deep Dives (12 files)
+
+Each file covers one technology domain with TL;DR, architecture, code patterns, and gotchas.
+
+| File | Lines | Covers |
+|------|-------|--------|
+| `ucanto-framework.md` | 451 | UCAN RPC: capabilities, server/client, transport, effects |
+| `ucan-auth-model.md` | 298 | Spaces, accounts, agents, delegation chains, session proofs |
+| `content-addressing.md` | 169 | CIDs, multihash, codecs, multicodec, block model |
+| `car-unixfs.md` | ~300 | CAR files, UnixFS encoding, sharding, DAG structure |
+| `content-claims-indexing.md` | ~350 | Content claims, IPNI, indexing service, ShardedDAGIndex |
+| `filecoin-pipeline.md` | ~250 | CommP, piece CIDs, aggregation, deal lifecycle |
+| `gateway-retrieval.md` | ~300 | Freeway gateway, 26 middlewares, byte-range retrieval |
+| `encryption-kms.md` | ~200 | UCAN KMS, encryption model, key management |
+| `pail-data-structures.md` | ~250 | Merkle clock, CRDT, Pail KV store |
+| `go-ecosystem.md` | ~300 | go-ucanto, go-libstoracha, Go service patterns |
+| `cross-cutting-patterns.md` | ~200 | Error handling, testing patterns, naming conventions |
+| `libp2p-networking.md` | ~150 | libp2p usage in indexing service and IPNI |
+
+**When used:** The AI consults the routing table in CLAUDE.md. Example: "I need to modify a capability" → loads `ucanto-framework.md`.
+
+### `aidev/memory/flows/` — End-to-End Traces (5 files)
+
+Step-by-step traces through the system with exact file paths, function names, and data transformations.
+
+| File | Traces |
+|------|--------|
+| `upload-flow.md` | File → UnixFS → shards → blob/add → index/add → upload/add |
+| `retrieval-flow.md` | Gateway request → IPNI lookup → claims → byte-range fetch from R2 |
+| `auth-flow.md` | Login → email verification → session proofs → delegation chain |
+| `filecoin-deal-flow.md` | blob/accept → filecoin/offer → aggregate → deal → proof |
+| `egress-tracking-flow.md` | Gateway egress → etracker → billing |
+
+**When used:** Before making cross-service changes. The `/trace` slash command loads these.
+
+### `aidev/memory/architecture/` — Structural Knowledge (3 files)
+
+| File | Contains |
+|------|----------|
+| `shared-packages.md` | Full blast radius analysis — which packages affect which repos, monorepo relationship |
+| `spec-implementation-map.md` | Where specs diverge from implementation — known gaps |
+| `infrastructure-decisions.md` | DynamoDB tables, R2 buckets, SQS queues, SST config, deployment patterns |
+
+**When used:** Before changing shared code or infrastructure. The `/impact` command consults these.
+
+---
+
+## Layer 3: Structured Data + Query Tool
+
+Machine-readable JSON files generated by scanning all 82 repos. These power cross-cutting queries that would be impossible by reading individual repos.
+
+### Data Files (`aidev/data/`)
+
+| File | Size | Contains |
+|------|------|----------|
+| `api-surface-map.json` | 276KB | 175 UCAN capabilities, 231 service graph edges, handlers and routes per repo |
+| `infrastructure-map.json` | 172KB | DynamoDB tables, R2/S3 buckets, SQS queues, 57 SQL schemas across 32 repos |
+| `product-map.json` | 47KB | 82 repos grouped into 15 products, with roles, deps, tech stack |
+
+### Scanners (`aidev/scripts/`)
+
+| Script | Scans for |
+|--------|-----------|
+| `scan_api_surface.py` | Capability definitions, handlers, service graph edges, routes |
+| `scan_infra.py` | Infrastructure resources (DynamoDB, R2, SQS, SQL schemas) |
+| `scan_products.py` | Repo metadata, dependencies, tech stack, product groupings |
+
+Re-run these when repos have significant structural changes.
+
+### Query Tool (`tools/query.py`)
+
+Cross-cutting queries over all 3 data files:
+
+```bash
+# Who defines/handles a capability?
+python aidev/tools/query.py capability blob/add
+
+# All capabilities for a repo
+python aidev/tools/query.py capability --repo piri
+
+# Full dependency + infrastructure impact analysis
+python aidev/tools/query.py impact indexing-service
+
+# Package reverse-dependency analysis
+python aidev/tools/query.py impact @storacha/capabilities
+
+# Infrastructure resources for a repo
+python aidev/tools/query.py infra freeway
+
+# All repos using a specific infra type
+python aidev/tools/query.py infra --type dynamodb
+
+# Service graph edges (what calls what)
+python aidev/tools/query.py graph upload-service
+
+# Comprehensive repo overview
+python aidev/tools/query.py repo piri
+
+# Product details with all repos
+python aidev/tools/query.py product "Upload Platform"
+```
+
+**When used:** The AI runs these queries during design (Phase 2) and impact analysis. The `/impact` slash command uses this tool.
+
+---
+
+## Layer 4: Skills (Slash Commands)
+
+Reusable workflows defined in `.claude/skills/`. Each skill is a `SKILL.md` file with structured instructions.
+
+| Skill | Trigger | What it does |
+|-------|---------|-------------|
+| `dev` | `/dev` | Full 5-phase development workflow (specify → complete) |
+| `trace` | `/trace <flow>` | Loads an end-to-end flow trace into context |
+| `impact` | `/impact <pkg>` | Blast radius analysis using query tool + memory files |
+| `spec` | `/spec <name>` | Shows spec-to-implementation mapping with divergences |
+| `review` | `/review` | Independent code review by subagent |
+| `new-capability` | `/new-capability` | Step-by-step guide for adding a UCAN capability |
+| `discover-repo` | `/discover-repo` | Systematic repo exploration (structure, patterns, conventions) |
+
+Skills are git-committable and team-shareable.
+
+---
+
+## Layer 5: Research + AIPIPs
+
+Background research and process evolution history.
+
+### Research Reports (`research/`)
+
+| Report | Topic |
+|--------|-------|
+| `lean-prd-workflow.md` | Value-first planning, 3-tier adaptive complexity |
+| `tdd-ai-agents.md` | TDD with AI agents, tests-as-spec, enforcement |
+| `enforcement-mechanisms.md` | 3-layer defense-in-depth, hook design |
+| `scanner-data-coverage.md` | Scanner data gaps, MCP best practices |
+| `ai-memory-vector-index-analysis.md` | Storacha for AI memory, vector index feasibility |
+
+### AIPIPs (`AIPIP/`)
+
+Versioned process improvement proposals. Each has problem statement, proposal, alternatives, and impact analysis. 11 proposals total (10 accepted, 1 proposed). See the [Process Guide](./AI-Dev-Process-Guide.md) for details.
+
+---
+
+## How It All Connects
+
+```
+Developer says: "Add blob encryption to the upload flow"
+
+1. CLAUDE.md routing table → AI loads memory/tech/encryption-kms.md
+                                    + memory/flows/upload-flow.md
+
+2. /dev skill kicks off          → Phase 1: Specify (feature brief)
+
+3. Phase 2: Design               → AI runs: python aidev/tools/query.py capability blob/add
+                                   AI runs: python aidev/tools/query.py impact upload-service
+                                   AI reads: memory/architecture/shared-packages.md
+
+4. Phase 3: Decompose + Test     → Subagent writes tests (context-isolated)
+
+5. Phase 4: Implement            → AI follows patterns from memory/tech/ucanto-framework.md
+                                   AI follows conventions from .claude/rules/javascript.md
+
+6. /review                       → Independent subagent reviews against conventions
+
+7. Phase 5: Complete             → Draft PR, human reviews on GitHub
+```
+
+---
+
+## Maintenance
+
+| What | How | When |
+|------|-----|------|
+| Memory files | Manual curation after repo analysis | When repos have major changes |
+| Structured data | Re-run `aidev/scripts/scan_*.py` | When repos change structure |
+| Rules | Requires an accepted AIPIP | When process needs improvement |
+| Skills | Requires an accepted AIPIP | When workflows need adjustment |
+| MEMORY.md | Auto-updated by AI across sessions | Ongoing |
+| Research | Created for specific investigations | As needed |

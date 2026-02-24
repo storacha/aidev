@@ -1,0 +1,41 @@
+# Workspace state (not shared)
+.specs/active/
+.specs/done/
+.specs/telemetry.jsonl
+.specs/retro-log.md
+
+# AIPIP governance token (never shared)
+.claude/.process-change-token
+
+# Local settings (permissions, allowed commands)
+.claude/settings.local.json
+
+# Cloned repositories (development artifacts)
+repos/
+
+# Regenerable scanner text output
+data/*.txt
+
+# Auto-generated scanner config
+data/repos-config.yaml
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Node
+node_modules/
+dist/
+
+# Editor
+*.swp
+.idea/
+.vscode/
+
+# Environment
+.env
+.env.local

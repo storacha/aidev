@@ -1,0 +1,1582 @@
+{
+  "products": [
+    {
+      "product_name": "Upload Platform",
+      "description": "Core upload API, client SDK, and infrastructure",
+      "repo_count": 3,
+      "languages": [
+        "JavaScript"
+      ],
+      "repos": [
+        {
+          "name": "upload-service",
+          "language": "JavaScript",
+          "deploy_target": null,
+          "is_monorepo": true,
+          "publishes": [
+            "@storacha/access",
+            "@storacha/blob-index",
+            "@storacha/capabilities",
+            "@storacha/cli",
+            "@storacha/client",
+            "@storacha/did-mailto",
+            "@storacha/encrypt-upload-client",
+            "@storacha/filecoin-api",
+            "@storacha/filecoin-client",
+            "@storacha/principal-resolver",
+            "@storacha/router",
+            "@storacha/ucn",
+            "@storacha/ui-core",
+            "@storacha/ui-react",
+            "@storacha/upload-api",
+            "@storacha/upload-client"
+          ],
+          "role": "library",
+          "description": "This repo implements the storacha.network UCAN protocol [specifications](https://github.com/storacha/specs).",
+          "depends_on_same_product": [
+            "w3up"
+          ],
+          "depends_on_cross_product": [
+            "content-claims",
+            "data-segment",
+            "js-indexing-service-client",
+            "one-webcrypto",
+            "pail",
+            "sigv4",
+            "ucanto",
+            "w3clock"
+          ]
+        },
+        {
+          "name": "w3up",
+          "language": "JavaScript",
+          "deploy_target": null,
+          "is_monorepo": true,
+          "publishes": [
+            "@web3-storage/access",
+            "@web3-storage/blob-index",
+            "@web3-storage/capabilities",
+            "@web3-storage/did-mailto",
+            "@web3-storage/eslint-config-w3up",
+            "@web3-storage/filecoin-api",
+            "@web3-storage/filecoin-client",
+            "@web3-storage/upload-api",
+            "@web3-storage/upload-client",
+            "@web3-storage/w3up-client"
+          ],
+          "role": "library",
+          "description": "This repo moved to [github.com/storacha/upload-service](https://github.com/storacha/upload-service). Please only use this repo to backport changes to `@web3-storage/*` modules.",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": [
+            "content-claims",
+            "data-segment",
+            "one-webcrypto",
+            "sigv4",
+            "ucanto"
+          ]
+        },
+        {
+          "name": "w3infra",
+          "language": "JavaScript",
+          "deploy_target": "SST (AWS)",
+          "is_monorepo": true,
+          "publishes": [
+            "@storacha/upload-service-infra-billing",
+            "@storacha/upload-service-infra-carpark",
+            "@storacha/upload-service-infra-filecoin",
+            "@storacha/upload-service-infra-indexer",
+            "@storacha/upload-service-infra-psa",
+            "@storacha/upload-service-infra-replicator",
+            "@storacha/upload-service-infra-roundabout",
+            "@storacha/upload-service-infra-upload-api"
+          ],
+          "role": "infrastructure + service",
+          "description": "The Infra for [upload-service].",
+          "depends_on_same_product": [
+            "upload-service",
+            "w3up"
+          ],
+          "depends_on_cross_product": [
+            "content-claims",
+            "data-segment",
+            "js-indexing-service-client",
+            "one-webcrypto",
+            "sigv4",
+            "ucanto"
+          ]
+        }
+      ]
+    },
+    {
+      "product_name": "Gateway & Retrieval",
+      "description": "IPFS gateway, content serving, blob fetching",
+      "repo_count": 5,
+      "languages": [
+        "JavaScript"
+      ],
+      "repos": [
+        {
+          "name": "freeway",
+          "language": "JavaScript",
+          "deploy_target": "Cloudflare Worker",
+          "is_monorepo": false,
+          "publishes": [],
+          "role": "service (CF Worker)",
+          "description": "An IPFS gateway for accessing UnixFS data via CAR CIDs",
+          "depends_on_same_product": [
+            "blob-fetcher",
+            "gateway-lib"
+          ],
+          "depends_on_cross_product": [
+            "content-claims",
+            "js-indexing-service-client",
+            "public-bucket",
+            "ucanto",
+            "upload-service"
+          ]
+        },
+        {
+          "name": "gateway-lib",
+          "language": "JavaScript",
+          "deploy_target": null,
+          "is_monorepo": false,
+          "publishes": [
+            "@web3-storage/gateway-lib"
+          ],
+          "role": "library",
+          "description": "Shared library of components for building an IPFS gateway in Cloudflare workers.",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": []
+        },
+        {
+          "name": "blob-fetcher",
+          "language": "JavaScript",
+          "deploy_target": null,
+          "is_monorepo": false,
+          "publishes": [
+            "@web3-storage/blob-fetcher"
+          ],
+          "role": "library",
+          "description": "A blob fetcher that batches requests and reads multipart byterange responses.",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": [
+            "content-claims",
+            "js-indexing-service-client",
+            "public-bucket",
+            "ucanto",
+            "upload-service"
+          ]
+        },
+        {
+          "name": "hoverboard",
+          "language": "JavaScript",
+          "deploy_target": "Cloudflare Worker",
+          "is_monorepo": false,
+          "publishes": [],
+          "role": "service (CF Worker)",
+          "description": "An IPFS Bitswap Peer in Cloudflare Workers",
+          "depends_on_same_product": [
+            "blob-fetcher"
+          ],
+          "depends_on_cross_product": [
+            "content-claims",
+            "public-bucket",
+            "w3up"
+          ]
+        },
+        {
+          "name": "w3link",
+          "language": "JavaScript",
+          "deploy_target": null,
+          "is_monorepo": true,
+          "publishes": [],
+          "role": "CLI tool",
+          "description": "w3link packages",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": [
+            "workers"
+          ]
+        }
+      ]
+    },
+    {
+      "product_name": "Content Routing",
+      "description": "Content indexing, claims, IPNI integration",
+      "repo_count": 3,
+      "languages": [
+        "Go",
+        "JavaScript"
+      ],
+      "repos": [
+        {
+          "name": "indexing-service",
+          "language": "Go",
+          "deploy_target": "Docker",
+          "is_monorepo": false,
+          "publishes": [
+            "github.com/storacha/indexing-service"
+          ],
+          "role": "service (containerized)",
+          "description": "> Indexing for Storacha Network, Cached And Ready To Go",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": [
+            "go-libstoracha",
+            "go-ucanto"
+          ]
+        },
+        {
+          "name": "content-claims",
+          "language": "JavaScript",
+          "deploy_target": "SST (AWS)",
+          "is_monorepo": true,
+          "publishes": [
+            "@web3-storage/content-claims",
+            "@web3-storage/content-claims-cli",
+            "@web3-storage/content-claims-infra"
+          ],
+          "role": "infrastructure + service",
+          "description": "Implementation of the Content Claims Protocol.",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": [
+            "ucanto",
+            "w3up"
+          ]
+        },
+        {
+          "name": "storetheindex",
+          "language": "Go",
+          "deploy_target": "Docker",
+          "is_monorepo": false,
+          "publishes": [
+            "github.com/ipni/storetheindex"
+          ],
+          "role": "service (containerized)",
+          "description": "[![](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg?style=flat-square)](https://protocol.ai)",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": [
+            "go-libstoracha"
+          ]
+        }
+      ]
+    },
+    {
+      "product_name": "Storage Node",
+      "description": "Decentralized storage node, PDP proofs, provisioning",
+      "repo_count": 3,
+      "languages": [
+        "Go",
+        "JS+Go"
+      ],
+      "repos": [
+        {
+          "name": "piri",
+          "language": "JS+Go",
+          "deploy_target": "Docker",
+          "is_monorepo": false,
+          "publishes": [
+            "github.com/storacha/piri"
+          ],
+          "role": "service (containerized)",
+          "description": "<div align=\"center\">",
+          "depends_on_same_product": [
+            "piri-signing-service"
+          ],
+          "depends_on_cross_product": [
+            "delegator",
+            "go-libstoracha",
+            "go-ucanto"
+          ]
+        },
+        {
+          "name": "piri-signing-service",
+          "language": "Go",
+          "deploy_target": "Docker",
+          "is_monorepo": false,
+          "publishes": [
+            "github.com/storacha/piri-signing-service"
+          ],
+          "role": "service (containerized)",
+          "description": "A secure HTTP signing service for Storacha's Proof of Data Possession (PDP) operations on Filecoin.",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": [
+            "go-libstoracha",
+            "go-ucanto"
+          ]
+        },
+        {
+          "name": "storoku",
+          "language": "Go",
+          "deploy_target": "Terraform",
+          "is_monorepo": false,
+          "publishes": [
+            "github.com/storacha/storoku"
+          ],
+          "role": "service (Go)",
+          "description": "> Automated Conventional Storacha Service Deployments",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": []
+        }
+      ]
+    },
+    {
+      "product_name": "Filecoin Pipeline",
+      "description": "Filecoin deal making, CommP computation, aggregation",
+      "repo_count": 4,
+      "languages": [
+        "JS+Go",
+        "JavaScript"
+      ],
+      "repos": [
+        {
+          "name": "filecoin-services",
+          "language": "JS+Go",
+          "deploy_target": null,
+          "is_monorepo": false,
+          "publishes": [],
+          "role": "library",
+          "description": "Building Filecoin onchain programmable services that integrate with the Filecoin network for decentralized storage.",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": []
+        },
+        {
+          "name": "w3filecoin-infra",
+          "language": "JavaScript",
+          "deploy_target": "SST (AWS)",
+          "is_monorepo": true,
+          "publishes": [
+            "@w3filecoin/core",
+            "@w3filecoin/functions",
+            "@w3filecoin/tools"
+          ],
+          "role": "infrastructure + service",
+          "description": "<h1 align=\"center\">\u2042<br/>web3.storage</h1>",
+          "depends_on_same_product": [
+            "data-segment"
+          ],
+          "depends_on_cross_product": [
+            "one-webcrypto",
+            "ucanto",
+            "upload-service"
+          ]
+        },
+        {
+          "name": "data-segment",
+          "language": "JavaScript",
+          "deploy_target": null,
+          "is_monorepo": false,
+          "publishes": [
+            "@web3-storage/data-segment"
+          ],
+          "role": "library",
+          "description": "Implementation of [FRC-0058](https://github.com/filecoin-project/FIPs/blob/master/FRCs/frc-0058.md) verifiable aggregation scheme",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": []
+        },
+        {
+          "name": "fr32-sha2-256-trunc254-padded-binary-tree-multihash",
+          "language": "JavaScript",
+          "deploy_target": null,
+          "is_monorepo": false,
+          "publishes": [],
+          "role": "library",
+          "description": "Fil Piece multihash",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": []
+        }
+      ]
+    },
+    {
+      "product_name": "UCAN Framework",
+      "description": "UCAN-based RPC framework (JS + Go)",
+      "repo_count": 2,
+      "languages": [
+        "Go",
+        "JavaScript"
+      ],
+      "repos": [
+        {
+          "name": "ucanto",
+          "language": "JavaScript",
+          "deploy_target": null,
+          "is_monorepo": true,
+          "publishes": [
+            "@ucanto/client",
+            "@ucanto/core",
+            "@ucanto/interface",
+            "@ucanto/principal",
+            "@ucanto/server",
+            "@ucanto/transport",
+            "@ucanto/validator"
+          ],
+          "role": "library",
+          "description": "[![Core Tests](https://github.com/storacha/ucanto/actions/workflows/core.yml/badge.svg)](https://github.com/storacha/ucanto/actions/workflows/core.yml)",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": []
+        },
+        {
+          "name": "go-ucanto",
+          "language": "Go",
+          "deploy_target": null,
+          "is_monorepo": false,
+          "publishes": [
+            "github.com/storacha/go-ucanto"
+          ],
+          "role": "CLI tool",
+          "description": "[![Go Report Card](https://goreportcard.com/badge/github.com/storacha/go-ucanto)](https://goreportcard.com/report/github.com/storacha/go-ucanto)",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": []
+        }
+      ]
+    },
+    {
+      "product_name": "Shared Libraries",
+      "description": "Go shared libraries for Storacha ecosystem",
+      "repo_count": 1,
+      "languages": [
+        "Go"
+      ],
+      "repos": [
+        {
+          "name": "go-libstoracha",
+          "language": "Go",
+          "deploy_target": null,
+          "is_monorepo": false,
+          "publishes": [
+            "github.com/storacha/go-libstoracha"
+          ],
+          "role": "library (Go)",
+          "description": "A unified Go library (monorepo) for Storacha functionality. This repository hosts multiple subpackages that address different aspects of Storacha\u2019s ecosystem\u2014from capability definitions to job queuing",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": [
+            "go-ucanto"
+          ]
+        }
+      ]
+    },
+    {
+      "product_name": "Identity & Auth",
+      "description": "Encryption key management, delegation service",
+      "repo_count": 2,
+      "languages": [
+        "Go",
+        "JavaScript"
+      ],
+      "repos": [
+        {
+          "name": "ucan-kms",
+          "language": "JavaScript",
+          "deploy_target": "Cloudflare Worker",
+          "is_monorepo": false,
+          "publishes": [],
+          "role": "service (CF Worker)",
+          "description": "UCAN-based Key Management Service",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": [
+            "ucanto",
+            "upload-service"
+          ]
+        },
+        {
+          "name": "delegator",
+          "language": "Go",
+          "deploy_target": "Docker",
+          "is_monorepo": false,
+          "publishes": [
+            "github.com/storacha/delegator"
+          ],
+          "role": "service (containerized)",
+          "description": "A delegation service that manages storage provider registration and proof generation for the Storacha network. The service validates provider identities, manages their registration status, and issues ",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": [
+            "forgectl",
+            "go-libstoracha",
+            "go-ucanto"
+          ]
+        }
+      ]
+    },
+    {
+      "product_name": "Data Structures",
+      "description": "Merkle clock, Pail CRDT, distributed data structures",
+      "repo_count": 3,
+      "languages": [
+        "Go",
+        "JavaScript"
+      ],
+      "repos": [
+        {
+          "name": "pail",
+          "language": "JavaScript",
+          "deploy_target": null,
+          "is_monorepo": false,
+          "publishes": [
+            "@web3-storage/pail"
+          ],
+          "role": "library",
+          "description": "DAG based key value store.",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": []
+        },
+        {
+          "name": "go-pail",
+          "language": "Go",
+          "deploy_target": null,
+          "is_monorepo": false,
+          "publishes": [
+            "github.com/storacha/go-pail"
+          ],
+          "role": "library (Go)",
+          "description": "DAG based key value store. Sharded DAG that minimises traversals and work to build shards.",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": []
+        },
+        {
+          "name": "w3clock",
+          "language": "JavaScript",
+          "deploy_target": "Cloudflare Worker",
+          "is_monorepo": false,
+          "publishes": [
+            "@web3-storage/clock"
+          ],
+          "role": "service (CF Worker)",
+          "description": "UCAN based Merkle Clock as a service.",
+          "depends_on_same_product": [
+            "pail"
+          ],
+          "depends_on_cross_product": [
+            "ucanto"
+          ]
+        }
+      ]
+    },
+    {
+      "product_name": "Egress & Billing",
+      "description": "Egress tracking, usage metering, billing",
+      "repo_count": 2,
+      "languages": [
+        "Go",
+        "JavaScript"
+      ],
+      "repos": [
+        {
+          "name": "etracker",
+          "language": "Go",
+          "deploy_target": "Docker",
+          "is_monorepo": false,
+          "publishes": [
+            "github.com/storacha/etracker"
+          ],
+          "role": "service (containerized)",
+          "description": "",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": [
+            "go-libstoracha",
+            "go-ucanto"
+          ]
+        },
+        {
+          "name": "egress-consumer",
+          "language": "JavaScript",
+          "deploy_target": "Cloudflare Worker",
+          "is_monorepo": false,
+          "publishes": [],
+          "role": "service (CF Worker)",
+          "description": "Cloudflare Worker to consume egress tracking events and batch them to upload-api",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": [
+            "ucanto"
+          ]
+        }
+      ]
+    },
+    {
+      "product_name": "Developer Tools",
+      "description": "Developer console, debugging tools, dashboard",
+      "repo_count": 4,
+      "languages": [
+        "Go",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "repos": [
+        {
+          "name": "console-toolkit",
+          "language": "TypeScript",
+          "deploy_target": null,
+          "is_monorepo": true,
+          "publishes": [
+            "@storacha/console-toolkit-example-dmail-integration",
+            "@storacha/console-toolkit-example-web3mail-integration",
+            "@storacha/console-toolkit-react",
+            "@storacha/console-toolkit-react-styled"
+          ],
+          "role": "documentation",
+          "description": "Storacha Console Integration Toolkit - Plug-and-play UI components for seamless integration",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": [
+            "ucanto",
+            "upload-service"
+          ]
+        },
+        {
+          "name": "debugger",
+          "language": "Go",
+          "deploy_target": null,
+          "is_monorepo": false,
+          "publishes": [
+            "github.com/storacha/debugger"
+          ],
+          "role": "service (Go)",
+          "description": "Various tools and commands that can help debugging the Storacha Network.",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": [
+            "go-libstoracha",
+            "go-ucanto",
+            "piri"
+          ]
+        },
+        {
+          "name": "dashboard",
+          "language": "TypeScript",
+          "deploy_target": null,
+          "is_monorepo": false,
+          "publishes": [],
+          "role": "library",
+          "description": "A client-side web application for Storacha customers to view their storage usage, egress statistics, and monthly invoicing.",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": [
+            "ucanto",
+            "upload-service"
+          ]
+        },
+        {
+          "name": "tg-miniapp",
+          "language": "JavaScript",
+          "deploy_target": "Docker",
+          "is_monorepo": true,
+          "publishes": [],
+          "role": "service (containerized)",
+          "description": "This is the official Telegram Mini App for [Storacha](https://storacha.network), built to let users securely back up their personal and group chats using Storacha\u2019s decentralized storage solution.",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": [
+            "data-segment",
+            "ucanto",
+            "upload-service"
+          ]
+        }
+      ]
+    },
+    {
+      "product_name": "AI & Integrations",
+      "description": "AI agent integrations",
+      "repo_count": 2,
+      "languages": [
+        "JavaScript",
+        "TypeScript"
+      ],
+      "repos": [
+        {
+          "name": "eliza",
+          "language": "JavaScript",
+          "deploy_target": "Docker",
+          "is_monorepo": true,
+          "publishes": [
+            "@elizaos-plugins/adapter-sqlite",
+            "@elizaos/agent",
+            "@elizaos/client-direct",
+            "@elizaos/core",
+            "@elizaos/plugin-bootstrap"
+          ],
+          "role": "service (containerized)",
+          "description": "<div align=\"center\">",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": []
+        },
+        {
+          "name": "ai-integrations",
+          "language": "TypeScript",
+          "deploy_target": null,
+          "is_monorepo": false,
+          "publishes": [
+            "@storacha/elizaos-adapter"
+          ],
+          "role": "documentation",
+          "description": "Storacha database adapter for ElizaOS",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": [
+            "ucanto",
+            "w3up"
+          ]
+        }
+      ]
+    },
+    {
+      "product_name": "Documentation & Community",
+      "description": "Specifications, documentation, community resources",
+      "repo_count": 4,
+      "languages": [
+        "JavaScript",
+        "Other"
+      ],
+      "repos": [
+        {
+          "name": "docs",
+          "language": "JavaScript",
+          "deploy_target": null,
+          "is_monorepo": false,
+          "publishes": [],
+          "role": "CLI tool",
+          "description": "**The** Storacha documentation _website._",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": []
+        },
+        {
+          "name": "specs",
+          "language": "Other",
+          "deploy_target": null,
+          "is_monorepo": false,
+          "publishes": [],
+          "role": "documentation",
+          "description": "This repository contains the specs for the `w3up` protocol and associated subsystems.",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": []
+        },
+        {
+          "name": "RFC",
+          "language": "Other",
+          "deploy_target": null,
+          "is_monorepo": false,
+          "publishes": [],
+          "role": "documentation",
+          "description": "This is repository is place for having structured feedback loops on various work related subjects.",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": []
+        },
+        {
+          "name": "awesome-storacha",
+          "language": "Other",
+          "deploy_target": null,
+          "is_monorepo": false,
+          "publishes": [],
+          "role": "documentation",
+          "description": "> A curated list of awesome projects, tools, and resources built by the Storacha community.",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": []
+        }
+      ]
+    },
+    {
+      "product_name": "Infrastructure Libraries",
+      "description": "Low-level content-addressing, CAR handling, IPLD utilities",
+      "repo_count": 3,
+      "languages": [
+        "Go",
+        "JavaScript"
+      ],
+      "repos": [
+        {
+          "name": "car-block-validator",
+          "language": "JavaScript",
+          "deploy_target": null,
+          "is_monorepo": false,
+          "publishes": [
+            "@web3-storage/car-block-validator"
+          ],
+          "role": "library",
+          "description": "Validate car block bytes",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": []
+        },
+        {
+          "name": "ipfs-car",
+          "language": "JavaScript",
+          "deploy_target": null,
+          "is_monorepo": false,
+          "publishes": [],
+          "role": "library",
+          "description": "Convert files to content-addressed archives (.car) and back",
+          "depends_on_same_product": [
+            "car-block-validator"
+          ],
+          "depends_on_cross_product": []
+        },
+        {
+          "name": "ipni-publisher",
+          "language": "Go",
+          "deploy_target": null,
+          "is_monorepo": false,
+          "publishes": [
+            "github.com/storacha/ipni-publisher"
+          ],
+          "role": "library (Go)",
+          "description": "A library to create, sign and publish adverts to a local IPNI chain, and announce them to other indexers.",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": [
+            "go-ucanto"
+          ]
+        }
+      ]
+    },
+    {
+      "product_name": "Legacy & Migration",
+      "description": "Legacy services, migration tools, deprecated repos",
+      "repo_count": 10,
+      "languages": [
+        "Go",
+        "JavaScript",
+        "Other",
+        "TypeScript"
+      ],
+      "repos": [
+        {
+          "name": "add-to-web3",
+          "language": "Other",
+          "deploy_target": null,
+          "is_monorepo": false,
+          "publishes": [],
+          "role": "documentation",
+          "description": "Upload files to [Storacha](https://storacha/network) from a Github Action, and output the IPFS Content ID.",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": []
+        },
+        {
+          "name": "w3name",
+          "language": "TypeScript",
+          "deploy_target": null,
+          "is_monorepo": true,
+          "publishes": [],
+          "role": "CLI tool",
+          "description": "<h1 align=\"center\">\u2042<br/>w3name</h1>",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": []
+        },
+        {
+          "name": "reads",
+          "language": "JavaScript",
+          "deploy_target": null,
+          "is_monorepo": true,
+          "publishes": [],
+          "role": "CLI tool",
+          "description": "Libraries and services that compose the web3.storage read pipeline",
+          "depends_on_same_product": [
+            "workers"
+          ],
+          "depends_on_cross_product": [
+            "unixfs-dl"
+          ]
+        },
+        {
+          "name": "dagula",
+          "language": "JavaScript",
+          "deploy_target": null,
+          "is_monorepo": false,
+          "publishes": [],
+          "role": "library",
+          "description": "Suck a DAG out of a peer in the IPFS network.",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": []
+        },
+        {
+          "name": "workers",
+          "language": "JavaScript",
+          "deploy_target": null,
+          "is_monorepo": true,
+          "publishes": [
+            "@web3-storage/worker-utils"
+          ],
+          "role": "library",
+          "description": "Repository of specific single function workers.",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": []
+        },
+        {
+          "name": "bluesky-backup-webapp-server",
+          "language": "TypeScript",
+          "deploy_target": "Docker",
+          "is_monorepo": false,
+          "publishes": [],
+          "role": "documentation",
+          "description": "HOT HOT HOT identity and data backup for your ATProto PDS",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": [
+            "ucanto",
+            "upload-service"
+          ]
+        },
+        {
+          "name": "guppy",
+          "language": "Go",
+          "deploy_target": null,
+          "is_monorepo": false,
+          "publishes": [
+            "github.com/storacha/guppy"
+          ],
+          "role": "CLI tool",
+          "description": "> *Storacha's go uploader\u2014and more!* \ud83d\udc14\u2764\ufe0f\ud83d\udc1f",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": [
+            "go-ds-arc",
+            "go-fil-commp-hashhash",
+            "go-libstoracha",
+            "go-ucanto",
+            "indexing-service"
+          ]
+        },
+        {
+          "name": "forgectl",
+          "language": "Go",
+          "deploy_target": null,
+          "is_monorepo": false,
+          "publishes": [
+            "github.com/storacha/forgectl"
+          ],
+          "role": "CLI tool",
+          "description": "Admin tools for the Storacha Forge network.",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": []
+        },
+        {
+          "name": "admin",
+          "language": "TypeScript",
+          "deploy_target": null,
+          "is_monorepo": false,
+          "publishes": [],
+          "role": "documentation",
+          "description": "Administrative tools for storacha.network.",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": [
+            "ucanto",
+            "upload-service"
+          ]
+        },
+        {
+          "name": "agent-store-migration",
+          "language": "JavaScript",
+          "deploy_target": null,
+          "is_monorepo": false,
+          "publishes": [],
+          "role": "library",
+          "description": "Migration tooling for legacy spaces to modern indexing system",
+          "depends_on_same_product": [],
+          "depends_on_cross_product": [
+            "content-claims",
+            "js-indexing-service-client",
+            "ucanto",
+            "upload-service"
+          ]
+        }
+      ]
+    }
+  ],
+  "standalone": [
+    {
+      "name": "fil-datasegment",
+      "language": "Go",
+      "deploy_target": null,
+      "is_monorepo": false,
+      "publishes": [
+        "github.com/storacha/fil-datasegment"
+      ],
+      "role": "library (Go)",
+      "description": "fil-datasegment",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": []
+    },
+    {
+      "name": "filecoin-spade-client",
+      "language": "Go",
+      "deploy_target": null,
+      "is_monorepo": false,
+      "publishes": [
+        "filecoin-spade-client"
+      ],
+      "role": "CLI tool",
+      "description": "[![Made by](https://img.shields.io/badge/made%20by-DukeSoft-blue.svg?style=flat-square)](https://dukesoft.nl)",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": [
+        "fil-datasegment",
+        "go-spade-apitypes",
+        "spade"
+      ]
+    },
+    {
+      "name": "files-from-path",
+      "language": "JavaScript",
+      "deploy_target": null,
+      "is_monorepo": false,
+      "publishes": [],
+      "role": "library",
+      "description": "Expand paths to file-like objects with name, readable stream and size.",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": []
+    },
+    {
+      "name": "go-ds-arc",
+      "language": "Go",
+      "deploy_target": null,
+      "is_monorepo": false,
+      "publishes": [
+        "github.com/storacha/go-ds-arc"
+      ],
+      "role": "library (Go)",
+      "description": "This is an IPFS datastore implementation backed by an Adaptive Replacement",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": []
+    },
+    {
+      "name": "go-fil-commp-hashhash",
+      "language": "Go",
+      "deploy_target": null,
+      "is_monorepo": false,
+      "publishes": [
+        "github.com/storacha/go-fil-commp-hashhash"
+      ],
+      "role": "service (Go)",
+      "description": "go-fil-commp-hashhash",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": []
+    },
+    {
+      "name": "go-mkdelegation",
+      "language": "JS+Go",
+      "deploy_target": null,
+      "is_monorepo": false,
+      "publishes": [
+        "github.com/storacha/go-mkdelegation"
+      ],
+      "role": "library",
+      "description": "A Go implementation of UCAN (User Controlled Authorization Networks) delegation tools.",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": [
+        "go-libstoracha",
+        "go-ucanto"
+      ]
+    },
+    {
+      "name": "go-spade-apitypes",
+      "language": "Go",
+      "deploy_target": null,
+      "is_monorepo": false,
+      "publishes": [
+        "github.com/storacha/go-spade-apitypes"
+      ],
+      "role": "library (Go)",
+      "description": "go-spade-apitypes",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": []
+    },
+    {
+      "name": "homebrew-storoku",
+      "language": "Other",
+      "deploy_target": null,
+      "is_monorepo": false,
+      "publishes": [],
+      "role": "documentation",
+      "description": "",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": []
+    },
+    {
+      "name": "index-worker",
+      "language": "JavaScript",
+      "deploy_target": "Cloudflare Worker",
+      "is_monorepo": false,
+      "publishes": [],
+      "role": "service (CF Worker)",
+      "description": "Index worker is a cloudflare worker that generates an index for a CAR file.",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": []
+    },
+    {
+      "name": "js-indexing-service-client",
+      "language": "JavaScript",
+      "deploy_target": null,
+      "is_monorepo": false,
+      "publishes": [
+        "@storacha/indexing-service-client"
+      ],
+      "role": "library",
+      "description": "A client for the Storacha Indexing Service",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": [
+        "ucanto",
+        "upload-service"
+      ]
+    },
+    {
+      "name": "learnyouw3up",
+      "language": "JavaScript",
+      "deploy_target": null,
+      "is_monorepo": false,
+      "publishes": [],
+      "role": "library",
+      "description": "Workshopper for learning how to use w3up - Storacha's UCAN based upload protocol for IPFS and Filecoin.",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": [
+        "data-segment",
+        "ucanto",
+        "upload-service"
+      ]
+    },
+    {
+      "name": "legacy-spaces-migration",
+      "language": "JavaScript",
+      "deploy_target": null,
+      "is_monorepo": false,
+      "publishes": [],
+      "role": "library",
+      "description": "Migration tooling for legacy spaces to modern indexing system",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": [
+        "content-claims",
+        "js-indexing-service-client",
+        "ucanto",
+        "upload-service"
+      ]
+    },
+    {
+      "name": "linkdex",
+      "language": "JavaScript",
+      "deploy_target": null,
+      "is_monorepo": false,
+      "publishes": [],
+      "role": "library",
+      "description": "An index mapping block CID to linked block CID.",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": [
+        "car-block-validator"
+      ]
+    },
+    {
+      "name": "lit-pkp-demo",
+      "language": "JavaScript",
+      "deploy_target": null,
+      "is_monorepo": false,
+      "publishes": [],
+      "role": "library",
+      "description": "A proof of concept demonstrating Lit Protocol's PKP (Programmable Key Pairs) integration with Storacha for encrypted file storage and access control.",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": [
+        "ucanto",
+        "upload-service"
+      ]
+    },
+    {
+      "name": "mcp-storage-server",
+      "language": "TypeScript",
+      "deploy_target": "Docker",
+      "is_monorepo": false,
+      "publishes": [
+        "@storacha/mcp-storage-server"
+      ],
+      "role": "service (containerized)",
+      "description": "Storacha MCP Storage Server - Decentralized storage for AI systems",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": [
+        "ucanto",
+        "upload-service"
+      ]
+    },
+    {
+      "name": "md-merge",
+      "language": "TypeScript",
+      "deploy_target": null,
+      "is_monorepo": false,
+      "publishes": [
+        "@storacha/md-merge"
+      ],
+      "role": "documentation",
+      "description": "CRDT-based markdown merging using RGA-backed mdast trees.",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": [
+        "upload-service"
+      ]
+    },
+    {
+      "name": "network-tester",
+      "language": "Go",
+      "deploy_target": null,
+      "is_monorepo": false,
+      "publishes": [
+        "github.com/storacha/network-tester"
+      ],
+      "role": "CLI tool",
+      "description": "Test uploads and more to the Storacha Network.",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": [
+        "go-libstoracha",
+        "go-ucanto",
+        "guppy",
+        "indexing-service"
+      ]
+    },
+    {
+      "name": "one-webcrypto",
+      "language": "TypeScript",
+      "deploy_target": null,
+      "is_monorepo": false,
+      "publishes": [
+        "@storacha/one-webcrypto"
+      ],
+      "role": "documentation",
+      "description": "Import the webcrypto API as a single module in both nodejs and browsers.",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": []
+    },
+    {
+      "name": "public-bucket",
+      "language": "JavaScript",
+      "deploy_target": null,
+      "is_monorepo": false,
+      "publishes": [
+        "@web3-storage/public-bucket"
+      ],
+      "role": "library",
+      "description": "Server implementation of a bucket with multipart range support.",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": []
+    },
+    {
+      "name": "randdir",
+      "language": "Go",
+      "deploy_target": null,
+      "is_monorepo": false,
+      "publishes": [
+        "github.com/storacha/randdir"
+      ],
+      "role": "library (Go)",
+      "description": "",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": []
+    },
+    {
+      "name": "sigv4",
+      "language": "JavaScript",
+      "deploy_target": null,
+      "is_monorepo": false,
+      "publishes": [
+        "@web3-storage/sigv4"
+      ],
+      "role": "library",
+      "description": "A library for signing uploads for AWS using the signature v4.",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": []
+    },
+    {
+      "name": "spade",
+      "language": "Go",
+      "deploy_target": null,
+      "is_monorepo": false,
+      "publishes": [
+        "github.com/storacha/spade"
+      ],
+      "role": "library (Go)",
+      "description": "spade",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": []
+    },
+    {
+      "name": "spade-agent",
+      "language": "Go",
+      "deploy_target": null,
+      "is_monorepo": false,
+      "publishes": [
+        "github.com/storacha/spade-agent"
+      ],
+      "role": "CLI tool",
+      "description": "Spade Agent is a client for the Spade API that runs on your local system and automatically checks for eligible pieces, downloads and assembles them and oversees publishing storage deals on the Filecoi",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": []
+    },
+    {
+      "name": "storacha.forge",
+      "language": "TypeScript",
+      "deploy_target": "Cloudflare Worker",
+      "is_monorepo": false,
+      "publishes": [],
+      "role": "documentation",
+      "description": "This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": []
+    },
+    {
+      "name": "storacha.network",
+      "language": "TypeScript",
+      "deploy_target": null,
+      "is_monorepo": false,
+      "publishes": [],
+      "role": "library",
+      "description": "![Storacha Network](./public/img/storacha-og-card.png)",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": []
+    },
+    {
+      "name": "sync-multihash-sha2",
+      "language": "JavaScript",
+      "deploy_target": null,
+      "is_monorepo": false,
+      "publishes": [],
+      "role": "library",
+      "description": "Sync sha-256 & sha-512 multihash implementations",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": []
+    },
+    {
+      "name": "telemetry-grafana-agent",
+      "language": "Other",
+      "deploy_target": "Docker",
+      "is_monorepo": false,
+      "publishes": [],
+      "role": "documentation",
+      "description": "Telemetry grafana agent to scrape metrics endpoints and push them to a given Grafana Cloud endpoint.",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": []
+    },
+    {
+      "name": "ucan-see-my-request",
+      "language": "TypeScript",
+      "deploy_target": null,
+      "is_monorepo": false,
+      "publishes": [],
+      "role": "library",
+      "description": "Devtools extension to look at web requests",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": [
+        "ucanto"
+      ]
+    },
+    {
+      "name": "unixfs-dl",
+      "language": "JavaScript",
+      "deploy_target": null,
+      "is_monorepo": false,
+      "publishes": [
+        "@storacha/unixfs-dl"
+      ],
+      "role": "library",
+      "description": "Trusted UnixFS downloader",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": []
+    },
+    {
+      "name": "w3cli",
+      "language": "JavaScript",
+      "deploy_target": null,
+      "is_monorepo": false,
+      "publishes": [
+        "@web3-storage/w3cli"
+      ],
+      "role": "library",
+      "description": "\ud83d\udcbe w3 command line interface",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": [
+        "data-segment",
+        "sigv4",
+        "ucanto",
+        "w3up"
+      ]
+    },
+    {
+      "name": "w3ui",
+      "language": "JavaScript",
+      "deploy_target": null,
+      "is_monorepo": true,
+      "publishes": [
+        "@w3ui/core",
+        "@w3ui/example-react-components",
+        "@w3ui/example-test-playwright",
+        "@w3ui/react"
+      ],
+      "role": "library",
+      "description": "Headless, type-safe, UI components for the next generation Web3.Storage APIs.",
+      "depends_on_same_product": [],
+      "depends_on_cross_product": [
+        "ucanto",
+        "w3up"
+      ]
+    }
+  ],
+  "downstream_consumers": [
+    {
+      "repo": "admin",
+      "product": "Legacy & Migration",
+      "note": "depends on core: ucanto, upload-service"
+    },
+    {
+      "repo": "agent-store-migration",
+      "product": "Legacy & Migration",
+      "note": "depends on core: ucanto, upload-service"
+    },
+    {
+      "repo": "ai-integrations",
+      "product": "AI & Integrations",
+      "note": "depends on core: ucanto, w3up"
+    },
+    {
+      "repo": "blob-fetcher",
+      "product": "Gateway & Retrieval",
+      "note": "depends on core: ucanto, upload-service"
+    },
+    {
+      "repo": "bluesky-backup-webapp-server",
+      "product": "Legacy & Migration",
+      "note": "depends on core: ucanto, upload-service"
+    },
+    {
+      "repo": "console-toolkit",
+      "product": "Developer Tools",
+      "note": "depends on core: ucanto, upload-service"
+    },
+    {
+      "repo": "content-claims",
+      "product": "Content Routing",
+      "note": "depends on core: ucanto, w3up"
+    },
+    {
+      "repo": "dashboard",
+      "product": "Developer Tools",
+      "note": "depends on core: ucanto, upload-service"
+    },
+    {
+      "repo": "debugger",
+      "product": "Developer Tools",
+      "note": "depends on core: go-libstoracha, go-ucanto"
+    },
+    {
+      "repo": "delegator",
+      "product": "Identity & Auth",
+      "note": "depends on core: go-libstoracha, go-ucanto"
+    },
+    {
+      "repo": "egress-consumer",
+      "product": "Egress & Billing",
+      "note": "depends on core: ucanto"
+    },
+    {
+      "repo": "etracker",
+      "product": "Egress & Billing",
+      "note": "depends on core: go-libstoracha, go-ucanto"
+    },
+    {
+      "repo": "freeway",
+      "product": "Gateway & Retrieval",
+      "note": "depends on core: ucanto, upload-service"
+    },
+    {
+      "repo": "go-mkdelegation",
+      "product": "standalone",
+      "note": "depends on core: go-libstoracha, go-ucanto"
+    },
+    {
+      "repo": "guppy",
+      "product": "Legacy & Migration",
+      "note": "depends on core: go-libstoracha, go-ucanto"
+    },
+    {
+      "repo": "hoverboard",
+      "product": "Gateway & Retrieval",
+      "note": "depends on core: w3up"
+    },
+    {
+      "repo": "indexing-service",
+      "product": "Content Routing",
+      "note": "depends on core: go-libstoracha, go-ucanto"
+    },
+    {
+      "repo": "ipni-publisher",
+      "product": "Infrastructure Libraries",
+      "note": "depends on core: go-ucanto"
+    },
+    {
+      "repo": "js-indexing-service-client",
+      "product": "standalone",
+      "note": "depends on core: ucanto, upload-service"
+    },
+    {
+      "repo": "learnyouw3up",
+      "product": "standalone",
+      "note": "depends on core: ucanto, upload-service"
+    },
+    {
+      "repo": "legacy-spaces-migration",
+      "product": "standalone",
+      "note": "depends on core: ucanto, upload-service"
+    },
+    {
+      "repo": "lit-pkp-demo",
+      "product": "standalone",
+      "note": "depends on core: ucanto, upload-service"
+    },
+    {
+      "repo": "mcp-storage-server",
+      "product": "standalone",
+      "note": "depends on core: ucanto, upload-service"
+    },
+    {
+      "repo": "md-merge",
+      "product": "standalone",
+      "note": "depends on core: upload-service"
+    },
+    {
+      "repo": "network-tester",
+      "product": "standalone",
+      "note": "depends on core: go-libstoracha, go-ucanto"
+    },
+    {
+      "repo": "piri",
+      "product": "Storage Node",
+      "note": "depends on core: go-libstoracha, go-ucanto"
+    },
+    {
+      "repo": "piri-signing-service",
+      "product": "Storage Node",
+      "note": "depends on core: go-libstoracha, go-ucanto"
+    },
+    {
+      "repo": "storetheindex",
+      "product": "Content Routing",
+      "note": "depends on core: go-libstoracha"
+    },
+    {
+      "repo": "tg-miniapp",
+      "product": "Developer Tools",
+      "note": "depends on core: ucanto, upload-service"
+    },
+    {
+      "repo": "ucan-kms",
+      "product": "Identity & Auth",
+      "note": "depends on core: ucanto, upload-service"
+    },
+    {
+      "repo": "ucan-see-my-request",
+      "product": "standalone",
+      "note": "depends on core: ucanto"
+    },
+    {
+      "repo": "w3cli",
+      "product": "standalone",
+      "note": "depends on core: ucanto, w3up"
+    },
+    {
+      "repo": "w3clock",
+      "product": "Data Structures",
+      "note": "depends on core: ucanto"
+    },
+    {
+      "repo": "w3filecoin-infra",
+      "product": "Filecoin Pipeline",
+      "note": "depends on core: ucanto, upload-service"
+    },
+    {
+      "repo": "w3ui",
+      "product": "standalone",
+      "note": "depends on core: ucanto, w3up"
+    }
+  ],
+  "meta": {
+    "total_repos": 82,
+    "products": 15,
+    "standalone": 31,
+    "downstream_consumers": 35
+  }
+}
