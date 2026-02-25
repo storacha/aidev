@@ -89,14 +89,14 @@ Numbers assigned sequentially. Rejected proposals stay for historical record.
 
 | Mechanism | Scope | Bypassable? |
 |-----------|-------|-------------|
-| Branch protection on `main` | PR-only, no direct push | No |
-| CODEOWNERS: `@alex` owns all paths | All changes require owner review | No |
+| Branch protection on `main` | PR-only, no direct push, enforce_admins enabled | No |
+| CODEOWNERS: `@storacha/aidev-owners` team | All changes require team member review | No |
 | Pre-commit hook in product repos | Warns devs if they modify `.claude/shared/` | Yes, but server-side catches it |
 
 CODEOWNERS file:
 ```
-# All process files require process team review
-*                        @alex
+# All changes require approval from aidev-owners team
+*                        @storacha/aidev-owners
 ```
 
 ### 4. Distribution (via git subtree)
